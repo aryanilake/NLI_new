@@ -71,7 +71,6 @@ export default function MembersData() {
   const colors = tokens(theme.palette.mode);
   const [rows, setRows] = useState([]);
 
-  // Use the useEffect hook to fetch data after the component mounts
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -95,9 +94,9 @@ export default function MembersData() {
       }
     };
 
-    fetchData(); // Call fetchData inside useEffect
+    fetchData(); 
+  }, []); 
 
-  }, []); // The empty dependency array ensures that this effect runs once after the component mounts
 
 
   return (

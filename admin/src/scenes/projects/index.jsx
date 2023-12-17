@@ -1,6 +1,6 @@
 import React from "react";
 import Headers from "../../components/Headers";
-import { Box, Button, IconButton, Typography } from "@mui/material";
+import { Box, Button, IconButton } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import { tokens } from "../../theme";
 import { DownloadOutlined, SearchOutlined } from "@mui/icons-material";

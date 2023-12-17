@@ -5,8 +5,8 @@ import Navsidebar from "./scenes/global/Navsidebar";
 import Dashboard from "./scenes/dashboard";
 import Projects from "./scenes/projects";
 import Events from "./scenes/events";
-import { Routes, Route, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import {  useState } from "react";
 import Createmember from "./scenes/createmember";
 import Createproject from "./scenes/createproject";
 
