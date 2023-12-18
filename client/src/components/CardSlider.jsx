@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Pagination from "./Pagination";
 import { getAllmembers } from "../helper/helper";
+import { useNavigate } from "react-router-dom";
 
 const CardSlider = ({ label }) => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = (image) => {
+    navigate("/newpage", { state: image });
+  };
+
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -14,7 +21,7 @@ const CardSlider = ({ label }) => {
           .filter(
             (item) =>
               label === item.project1 ||
-              label === item.project1 ||
+              label === item.project2 ||
               label === item.project3
           )
 
@@ -26,6 +33,12 @@ const CardSlider = ({ label }) => {
             Active: item.active,
             Linkedin: item.linkedin,
             profile: item.profile,
+            About: item.about,
+            College: item.departmentclg,
+            project1: item.project1,
+            project2: item.project2,
+            project3: item.project3,
+            email: item.email,
           }));
 
         setImages(newRows);
@@ -35,7 +48,7 @@ const CardSlider = ({ label }) => {
     };
 
     fetchData();
-  }, []);
+  }, [label]);
 
   const [currentPage, setCurrentPage] = useState(1);
   const imagesPerPage = 8;
@@ -69,7 +82,7 @@ const CardSlider = ({ label }) => {
               <div className="info  mt-2 items-start flex ">
                 {image.YearLeft == 0 ? null : (
                   <span className="border border-[#8c8c73] text-[#8c8c73] px-4 py-2  rounded-full font-[Poppins] mb-2">
-                    image.YearLeft
+                    {image.YearLeft}
                   </span>
                 )}
 
@@ -83,7 +96,10 @@ const CardSlider = ({ label }) => {
                 </h1>
               </div>
               <div className="end ml-2 flex">
-                <button className="bg-[#d1d1d7] text-black px-4 py-2 rounded mt-2">
+                <button
+                  onClick={() => handleButtonClick(image)}
+                  className="bg-[#d1d1d7] text-black px-4 py-2 rounded mt-2"
+                >
                   Learn More
                 </button>
                 <button className="w-8 h-10 flex items-center justify-center ml-4 mt-2">

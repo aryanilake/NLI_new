@@ -6,7 +6,7 @@ import CardSlider from "../../components/CardSlider";
 
 
 function Teams() {
-  const [selectedLabel, setSelectedLabel] = useState("Beliefsat-1");
+  const [selectedLabel, setSelectedLabel] = useState("Beliefsat-2");
 
   const handleButtonClick = (label) => {
     // console.log(`Clicked: ${label}`);
@@ -37,8 +37,8 @@ function Teams() {
         />
       </div>
       <div className="results m-4">
-        {selectedLabel &&  <CardSlider label={selectedLabel}/>}
-
+        {selectedLabel &&  <CardSlider label={selectedLabel}/> }
+    {selectedLabel}
        
       </div>
     </div>
