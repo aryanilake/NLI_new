@@ -20,7 +20,7 @@ const Pagination = ({ currentPage, imagesPerPage, totalImages, paginate }) => {
   };
 
   return (
-    <div className="flex bg-white rounded-lg font-[Poppins] w-full items-center m-5">
+    <div className="flex bg-[#fafaf9] rounded-lg font-[Poppins] w-full items-center m-5">
       <button
         onClick={back}
         className="h-12 border-2 border-r-0 border-black px-4 rounded-l-lg hover:bg-black hover:text-white"

@@ -10,13 +10,13 @@ const Navbar = () => {
     setNav(!nav);
   };
   return (
-    <div className="font-poppins flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-black">
+    <div className="bg-[#fafaf9] w-full z-20 fixed top-0 left-0 right-0 font-poppins flex justify-between items-center h-20  mx-auto px-6  text-black">
       <div className="flex  justify-between items-center ">
         <img src={logo} className="h-12 w-auto"></img>
-        <h1 className="ml-2 text-3xl font-bold">New Leap Labs</h1>
+        <h1 className="font-[poppins] ml-2 text-3xl font-bold">NLL</h1>
       </div>
 
-      <ul className="hidden md:flex space-x-4">
+      <ul className="font-[poppins] hidden md:flex space-x-4">
         <li className="p-4 relative group">
           <Link to="/" className="block">
             Home

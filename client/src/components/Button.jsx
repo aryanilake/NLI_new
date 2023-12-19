@@ -2,7 +2,7 @@ import React from 'react';
 
 const Button = ({ onClick, label, type, isActive }) => {
   const buttonClasses = `font-poppins font-bold py-2 px-4 rounded 
-    ${isActive ? 'bg-black text-white' : 'bg-white text-black'}
+    ${isActive ? 'bg-black text-[#fafaf9]' : 'bg-[#fafaf9] text-black'}
     `;
 
   return (

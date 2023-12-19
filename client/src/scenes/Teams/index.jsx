@@ -15,7 +15,7 @@ function Teams() {
 
 
   return (
-    <div className="font-poppins justify-between items-center h-24 max-w-[1240px] mx-auto px-5 mt-5 mb-9">
+    <div className="py-20 font-poppins justify-between items-center h-screen mx-auto px-5 mt-5 mb-9">
       <div className="space-x-4">
         <Button
           onClick={() => handleButtonClick("Beliefsat-1")}

@@ -9,7 +9,7 @@ import NewPage from "./components/NewPage";
 
 function App() {
   return (
-    <div className="app">
+    <div className="app select-none bg-[#fafaf9]">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

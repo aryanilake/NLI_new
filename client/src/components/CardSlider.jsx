@@ -121,7 +121,7 @@ const CardSlider = ({ label }) => {
               </div>
             </div>
           </div>
-        ))}
+        ) )}
       </div>
     </div>
   );
