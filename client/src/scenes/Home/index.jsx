@@ -147,6 +147,13 @@ function Home() {
                 company="KJSHIT"
               />
             </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialCard
+                text="Sher abhi mehnat nhi karega! kyuki sher busyyy hai"
+                author="Sher"
+                company="Ek Tha Tiger"
+              />
+            </SwiperSlide>
            
           </Swiper>
         </div>
