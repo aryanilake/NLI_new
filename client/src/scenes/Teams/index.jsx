@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Button from "../../components/Button";
 import CardSlider from "../../components/CardSlider";
 import Navbar from "../../components/Navbar";
+import Team from "../../components/Team";
 
 
 
@@ -43,7 +44,7 @@ function Teams() {
       <div className="results m-4">
         {selectedLabel &&  <CardSlider label={selectedLabel}/> }
     {selectedLabel}
-       
+       <Team/>
       </div>
     </div>
     </>
