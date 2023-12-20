@@ -1,15 +1,19 @@
 import React from "react";
-import hero from "../../assets/hero.webp";
-import Headers from "../../components/Headers";
-import CardsDomain from "../../components/CardsDomain";
-import Foundercard from "../../components/Foundercard";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import TestimonialCard from "../../components/TestimonialCard";
+import hero from "../../assets/hero.webp";
+import Headers from "../../components/Headers";
+import CardsDomain from "../../components/CardsDomain";
+import Foundercard from "../../components/Foundercard";
+import Footer from "../../components/Footer";
+import belifsat from "../../assets/belifsat.jpg";
+import beliefsat1 from "../../assets/beliefsat1.jpg";
+import avruti from "../../assets/avruti.webp"
 
 function Home() {
   return (
@@ -53,6 +57,70 @@ function Home() {
 
         <section>
           <Headers title="Projects" />
+          <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12 text-white">
+            <div className=" col-span-1 md:col-span-12">
+              <div>
+                <div className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl">
+                  <img
+                    className="w-screen duration-700 ease-in-out group-hover:scale-105"
+                    src={belifsat}
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <div className="mt-4">
+                  <div className="flex space-x-2 mb-3">
+                    <p className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl">
+                      2003
+                    </p>
+                  </div>
+                  <div className="2xl:space-y-3">
+                    <h3 className="text-works-title 2xl:text-5xl font-medium uppercase text-primary-200">
+                      BeleifSat-0
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-span-1 pt-0 md:col-span-7 md:pt-16">
+              <div>
+                <div className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl">
+                  <img className="w-screen duration-700 ease-in-out group-hover:scale-105" src={beliefsat1} alt="" srcset="" />
+                </div>
+              </div>
+              <div className="mt-4">
+                <div className="flex space-x-2 mb-3">
+                  <p className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl">
+                    2003
+                  </p>
+                </div>
+                <div className="2xl:space-y-3">
+                  <h3 className="text-works-title 2xl:text-5xl font-medium uppercase text-primary-200">
+                    BeleifSat-1
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div className="col-span-1 pt-0 md:col-span-5 md:pt-80">
+            <div>
+                <div className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl">
+                  <img className="w-screen duration-700 ease-in-out group-hover:scale-105" src={avruti} alt="" srcset="" />
+                </div>
+              </div>
+            <div className="mt-4">
+                <div className="flex space-x-2 mb-3">
+                  <p className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl">
+                    2003
+                  </p>
+                </div>
+                <div className="2xl:space-y-3">
+                  <h3 className="text-works-title 2xl:text-5xl font-medium uppercase text-primary-200">
+                    Avruti
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section>
@@ -116,13 +184,11 @@ function Home() {
 
         <div className="Testimonials mb-10 font-[poppins]">
           <Swiper
-            // install Swiper modules
             modules={[Navigation, Pagination]}
             spaceBetween={30}
             slidesPerView={1}
             navigation
             pagination={{ clickable: true }}
-            // scrollbar={{ draggable: false }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
@@ -154,10 +220,12 @@ function Home() {
                 company="Ek Tha Tiger"
               />
             </SwiperSlide>
-           
           </Swiper>
         </div>
       </main>
+      <div className="footer">
+        <Footer />
+      </div>
     </div>
   );
 }
