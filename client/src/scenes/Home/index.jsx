@@ -3,6 +3,13 @@ import hero from "../../assets/hero.webp";
 import Headers from "../../components/Headers";
 import CardsDomain from "../../components/CardsDomain";
 import Foundercard from "../../components/Foundercard";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import TestimonialCard from "../../components/TestimonialCard";
 
 function Home() {
   return (
@@ -95,16 +102,54 @@ function Home() {
             </div>
           </div>
         </section>
+      </main>
 
+      <main className="px-5 md:px-10 xl:px-20 2xl:px-28 ">
         <section>
-        <Headers title="Founders" />
-        <div className="flex justify-center">
-
-        <Foundercard imageUrl={hero} title="Subhadip Samanta"/>
-        <Foundercard imageUrl={hero} title="Subhadip Samanta"/>
-        <Foundercard imageUrl={hero} title="Subhadip Samanta"/>
-        </div>
+          <Headers title="Founders" />
+          <div className="flex justify-center">
+            <Foundercard imageUrl={hero} title="Subhadip Samanta" />
+            <Foundercard imageUrl={hero} title="Subhadip Samanta" />
+            <Foundercard imageUrl={hero} title="Subhadip Samanta" />
+          </div>
         </section>
+
+        <div className="Testimonials mb-10 font-[poppins]">
+          <Swiper
+            // install Swiper modules
+            modules={[Navigation, Pagination]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            // scrollbar={{ draggable: false }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+          >
+            <SwiperSlide>
+              <TestimonialCard
+                text="Jai Shree Ram"
+                author="Shree Hari"
+                company="Global Foundation"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialCard
+                text="Elvish Bhai ke age koi bol sakta h kya!!"
+                author="Elvish Bhai"
+                company="Jeher.Co"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialCard
+                text="Inky Pinky Ponky donkey dies monkey cries"
+                author="Exam Cell"
+                company="KJSHIT"
+              />
+            </SwiperSlide>
+           
+          </Swiper>
+        </div>
       </main>
     </div>
   );
