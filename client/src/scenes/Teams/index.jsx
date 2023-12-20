@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Button from "../../components/Button";
 import CardSlider from "../../components/CardSlider";
+import Navbar from "../../components/Navbar";
+
 
 
 
@@ -15,6 +17,8 @@ function Teams() {
 
 
   return (
+    <>
+    <Navbar bgcolor = "#ffffff" textColor = "#000000"/>
     <div className="py-20 font-poppins justify-between items-center h-screen mx-auto px-5 mt-5 mb-9">
       <div className="space-x-4">
         <Button
@@ -42,6 +46,7 @@ function Teams() {
        
       </div>
     </div>
+    </>
   );
 }
 

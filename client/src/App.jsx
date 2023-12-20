@@ -6,17 +6,26 @@ import Projects from "./scenes/Projects";
 import Groundstation from "./scenes/Groundstation";
 import Teams from "./scenes/Teams";
 import NewPage from "./components/NewPage";
+import Lenis from "@studio-freight/lenis";
 
 function App() {
+  const lenis = new Lenis();
+
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
   return (
     <div className="app select-none bg-[#fafaf9] font-[poppins]">
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/teams" element={<Teams />} />
         <Route path="/groundstation" element={<Groundstation />} />
-        <Route path='/newpage' element={<NewPage/>}/>
+        <Route path="/newpage" element={<NewPage />} />
       </Routes>
     </div>
   );

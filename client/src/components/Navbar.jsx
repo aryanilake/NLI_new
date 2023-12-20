@@ -3,14 +3,17 @@ import logo from "../assets/NEWLEAPLABS.svg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({bgcolor , textColor}) => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
   };
+
+
+
   return (
-    <div className="bg-[#fafaf9] w-full z-20 fixed top-0 left-0 right-0 font-poppins flex justify-between items-center h-20  mx-auto px-6  text-black">
+    <div className=" w-full z-20 fixed top-0 left-0 right-0 font-poppins flex justify-between items-center h-20  mx-auto px-6  text-black" style={{backgroundColor: bgcolor , color:textColor , transition: "0.3 ease-in-out"}  }>
       <div className="flex  justify-between items-center ">
         <img src={logo} className="h-12 w-auto"></img>
         <h1 className="font-[poppins] ml-2 text-3xl font-bold">NLL</h1>
