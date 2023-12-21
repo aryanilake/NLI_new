@@ -5,6 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 import TestimonialCard from "../../components/TestimonialCard";
 import hero from "../../assets/hero.webp";
 import Headers from "../../components/Headers";
@@ -18,10 +19,9 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import Navbar from "../../components/Navbar";
 
-
 function Home() {
-  const [navbg , setNavbg] = useState("#ffffff");
-  const [navtext , setNavtext] = useState("#000000");
+  const [navbg, setNavbg] = useState("#fafaf9");
+  const [navtext, setNavtext] = useState("#000000");
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -48,16 +48,15 @@ function Home() {
           const backgroundColor = "#000000";
           const textColor = "#d1d1d7";
           changeBackgroundColor(backgroundColor, textColor);
-          setNavbg("#000000")
-          setNavtext("#d1d1d7")
+          setNavbg("#000000");
+          setNavtext("#d1d1d7");
         } else {
           // Change back to transparent when scrolling backward or at the end
           const backgroundColor = "transparent";
           const textColor = "#000000";
           changeBackgroundColor(backgroundColor, textColor);
-          setNavbg("#ffffff")
-          setNavtext("#000000")
-
+          setNavbg("#fafaf9");
+          setNavtext("#000000");
         }
       },
     });
@@ -65,12 +64,39 @@ function Home() {
 
   return (
     <>
-      <Navbar bgcolor = {navbg} textColor = {navtext} />
+      <motion.div
+        transition={{
+          ease: "linear",
+          duration: 2,
+          delay: 0.5,
+        }}
+        variants={{
+          hidden: { opacity: 0, y: -75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate="visible"
+      >
+        <Navbar bgcolor={navbg} textColor={navtext} />
+      </motion.div>
 
       <div className="home ">
         <section className="hero relative flex h-[95vh] py-20 w-full  overflow-hidden justify-center ">
           <div className="z-10 flex flex-col w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300">
-            <div className="title text-9xl  font-[poppins] text-[#262626] py-16 ">
+            <motion.div
+              transition={{
+                ease: "linear",
+                duration: 2,
+                delay: 1.7,
+              }}
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate="visible"
+              className="title text-9xl  font-[poppins] text-[#262626] py-16 "
+            >
               <h1 className=" overflow-visible">New Leap Labs</h1>
               <h1
                 className=" text-transparent font-outline-4 flex justify-center
@@ -80,20 +106,39 @@ function Home() {
               </h1>
 
               <h1 className=" overflow-visible">New Leap Labs</h1>
-            </div>
+            </motion.div>
           </div>
-          <div className="intro absolute mx-auto   w-[55%]  rounded-md">
-            <img
+
+          <motion.div
+            initial={{ scale: 2, opacity: 0 }} // initial scale and opacity
+            animate={{ scale: 1, opacity: 1 }} // animate to normal scale and full opacity
+            transition={{ duration: 2 }} // adjust the duration as needed
+            className="intro absolute mx-auto w-[55%] rounded-md"
+          >
+            <motion.img
               src={hero}
               alt=""
-              className="  aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-full h-auto"
+              className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-full h-auto"
             />
-          </div>
-          <div className="absolute bottom-12 right-0 flex flex-col items-center justify-center space-y-8">
+          </motion.div>
+
+          <motion.div 
+            transition={{
+              ease: "linear",
+              duration: 2,
+              delay: 1.7,
+            }}
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate="visible"
+          className="absolute bottom-12 right-0 flex flex-col items-center justify-center space-y-8">
             <span className=" rotate-90 text-body-3 text-xl font-[poppins] ">
               #webelieve
             </span>
-          </div>
+          </motion.div>
         </section>
 
         {/* black */}
