@@ -122,7 +122,7 @@ function Home() {
             />
           </motion.div>
 
-          <motion.div 
+          <motion.div
             transition={{
               ease: "linear",
               duration: 2,
@@ -134,7 +134,8 @@ function Home() {
             }}
             initial="hidden"
             animate="visible"
-          className="absolute bottom-12 right-0 flex flex-col items-center justify-center space-y-8">
+            className="absolute bottom-12 right-0 flex flex-col items-center justify-center space-y-8"
+          >
             <span className=" rotate-90 text-body-3 text-xl font-[poppins] ">
               #webelieve
             </span>
@@ -172,7 +173,7 @@ function Home() {
                       </p>
                     </div>
                     <div className="2xl:space-y-3">
-                      <h3 className="text-works-title 2xl:text-5xl font-medium uppercase text-primary-200">
+                      <h3 className="font-[poppins] text-3xl font-medium uppercase text-primary-200">
                         BeleifSat-0
                       </h3>
                     </div>
@@ -197,7 +198,7 @@ function Home() {
                     </p>
                   </div>
                   <div className="2xl:space-y-3">
-                    <h3 className="text-works-title 2xl:text-5xl font-medium uppercase text-primary-200">
+                    <h3 className="font-[poppins] text-3xl font-medium uppercase text-primary-200">
                       BeleifSat-1
                     </h3>
                   </div>
@@ -221,7 +222,7 @@ function Home() {
                     </p>
                   </div>
                   <div className="2xl:space-y-3">
-                    <h3 className="text-works-title 2xl:text-5xl font-medium uppercase text-primary-200">
+                    <h3 className="font-[poppins] text-3xl font-medium uppercase text-primary-200">
                       Avruti
                     </h3>
                   </div>
@@ -307,25 +308,19 @@ function Home() {
               </SwiperSlide>
               <SwiperSlide>
                 <TestimonialCard
-                  text="Elvish Bhai ke age koi bol sakta h kya!!"
-                  author="Elvish Bhai"
-                  company="Jeher.Co"
+                  text="Jai Shree Ram"
+                  author="Shree Hari"
+                  company="Global Foundation"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <TestimonialCard
-                  text="Inky Pinky Ponky donkey dies monkey cries"
-                  author="Exam Cell"
-                  company="KJSHIT"
+                  text="Jai Shree Ram"
+                  author="Shree Hari"
+                  company="Global Foundation"
                 />
               </SwiperSlide>
-              <SwiperSlide>
-                <TestimonialCard
-                  text="Sher abhi mehnat nhi karega! kyuki sher busyyy hai"
-                  author="Sher"
-                  company="Ek Tha Tiger"
-                />
-              </SwiperSlide>
+          
             </Swiper>
           </div>
         </main>
