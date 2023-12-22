@@ -19,6 +19,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import Navbar from "../../components/Navbar";
 
+
 function Home() {
   const [navbg, setNavbg] = useState("#fafaf9");
   const [navtext, setNavtext] = useState("#000000");
