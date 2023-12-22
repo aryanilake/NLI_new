@@ -11,4 +11,8 @@
     .font-outline-4 {
       -webkit-text-stroke: 4px rgb(202, 44, 44);;
     }
+    .reduced-letter-spacing {
+      letter-spacing: -2px; 
+    }
+    
   }

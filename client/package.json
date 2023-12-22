@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.1",
     "@mui/styled-engine-sc": "^6.0.0-alpha.9",
+    "@mui/x-data-grid": "^6.18.5",
+    "@mui/x-data-grid-generator": "^6.18.5",
     "@studio-freight/lenis": "^1.0.29",
     "antd": "^5.12.4",
     "axios": "^1.6.2",

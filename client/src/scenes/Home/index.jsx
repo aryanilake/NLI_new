@@ -326,9 +326,6 @@ function Home() {
           </div>
         </main>
 
-        <div className="footer">
-          <Footer />
-        </div>
       </div>
     </>
   );

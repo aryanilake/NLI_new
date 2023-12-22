@@ -7,6 +7,8 @@ import Groundstation from "./scenes/Groundstation";
 import Teams from "./scenes/Teams";
 import NewPage from "./components/NewPage";
 import Lenis from "@studio-freight/lenis";
+import Footer from "./components/Footer";
+
 
 function App() {
   const lenis = new Lenis();
@@ -20,6 +22,7 @@ function App() {
   requestAnimationFrame(raf);
   return (
     <div className="app select-none bg-[#fafaf9] font-[poppins]">
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
@@ -29,6 +32,10 @@ function App() {
         <Route path="/newpage" element={<NewPage />} />
 
       </Routes>
+      
+      <div className="footer">
+          <Footer />
+        </div>
     </div>
   );
 }
