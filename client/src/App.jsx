@@ -25,7 +25,9 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/teams" element={<Teams />} />
         <Route path="/groundstation" element={<Groundstation />} />
+
         <Route path="/newpage" element={<NewPage />} />
+
       </Routes>
     </div>
   );
