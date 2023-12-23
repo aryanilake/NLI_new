@@ -8,6 +8,7 @@ const NewPage = () => {
   const goBack = () => {
     window.history.back();
   };
+  const location = useLocation();
 
   return (
     <>
@@ -23,22 +24,23 @@ const NewPage = () => {
         </div>
         <div className="mainc pt-2 flex flex-row">
           <div className="leftmain w-[50%]">
-            <div className="imgc w-[80%] overflow-hidden">
-              <img className="rounded-lg h-full " src={gs} alt="" srcset="" />
+            <div className="imgc w-[80%] overflow-hidden flex justify-center items-center flex-col">
+              <img className="rounded-lg h-[50vh] " src={gs} alt="" srcset="" />
               <h2 className="mt-2 flex justify-center items-center text-3xl">
-                Subhadip Samanta
+              {location.state.fname} {location.state.lname}
               </h2>
             </div>
             <div className="projnames mt-10">
               <ol className="flex  flex-row">
-                <li className="m-2 text-2xl">Project 1</li>
-                <li className="m-2 text-2xl">Project 1</li>
-                <li className="m-2 text-2xl">Project 1</li>
+                <li className="m-2 text-2xl">{location.state.project1}</li>
+                <li className="m-2 text-2xl">{location.state.project2}</li>
+                <li className="m-2 text-2xl">{location.state.project3}</li>
+                
               </ol>
             </div>
-            <div className="link">
+            <div className="link flex flex-row">
               <button className="w-8 h-10 flex items-center justify-center ml-4 mt-2">
-                <a target="_blank" rel="noopener noreferrer">
+                <a href={location.state.Linkedin} target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 19 18"
@@ -49,23 +51,25 @@ const NewPage = () => {
                   </svg>
                 </a>
               </button>
+              <div className="hello"><span>{location.state.email} </span></div>
+
             </div>
           </div>
           <div className="righftmain w-[50%]">
             <div className="details">
               <ol className="flex  flex-row">
-                <li className="m-2 text-2xl">Year Left</li>
-                <li className="m-2 text-2xl">Domain</li>
+                <li className="m-2 text-2xl">{location.state.YearLeft}</li>
+                <li className="m-2 text-2xl">{location.state.Domain}</li>
               </ol>
             </div>
             <div className="m-2 about">
               <h2 className=" text-2xl">About</h2>
-              <span className="h-max">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt ad rerum id nobis, et dolor harum repudiandae deleniti perspiciatis quidem ratione? Alias ea corrupti ullam eveniet eligendi ipsa veritatis non veniam quod voluptates quos consequuntur ducimus ex provident, placeat, quaerat, architecto aliquid omnis? Libero numquam voluptatum praesentium atque amet in veniam, iure accusamus eos culpa eveniet nemo modi voluptatibus minus, sapiente repudiandae natus adipisci enim suscipit at dolores? Molestiae.</span>
+              <span className="h-max">{location.state.About}</span>
             </div>
             <div className="details">
               <ol className="flex  flex-row">
                 <li className="m-2 text-2xl">KJSIT</li>
-                <li className="m-2 text-2xl">Domain</li>
+                <li className="m-2 text-2xl">{location.state.College} Department</li>
               </ol>
             </div>
           </div>
@@ -77,5 +81,5 @@ const NewPage = () => {
 
 export default NewPage;
 
-//  const location = useLocation();
-//  <h2>{location.state.fname} {location.state.lname}</h2>
+// 
+//  <h2> {location.state.lname}</h2>
