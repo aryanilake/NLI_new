@@ -9,7 +9,6 @@ import { tokens } from "../../theme";
 import { useTheme } from "@emotion/react";
 import { createProject } from "../../helper/helper";
 
-
 export default function Createproject() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -18,8 +17,9 @@ export default function Createproject() {
   const initialValues = {
     projname: "",
     active: "",
-    profile: "",
-    about: ""
+    link1: "",
+    link2: "",
+    about: "",
   };
 
   const checkoutSchema = yup.object().shape({
@@ -31,35 +31,18 @@ export default function Createproject() {
       .required("Please enter True of False"),
 
     about: yup.string().required("required"),
-
   });
 
-
-  
-  const [file, setFile] = useState();
-
-  const onUpload = async (e) => {
-    const fileReader = new FileReader();
-
-    fileReader.onload = () => {
-      const base64 = fileReader.result;
-      setFile(base64);
-    };
-
-    fileReader.readAsDataURL(e.target.files[0]);
-  };
-
   const handleFormSubmit = async (values) => {
-    values.profile = file;
     console.log(values);
 
     createProject(values)
-    .then(() => {
+      .then(() => {
         alert("Member added successfully");
-    })
-    .catch(({ error }) => {
-        alert('Error occured' + error);
-    });
+      })
+      .catch(({ error }) => {
+        alert("Error occured" + error);
+      });
   };
 
   return (
@@ -107,7 +90,6 @@ export default function Createproject() {
                 sx={{ gridColumn: "span 2" }}
               />
 
-     
               <TextField
                 fullWidth
                 variant="filled"
@@ -121,9 +103,7 @@ export default function Createproject() {
                 helperText={touched.active && errors.active}
                 sx={{ gridColumn: "span 2" }}
               />
-    
-    
-     
+
               <TextField
                 fullWidth
                 variant="filled"
@@ -137,18 +117,32 @@ export default function Createproject() {
                 helperText={touched.about && errors.about}
                 sx={{ gridColumn: "span 4" }}
               />
-         
-                 <Input
+              <TextField
                 fullWidth
-                type="file"
-                label="Profile image"
-                name="profile"
-                onChange={onUpload}
+                variant="filled"
+                type="text"
+                label="Links"
                 onBlur={handleBlur}
-                error={!!touched.profile && !!errors.profile}
-                sx={{ gridColumn: "span 4" }}
+                onChange={handleChange}
+                value={(values.link1)}
+                name="links"
+                error={!!touched.link1 && !!errors.link1}
+                helperText={touched.link1 && errors.link1}
+              />
+              <TextField
+                fullWidth
+                variant="filled"
+                type="text"
+                label="Links"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={(values.link2)}
+                name="links"
+                error={!!touched.link2 && !!errors.link2}
+                helperText={touched.link2 && errors.link2}
               />
             </Box>
+
             <Box display="flex" justifyContent="end" mt="20px">
               <Button type="submit" color="secondary" variant="contained">
                 Create New Project

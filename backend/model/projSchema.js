@@ -16,7 +16,10 @@ const projSchema = mongoose.Schema({
     required: true,
   },
 
-  profile: {
+  link1: {
+    type: String,
+  },
+  link2: {
     type: String,
   },
 
