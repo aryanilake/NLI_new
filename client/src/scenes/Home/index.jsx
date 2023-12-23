@@ -83,7 +83,7 @@ function Home() {
 
       <div className="home ">
         <section className="hero relative flex h-[95vh] py-20 w-full  overflow-hidden justify-center ">
-          <div className="z-10 flex flex-col w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300">
+          <div className="z-10 flex flex-col w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300 font-[poppins] reduced-letter-spacing">
             <motion.div
               transition={{
                 ease: "linear",
@@ -96,7 +96,7 @@ function Home() {
               }}
               initial="hidden"
               animate="visible"
-              className="title text-9xl  font-[poppins] text-[#262626] py-16 "
+              className="title text-9xl   text-[#262626] py-16 "
             >
               <h1 className=" overflow-visible">New Leap Labs</h1>
               <h1
@@ -137,7 +137,7 @@ function Home() {
             animate="visible"
             className="absolute bottom-12 right-0 flex flex-col items-center justify-center space-y-8"
           >
-            <span className=" rotate-90 text-body-3 text-xl font-[poppins] ">
+            <span className=" rotate-90 text-body-3 text-xl  ">
               #webelieve
             </span>
           </motion.div>
@@ -147,7 +147,7 @@ function Home() {
         <main className="start h-max mb-10 px-5 md:px-10 xl:px-20 2xl:px-28 ">
           <section className="about select-none flex my-20 md:my-[12%] py-10 flex-col items-center justify-center overflow-hidden ">
             <div className=" flex w-full items-center space-x-20">
-              <h1 className="font-[poppins] text-heading-1 text-[5rem]  leading-[1.25em] md:leading-[1.08em]">
+              <h1 className=" text-heading-1 text-[5rem]   leading-[1.25em] md:leading-[1.08em]">
                 We create elevating digital experiences that inspire and connect
                 with people through development and design.
               </h1>
@@ -174,7 +174,7 @@ function Home() {
                       </p>
                     </div>
                     <div className="2xl:space-y-3">
-                      <h3 className="font-[poppins] text-3xl font-medium uppercase text-primary-200">
+                      <h3 className=" text-3xl font-medium uppercase text-primary-200">
                         BeleifSat-0
                       </h3>
                     </div>
@@ -199,7 +199,7 @@ function Home() {
                     </p>
                   </div>
                   <div className="2xl:space-y-3">
-                    <h3 className="font-[poppins] text-3xl font-medium uppercase text-primary-200">
+                    <h3 className=" text-3xl font-medium uppercase text-primary-200">
                       BeleifSat-1
                     </h3>
                   </div>
@@ -223,7 +223,7 @@ function Home() {
                     </p>
                   </div>
                   <div className="2xl:space-y-3">
-                    <h3 className="font-[poppins] text-3xl font-medium uppercase text-primary-200">
+                    <h3 className=" text-3xl font-medium uppercase text-primary-200">
                       Avruti
                     </h3>
                   </div>
@@ -234,7 +234,7 @@ function Home() {
 
           <section className="mb-10">
             <Headers title="Our Domains" />
-            <div className=" font-[poppins]">
+            <div className=" ">
               {/* First Row */}
               <div className="flex justify-center">
                 <CardsDomain
@@ -292,7 +292,7 @@ function Home() {
             </div>
           </section>
 
-          <div className="Testimonials mb-10 font-[poppins]">
+          <div className="Testimonials mb-10 ">
             <Swiper
               modules={[Navigation, Pagination]}
               spaceBetween={30}

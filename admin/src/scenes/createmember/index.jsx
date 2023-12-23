@@ -68,6 +68,8 @@ export default function Createmember() {
     about: yup.string().required("required"),
   });
 
+
+  
   const [file, setFile] = useState();
   const onUpload = async (e) => {
     const fileReader = new FileReader();

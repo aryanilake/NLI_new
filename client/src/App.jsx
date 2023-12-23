@@ -21,7 +21,7 @@ function App() {
 
   requestAnimationFrame(raf);
   return (
-    <div className="app select-none bg-[#fafaf9] font-[poppins]">
+    <div className="app select-none bg-[#fafaf9]  ">
       
       <Routes>
         <Route path="/" element={<Home />} />

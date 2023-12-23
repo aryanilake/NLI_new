@@ -14,9 +14,17 @@ const port = 8080;
 dotenv.config()
 // app.use('/',router);
 app.use(express.json());
-app.use(cors());
+app.use(
+    cors({
+        origin: 'http://localhost:3000', // Replace with the actual domain of your frontend
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+        credentials: true,
+    })
+);
 app.use(morgan('tiny'));
 app.disable('x-powered-by');
+app.use(bodyParser.json({ limit: '1gb' })); // Adjust the limit as needed
+app.use(bodyParser.urlencoded({ limit: '1gb', extended: true }));
 
 app.get('/',(req,res)=>{
     res.status(201).json("hello")

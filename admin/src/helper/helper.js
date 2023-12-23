@@ -47,3 +47,13 @@ export async function createMember(credentials){
         return Promise.reject({ error })
     }
 }
+
+export async function createProject(credentials){
+    try {
+        const { data : { msg }, status } = await axios.post('/api/createproject', credentials);
+
+        return Promise.resolve(msg , status)
+    } catch (error) {
+        return Promise.reject({ error })
+    }
+}

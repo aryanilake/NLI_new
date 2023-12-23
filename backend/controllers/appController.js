@@ -112,9 +112,11 @@ export async function getAllmembers(req, res) {
 
 // project
 
+
+
 export async function createproject(req, res) {
   try {
-    const { projname, dateStarted, active, about, projimg = "" } = req.body;
+    const { projname, active, about, projimg = "" } = req.body;
 
     // Check if the project already exists
     const existProj = await Project.exists({ projname });
@@ -127,7 +129,6 @@ export async function createproject(req, res) {
 
     const project = new Project({
       projname,
-      dateStarted,
       active,
       about,
       projimg: projimg || "",
@@ -159,6 +160,18 @@ export async function getProject(req, res) {
     const { ...rest } = Object.assign({}, project.toJSON());
 
     return res.status(200).send(rest);
+  } catch (error) {
+    return res
+      .status(500)
+      .send({ error: error.message || "Internal Server Error" });
+  }
+}
+
+
+export async function getAllprojects(req, res) {
+  try {
+    const projects = await Project.find({});
+    return res.status(200).json(projects);
   } catch (error) {
     return res
       .status(500)

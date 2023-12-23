@@ -1,5 +1,5 @@
 import { Box, Input } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import Headers from "../../components/Headers";
 import { Button, TextField } from "@mui/material";
 import { Formik } from "formik";
@@ -7,6 +7,8 @@ import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { tokens } from "../../theme";
 import { useTheme } from "@emotion/react";
+import { createProject } from "../../helper/helper";
+
 
 export default function Createproject() {
   const theme = useTheme();
@@ -14,27 +16,50 @@ export default function Createproject() {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
   const initialValues = {
-    projName: "",
-    datejoined: "2/3/5555",
+    projname: "",
     active: "",
-    projimage: null,
-    para1: "",
+    profile: "",
+    about: ""
   };
 
   const checkoutSchema = yup.object().shape({
-    projName: yup.string().required("required"),
+    projname: yup.string().required("required"),
 
-    datejoined: yup.date().required("required"),
     active: yup
       .bool()
       .oneOf([true, false])
       .required("Please enter True of False"),
 
-    para1: yup.string().required("required"),
+    about: yup.string().required("required"),
+
   });
 
-  const handleFormSubmit = (values) => {
+
+  
+  const [file, setFile] = useState();
+
+  const onUpload = async (e) => {
+    const fileReader = new FileReader();
+
+    fileReader.onload = () => {
+      const base64 = fileReader.result;
+      setFile(base64);
+    };
+
+    fileReader.readAsDataURL(e.target.files[0]);
+  };
+
+  const handleFormSubmit = async (values) => {
+    values.profile = file;
     console.log(values);
+
+    createProject(values)
+    .then(() => {
+        alert("Member added successfully");
+    })
+    .catch(({ error }) => {
+        alert('Error occured' + error);
+    });
   };
 
   return (
@@ -55,7 +80,6 @@ export default function Createproject() {
           handleBlur,
           handleChange,
           handleSubmit,
-          setFieldValue,
         }) => (
           <form onSubmit={handleSubmit}>
             <Box
@@ -76,10 +100,10 @@ export default function Createproject() {
                 label="Project Name"
                 onBlur={handleBlur}
                 onChange={handleChange}
-                value={values.projName}
-                name="projName"
-                error={!!touched.projName && !!errors.projName}
-                helperText={touched.projName && errors.projName}
+                value={values.projname}
+                name="projname"
+                error={!!touched.projname && !!errors.projname}
+                helperText={touched.projname && errors.projname}
                 sx={{ gridColumn: "span 2" }}
               />
 
@@ -97,19 +121,7 @@ export default function Createproject() {
                 helperText={touched.active && errors.active}
                 sx={{ gridColumn: "span 2" }}
               />
-              <TextField
-                fullWidth
-                variant="filled"
-                type="date"
-                label="Date joined"
-                onBlur={handleBlur}
-                onChange={handleChange}
-                value={values.datejoined}
-                name="datejoined"
-                error={!!touched.datejoined && !!errors.datejoined}
-                helperText={touched.datejoined && errors.datejoined}
-                sx={{ gridColumn: "span 2" }}
-              />
+    
     
      
               <TextField
@@ -119,21 +131,21 @@ export default function Createproject() {
                 label="About"
                 onBlur={handleBlur}
                 onChange={handleChange}
-                value={values.para1}
-                name="para1"
-                error={!!touched.para1 && !!errors.para1}
-                helperText={touched.para1 && errors.para1}
+                value={values.about}
+                name="about"
+                error={!!touched.about && !!errors.about}
+                helperText={touched.about && errors.about}
                 sx={{ gridColumn: "span 4" }}
               />
-              <Input
+         
+                 <Input
                 fullWidth
                 type="file"
                 label="Profile image"
-                onChange={(event) =>
-                  setFieldValue("projimage", event.currentTarget.files[0])
-                }
+                name="profile"
+                onChange={onUpload}
                 onBlur={handleBlur}
-                error={!!touched.projimage && !!errors.projimage}
+                error={!!touched.profile && !!errors.profile}
                 sx={{ gridColumn: "span 4" }}
               />
             </Box>
