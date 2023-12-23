@@ -18,7 +18,7 @@ function Projects() {
   return (
     <>
       <Navbar bgcolor="#fafaf9" textColor="#000000" />
-    <div className="py-20 font-[Generalsansvariable] justify-between items-center h-max mx-auto px-5 mt-5 mb-9">
+    <div className="py-20  justify-between items-center h-max mx-auto px-5 mt-5 mb-9">
       <div className="space-x-4">
         <Button
           onClick={() => handleButtonClick("Beliefsat-1")}

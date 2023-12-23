@@ -1,25 +1,56 @@
-import React from 'react'
-import gs from "../assets/gs.jpg"
+import React, { useState } from "react";
+import gs from "../assets/gs.jpg";
+import { getProject } from "../helper/helper";
+import { useEffect } from "react";
+import Button from "./Button";
 
-function Projectscontent({label}) {
+function Projectscontent({ label }) {
+  console.log(label);
+  const [data, setData] = useState({});
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await getProject({ projname: label });
+        console.log(result.data);
+
+        setData(result.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, [label]);
+
+  const redirectTo = ({link}) => {
+    window.location.href = link; // Replace with your YouTube URL
+  };
+
   return (
     <div>
-      <div className="img h-max">
-      <div className="mainimg h-[70vh] overflow-hidden  rounded-3xl ">
-            <img
-              src={gs}
-              className="w-full  transform hover:scale-110 transition-transform duration-300 ease-in-out"
-              alt="gs"
-              srcset=""
-            />
-          </div>
-      </div>
-
       <div className="text m-5">
-        <p className="text-3xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, ut eveniet in molestias nesciunt magni quia aperiam voluptatem, iste voluptate similique quidem totam beatae maiores ab ullam dolorum alias deleniti illum nobis reiciendis! Nobis inventore molestias autem? Asperiores possimus corrupti ratione itaque tenetur porro exercitationem, cumque natus et debitis nesciunt quidem! Voluptatem, a ipsam nihil, perspiciatis quia repellat facilis voluptatibus, quae fugit iste consectetur qui sunt incidunt numquam corporis.</p>
+        <p className="text-3xl">{data.about}</p>
+      </div>
+      <div className="flex flex-row m-2">
+      {data.link1 && (
+        <Button
+          onClick={() => redirectTo(data.link1)}
+          label="Link 1"
+          type="button"
+          isActive={true}
+        />
+      )}
+      {data.link2 && (
+        <Button
+          onClick={() => redirectTo(data.link2)}
+          label="Link 2"
+          type="button"
+          isActive={true}
+        />
+      )}
       </div>
     </div>
-  )
+  );
 }
 
-export default Projectscontent
+export default Projectscontent;
