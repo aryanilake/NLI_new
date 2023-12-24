@@ -24,7 +24,6 @@ export default function Createmember() {
     fname: "",
     lname: "",
     email: "",
-    contact: "",
     yearleft: 0,
     active: "",
     project1: "",
@@ -37,17 +36,13 @@ export default function Createmember() {
     profile:""
   };
 
-  const phoneRegExp =
-    /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
+  
 
   const checkoutSchema = yup.object().shape({
     fname: yup.string().required("required"),
     lname: yup.string().required("required"),
     email: yup.string().email("invalid email").required("required"),
-    contact: yup
-      .string()
-      .matches(phoneRegExp, "Phone number is not valid")
-      .required("required"),
+
     yearleft: yup.number().test({
       name: 'maxYear',
       exclusive: true,
@@ -85,14 +80,14 @@ export default function Createmember() {
   const handleFormSubmit = async (values) => {
     values.profile = file;
 
-    // console.log(values.profile);
+    console.log(values.profile);
     
     createMember(values)
     .then(() => {
         alert("Member added successfully");
     })
     .catch(({ error }) => {
-        alert('Error occured');
+        alert('Error occured' + error);
     });
   };
 
@@ -177,19 +172,7 @@ export default function Createmember() {
                 helperText={touched.email && errors.email}
                 sx={{ gridColumn: "span 2" }}
               />
-              <TextField
-                fullWidth
-                variant="filled"
-                type="text"
-                label="Contact"
-                onBlur={handleBlur}
-                onChange={handleChange}
-                value={values.contact}
-                name="contact"
-                error={!!touched.contact && !!errors.contact}
-                helperText={touched.contact && errors.contact}
-                sx={{ gridColumn: "span 2" }}
-              />
+        
               <TextField
                 fullWidth
                 variant="filled"

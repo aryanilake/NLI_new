@@ -38,7 +38,7 @@ export default function Createproject() {
 
     createProject(values)
       .then(() => {
-        alert("Member added successfully");
+        alert("Project added successfully");
       })
       .catch(({ error }) => {
         alert("Error occured" + error);
@@ -117,30 +117,33 @@ export default function Createproject() {
                 helperText={touched.about && errors.about}
                 sx={{ gridColumn: "span 4" }}
               />
-              <TextField
+             <TextField
                 fullWidth
                 variant="filled"
                 type="text"
-                label="Links"
+                label="Link1"
                 onBlur={handleBlur}
                 onChange={handleChange}
-                value={(values.link1)}
-                name="links"
+                value={values.link1}
+                name="link1"
                 error={!!touched.link1 && !!errors.link1}
                 helperText={touched.link1 && errors.link1}
+                sx={{ gridColumn: "span 2" }}
               />
-              <TextField
+             <TextField
                 fullWidth
                 variant="filled"
                 type="text"
-                label="Links"
+                label="Link2"
                 onBlur={handleBlur}
                 onChange={handleChange}
-                value={(values.link2)}
-                name="links"
+                value={values.link2}
+                name="link2"
                 error={!!touched.link2 && !!errors.link2}
                 helperText={touched.link2 && errors.link2}
+                sx={{ gridColumn: "span 2" }}
               />
+           
             </Box>
 
             <Box display="flex" justifyContent="end" mt="20px">

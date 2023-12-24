@@ -25,7 +25,7 @@ const NewPage = () => {
         <div className="mainc pt-2 flex flex-row">
           <div className="leftmain w-[50%]">
             <div className="imgc w-[80%] overflow-hidden flex justify-center items-center flex-col">
-              <img className="rounded-lg h-[50vh] " src={gs} alt="" srcset="" />
+              <img className="rounded-lg h-[50vh] " src={location.state.profile} alt="" srcset="" />
               <h2 className="mt-2 flex justify-center items-center text-3xl">
               {location.state.fname} {location.state.lname}
               </h2>
@@ -51,15 +51,14 @@ const NewPage = () => {
                   </svg>
                 </a>
               </button>
-              <div className="hello"><span>{location.state.email} </span></div>
 
             </div>
           </div>
           <div className="righftmain w-[50%]">
             <div className="details">
               <ol className="flex  flex-row">
-                <li className="m-2 text-2xl">{location.state.YearLeft}</li>
                 <li className="m-2 text-2xl">{location.state.Domain}</li>
+                <li className="m-2 text-2xl">{location.state.email}</li>
               </ol>
             </div>
             <div className="m-2 about">
