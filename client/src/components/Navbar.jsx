@@ -16,7 +16,7 @@ const Navbar = ({bgcolor , textColor}) => {
     <div className=" w-full z-20 fixed top-0 left-0 right-0 font-poppins flex justify-between items-center h-20  mx-auto px-6  text-black" style={{backgroundColor: bgcolor , color:textColor , transition: "0.3 ease-in-out"}  }>
       <div className="flex  justify-between items-center ">
         <img src={logo} className="h-12 w-auto rounded-full border border-black"></img>
-        <h1 className="font-[poppins] ml-2 text-3xl font-bold">NLL</h1>
+        {/* <h1 className="font-[poppins] ml-2 text-3xl font-bold">NLL</h1> */}
       </div>
 
       <ul className="font-[poppins] hidden md:flex space-x-4">
