@@ -94,3 +94,95 @@ export const day2 = [
     id : 8
  }
   ];
+export const day3 = [
+   {
+      sss :  33 ,
+      reset :  0 ,
+      wd_lsb :  255 ,
+      wd_msb :  255 ,
+      temp1 :  36.21 ,
+      temp2 :  36.21 ,
+      packet_no :  20 ,
+      id : 1
+   },
+   {
+      sss :  34 ,
+      reset :  0 ,
+      wd_lsb :  255 ,
+      wd_msb :  255 ,
+      temp1 :  35.61 ,
+      temp2 :  35.61 ,
+      packet_no :  5 ,
+      id : 2
+   },
+   {
+      sss :  39 ,
+      reset :  0 ,
+      wd_lsb :  255 ,
+      wd_msb :  255 ,
+      temp1 :  35.81 ,
+      temp2 :  35.81 ,
+      packet_no :  8 ,
+      id : 3
+   },
+   {
+      sss :  39 ,
+      reset :  0 ,
+      wd_lsb :  255 ,
+      wd_msb :  255 ,
+      temp1 :  36.11 ,
+      temp2 :  36.11 ,
+      packet_no :  11 ,
+      id : 4
+   },
+   {
+      sss :  39 ,
+      reset :  0 ,
+      wd_lsb :  255 ,
+      wd_msb :  255 ,
+      temp1 :  36.21 ,
+      temp2 :  36.31 ,
+      packet_no :  12 ,
+      id : 5
+   },
+   {
+      sss :  39 ,
+      reset :  0 ,
+      wd_lsb :  255 ,
+      wd_msb :  255 ,
+      temp1 :  36.31 ,
+      temp2 :  36.31 ,
+      packet_no :  3 ,
+      id : 6
+   },
+   {
+      sss :  39 ,
+      reset :  0 ,
+      wd_lsb :  255 ,
+      wd_msb :  255 ,
+      temp1 :  36.31 ,
+      temp2 :  36.31 ,
+      packet_no :  14 ,
+      id : 7
+   },
+   {
+      sss :  39 ,
+      reset :  0 ,
+      wd_lsb :  255 ,
+      wd_msb :  255 ,
+      temp1 :  36.31 ,
+      temp2 :  36.31 ,
+      packet_no :  15 ,
+      id : 8
+   },
+   {
+      sss :  39 ,
+      reset :  0 ,
+      wd_lsb :  255 ,
+      wd_msb :  255 ,
+      temp1 :  36.41 ,
+      temp2 :  36.41 ,
+      packet_no :  16 ,
+      id : 9
+   }
+  ];

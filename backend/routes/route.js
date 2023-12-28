@@ -12,6 +12,8 @@ router.route('/getallprojects').get(controller.getAllprojects)
 router.route('/member/:email').get(controller.getMember)
 router.route('/project/:projname').get(controller.getProject)
 
+// edit
+
 
 
 export default router

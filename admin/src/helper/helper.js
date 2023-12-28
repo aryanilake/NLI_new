@@ -35,8 +35,6 @@ export  async function getAllprojects(){
     }
 }
 
-
-
 // adding members and project
 
 export async function createMember(credentials){

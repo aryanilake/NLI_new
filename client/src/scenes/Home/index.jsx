@@ -11,10 +11,17 @@ import hero from "../../assets/hero.webp";
 import Headers from "../../components/Headers";
 import CardsDomain from "../../components/CardsDomain";
 import Foundercard from "../../components/Foundercard";
-import Footer from "../../components/Footer";
 import belifsat from "../../assets/belifsat.jpg";
 import beliefsat1 from "../../assets/beliefsat1.jpg";
-import avruti from "../../assets/avruti.webp";
+import avruti from "../../assets/avruti.jpg"
+import software from "../../assets/software.png"
+import embedded from "../../assets/embedded.jpg"
+import hardware from "../../assets/hardware.jpg"
+import structure from "../../assets/structure.jpg"
+import data from "../../assets/data.jpg"
+import document from "../../assets/document.webp"
+
+import radio from "../../assets/radio.webp"
 import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import Navbar from "../../components/Navbar";
@@ -36,23 +43,20 @@ function Home() {
     };
 
     ScrollTrigger.create({
-      trigger: ".start", // Replace with the appropriate trigger element
-      start: "top center", // Trigger when the top of the trigger element hits the top of the viewport
-      end: "bottom bottom", // Trigger when the bottom of the trigger element hits the top of the viewport
+      trigger: ".start", 
+      start: "top center", 
+      end: "bottom bottom",
       onUpdate: (self) => {
-        // Using onUpdate to continuously update the animation during scrolling
         const progress = self.progress.toFixed(3);
         console.log(progress);
 
         if (progress > 0 && progress < 1) {
-          // Change background color only when scrolling forward
           const backgroundColor = "#000000";
           const textColor = "#d1d1d7";
           changeBackgroundColor(backgroundColor, textColor);
           setNavbg("#000000");
           setNavtext("#d1d1d7");
         } else {
-          // Change back to transparent when scrolling backward or at the end
           const backgroundColor = "transparent";
           const textColor = "#000000";
           changeBackgroundColor(backgroundColor, textColor);
@@ -147,9 +151,8 @@ function Home() {
         <main className="start h-max mb-10 px-5 md:px-10 xl:px-20 2xl:px-28 ">
           <section className="about select-none flex my-20 md:my-[12%] py-10 flex-col items-center justify-center overflow-hidden ">
             <div className=" flex w-full items-center space-x-20">
-              <h1 className=" text-heading-1 text-[5rem]   leading-[1.25em] md:leading-[1.08em]">
-                We create elevating digital experiences that inspire and connect
-                with people through development and design.
+              <h1 className=" text-heading-1 text-[4rem]   leading-[1.25em] md:leading-[1.08em]">
+                We fosters innovation by inspiring students in satellite technology, contributing prestigious awards, and advancing indigenous nano-satellite development for societal impact.
               </h1>
             </div>
           </section>
@@ -238,43 +241,44 @@ function Home() {
               {/* First Row */}
               <div className="flex justify-center">
                 <CardsDomain
-                  imageUrl={hero}
+                  imageUrl={software}
                   title="Software"
-                  description="Hey! I am Subhadip software member"
+                  description="Software domain involves designing, developing, and maintaining applications and systems for diverse purposes."
                 />
                 <CardsDomain
-                  imageUrl={hero}
+                  imageUrl={embedded}
                   title="Embedded"
-                  description="hjshjs"
+                  description="Embedded domain involves designing computer systems for specific functions, integrating hardware and software for efficiency."
                 />
                 <CardsDomain
-                  imageUrl={hero}
+                  imageUrl={radio}
                   title="Radio Frequency"
-                  description="hjshjs"
+                  description="Radio frequency domain involves electromagnetic waves for wireless communication, spanning from 3 kHz to 300 GHz."
                 />
                 <CardsDomain
-                  imageUrl={hero}
-                  title="Radio Frequency"
-                  description="hjshjs"
+                  imageUrl={hardware}
+                  title="Hardware"
+                  description="Hardware domain involves designing, building, and maintaining physical computer components, including processors, memory, and peripherals."
                 />
               </div>
 
               {/* Second Row */}
               <div className="flex justify-center">
                 <CardsDomain
-                  imageUrl={hero}
-                  title="Radio Frequency"
-                  description="hjshjs"
+                  imageUrl={data}
+                  title="Data Science"
+                  description="Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making."
                 />
                 <CardsDomain
-                  imageUrl={hero}
-                  title="Radio Frequency"
-                  description="hjshjs"
+                  imageUrl={structure}
+                  title="Structure Design"
+                  description="PCB design involves creating circuit layouts on boards for electronic devices, optimizing connectivity and functionality."
                 />
                 <CardsDomain
-                  imageUrl={hero}
-                  title="Radio Frequency"
-                  description="hjshjs"
+                  imageUrl={document}
+                  title="Non-technical"
+                  description="This domain involves communication, process management, and user-focused content creation for clarity and efficiency.
+                  "
                 />
               </div>
             </div>
@@ -286,13 +290,14 @@ function Home() {
           <section>
             <Headers title="Founders" />
             <div className="flex justify-center">
-              <Foundercard imageUrl={hero} title="Subhadip Samanta" />
-              <Foundercard imageUrl={hero} title="Subhadip Samanta" />
-              <Foundercard imageUrl={hero} title="Subhadip Samanta" />
+              <Foundercard imageUrl={hero} title="Rohit Bokade" />
+              <Foundercard imageUrl={hero} title="Supriya Bhide" />
+              <Foundercard imageUrl={hero} title="Umesh Shinde" />
             </div>
           </section>
 
           <div className="Testimonials mb-10 ">
+          <Headers title="Testimonials" />
             <Swiper
               modules={[Navigation, Pagination]}
               spaceBetween={30}

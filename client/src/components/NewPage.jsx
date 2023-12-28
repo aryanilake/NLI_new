@@ -62,7 +62,7 @@ const NewPage = () => {
               </ol>
             </div>
             <div className="m-2 about">
-              <h2 className=" text-2xl">About</h2>
+              <h2 className=" text-2xl ">About</h2>
               <span className="h-max">{location.state.About}</span>
             </div>
             <div className="details">

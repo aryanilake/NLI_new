@@ -4,7 +4,7 @@ import gs from "../../assets/gs.jpg";
 import Headers from "../../components/Headers";
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
-import { day1, day2,columns  } from "../../helper/gsdata"; // Import rows for Day 1
+import { day1, day2,day3, columns } from "../../helper/gsdata"; // Import rows for Day 1
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 
@@ -63,29 +63,34 @@ function GroundStation() {
               </Box>
             ) : selectedDay === 2 ? (
               <Box
-              sx={{
-                border: "1px solid black",
-                borderRadius: "5px",
-                marginTop: "10px",
-              }}
-            >
-              <DataGrid
-                rows={day2}
-                columns={columns}
-                pageSize={6}
-                checkboxSelection
-                disableRowSelectionOnClick
-              />
-            </Box>
+                sx={{
+                  border: "1px solid black",
+                  borderRadius: "5px",
+                  marginTop: "10px",
+                }}
+              >
+                <DataGrid
+                  rows={day2}
+                  columns={columns}
+                  pageSize={6}
+                  checkboxSelection
+                  disableRowSelectionOnClick
+                />
+              </Box>
             ) : (
               <Box
-              sx={{
-                display:"flex",
-                justifyContent:"center"
-              }}
-              
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
               >
-                <p>Connecting to satellite.... Stay tuned!</p>
+                <DataGrid
+                  rows={day3}
+                  columns={columns}
+                  pageSize={6}
+                  checkboxSelection
+                  disableRowSelectionOnClick
+                />
               </Box>
             )}
           </div>

@@ -1,11 +1,36 @@
 // Teams.js
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../components/Button";
 import Navbar from "../../components/Navbar";
 import Projectscontent from "../../components/Projectscontent";
 
 function Projects() {
   const [selectedLabel, setSelectedLabel] = useState("Beliefsat-0");
+  const [isDatabaseConnected, setDatabaseConnected] = useState(false);
+  
+  useEffect(() => {
+    // Replace the URL with the actual endpoint you want to check
+    const serverCheckUrl = "http://localhost:8080";
+
+    const checkServerConnection = async () => {
+      try {
+        const response = await fetch(serverCheckUrl);
+
+        // Check if the response status is in the 2xx range (success)
+        if (response.ok) {
+          setDatabaseConnected(true);
+        } else {
+          setDatabaseConnected(false);
+        }
+      } catch (error) {
+        console.error("Error checking server connection:", error);
+        setDatabaseConnected(false);
+      }
+    };
+
+    // Call the function to check server connection
+    checkServerConnection();
+  }, []);
 
   const handleButtonClick = (label) => {
     setSelectedLabel(label);
@@ -40,7 +65,7 @@ function Projects() {
             type="button"
             isActive={selectedLabel === "UASS" ? true : false}
           />
-                 <Button
+          <Button
             onClick={() => handleButtonClick("Somaiya-Pod")}
             label="Somaiya-Pod"
             type="button"
@@ -54,7 +79,11 @@ function Projects() {
           />
         </div>
         <div className="results m-4">
-          {selectedLabel && <Projectscontent label={selectedLabel} />}
+          {isDatabaseConnected ? (
+            selectedLabel && <Projectscontent label={selectedLabel} />
+          ) : (
+            <p>Unable to connect to the server.</p>
+          )}
         </div>
       </div>
     </>
