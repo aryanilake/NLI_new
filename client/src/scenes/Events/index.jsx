@@ -27,18 +27,15 @@ function Events() {
           <source src={spacebg} type="video/mp4" />
         </video>
 
-        {/* Dark Overlay */}
         <div
           className="absolute top-0 left-0 w-full h-full bg-black opacity-50"
           style={{ mixBlendMode: "multiply" }}
         ></div>
 
-        {/* Content */}
         <div className="relative flex flex-col items-center justify-center h-full text-white">
           <h1 className="text-4xl font-bold mb-4">We are launching</h1>
           <p className="text-xl mb-8">By ISRO PSLV</p>
 
-          {/* Countdown */}
           <Countdown
             date={new Date("2024-01-01T00:00:00")}
             renderer={({ days, hours, minutes, seconds }) => (
