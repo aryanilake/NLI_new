@@ -59,7 +59,7 @@ function Events() {
 
                 {/* The Countdown component */}
                 <Countdown
-                  date={new Date("2023-12-28T17:24:00")}
+                  date={new Date("2024-01-01T00:00:00")}
                   renderer={({ days, hours, minutes, seconds }) => (
                     <div className="text-2xl">
                       {days}d {hours}h {minutes}m {seconds}s
