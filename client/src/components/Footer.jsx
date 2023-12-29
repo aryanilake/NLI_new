@@ -20,7 +20,7 @@ function Footer() {
             Ayurvihar Complex, Eastern Express Highway East, Near Everard Nagar, 400022, Sion
           </p>
           <p className="mt-2 font-bold text-sm">
-            subhadip@somaiya.edu . 8976044011
+            nli@somaiya.edu . 7391056286
           </p>
         </div>
         <div className="flex space-x-4">
@@ -33,7 +33,6 @@ function Footer() {
       <div className="bg-black text-white py-4 font-[poppins]">
         <div className="text-center flex justify-between items-center px-6 ">
           <span className="text-sm">All rights reserved</span>
-          <span className="text-sm">Made By Subh</span>
           <BackToTopButton/>
         </div>
       </div>

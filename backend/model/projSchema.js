@@ -6,13 +6,6 @@ const projSchema = mongoose.Schema({
     required: true,
     unique: true,
   },
- 
-
-  dateStarted:{
-    type:Date,
-    required: true
-  },
-
   active:{
     type:Boolean,
     required:true
@@ -23,9 +16,11 @@ const projSchema = mongoose.Schema({
     required: true,
   },
 
-  projimg:{
-    type:String,
-    required:true
+  link1: {
+    type: String,
+  },
+  link2: {
+    type: String,
   },
 
   

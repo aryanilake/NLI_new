@@ -2,13 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
-    .font-outline-8 {
-      -webkit-text-stroke: 8px rgb(202, 44, 44);
-    }
-    .font-outline-4 {
-      -webkit-text-stroke: 4px rgb(202, 44, 44);;
-    }
+  .font-outline-8 {
+    -webkit-text-stroke: 8px rgb(202, 44, 44);
   }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px rgb(202, 44, 44);
+  }
+  .reduced-letter-spacing {
+    letter-spacing: -2px;
+  }
+}
+
+@font-face {
+  font-family: Generalsans;
+  src: url("client/public/GeneralSans-Regular.otf") format("otf");
+}
+
+body {
+  font-family: "Generalsans", sans-serif;
+}

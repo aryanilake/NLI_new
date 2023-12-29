@@ -1,5 +1,5 @@
 import { Box, Input } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import Headers from "../../components/Headers";
 import { Button, TextField } from "@mui/material";
 import { Formik } from "formik";
@@ -7,6 +7,7 @@ import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { tokens } from "../../theme";
 import { useTheme } from "@emotion/react";
+import { createProject } from "../../helper/helper";
 
 export default function Createproject() {
   const theme = useTheme();
@@ -14,27 +15,34 @@ export default function Createproject() {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
   const initialValues = {
-    projName: "",
-    datejoined: "2/3/5555",
+    projname: "",
     active: "",
-    projimage: null,
-    para1: "",
+    link1: "",
+    link2: "",
+    about: "",
   };
 
   const checkoutSchema = yup.object().shape({
-    projName: yup.string().required("required"),
+    projname: yup.string().required("required"),
 
-    datejoined: yup.date().required("required"),
     active: yup
       .bool()
       .oneOf([true, false])
       .required("Please enter True of False"),
 
-    para1: yup.string().required("required"),
+    about: yup.string().required("required"),
   });
 
-  const handleFormSubmit = (values) => {
+  const handleFormSubmit = async (values) => {
     console.log(values);
+
+    createProject(values)
+      .then(() => {
+        alert("Project added successfully");
+      })
+      .catch(({ error }) => {
+        alert("Error occured" + error);
+      });
   };
 
   return (
@@ -55,7 +63,6 @@ export default function Createproject() {
           handleBlur,
           handleChange,
           handleSubmit,
-          setFieldValue,
         }) => (
           <form onSubmit={handleSubmit}>
             <Box
@@ -76,14 +83,13 @@ export default function Createproject() {
                 label="Project Name"
                 onBlur={handleBlur}
                 onChange={handleChange}
-                value={values.projName}
-                name="projName"
-                error={!!touched.projName && !!errors.projName}
-                helperText={touched.projName && errors.projName}
+                value={values.projname}
+                name="projname"
+                error={!!touched.projname && !!errors.projname}
+                helperText={touched.projname && errors.projname}
                 sx={{ gridColumn: "span 2" }}
               />
 
-     
               <TextField
                 fullWidth
                 variant="filled"
@@ -97,21 +103,7 @@ export default function Createproject() {
                 helperText={touched.active && errors.active}
                 sx={{ gridColumn: "span 2" }}
               />
-              <TextField
-                fullWidth
-                variant="filled"
-                type="date"
-                label="Date joined"
-                onBlur={handleBlur}
-                onChange={handleChange}
-                value={values.datejoined}
-                name="datejoined"
-                error={!!touched.datejoined && !!errors.datejoined}
-                helperText={touched.datejoined && errors.datejoined}
-                sx={{ gridColumn: "span 2" }}
-              />
-    
-     
+
               <TextField
                 fullWidth
                 variant="filled"
@@ -119,24 +111,41 @@ export default function Createproject() {
                 label="About"
                 onBlur={handleBlur}
                 onChange={handleChange}
-                value={values.para1}
-                name="para1"
-                error={!!touched.para1 && !!errors.para1}
-                helperText={touched.para1 && errors.para1}
+                value={values.about}
+                name="about"
+                error={!!touched.about && !!errors.about}
+                helperText={touched.about && errors.about}
                 sx={{ gridColumn: "span 4" }}
               />
-              <Input
+             <TextField
                 fullWidth
-                type="file"
-                label="Profile image"
-                onChange={(event) =>
-                  setFieldValue("projimage", event.currentTarget.files[0])
-                }
+                variant="filled"
+                type="text"
+                label="Link1"
                 onBlur={handleBlur}
-                error={!!touched.projimage && !!errors.projimage}
-                sx={{ gridColumn: "span 4" }}
+                onChange={handleChange}
+                value={values.link1}
+                name="link1"
+                error={!!touched.link1 && !!errors.link1}
+                helperText={touched.link1 && errors.link1}
+                sx={{ gridColumn: "span 2" }}
               />
+             <TextField
+                fullWidth
+                variant="filled"
+                type="text"
+                label="Link2"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.link2}
+                name="link2"
+                error={!!touched.link2 && !!errors.link2}
+                helperText={touched.link2 && errors.link2}
+                sx={{ gridColumn: "span 2" }}
+              />
+           
             </Box>
+
             <Box display="flex" justifyContent="end" mt="20px">
               <Button type="submit" color="secondary" variant="contained">
                 Create New Project

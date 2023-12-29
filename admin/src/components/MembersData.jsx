@@ -21,7 +21,7 @@ const columns = [
   {
     field: 'YearLeft',
     headerName: 'Year Left',
-    width: 150,
+    width: 110,
     editable: false,
   },
   {

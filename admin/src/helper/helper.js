@@ -25,22 +25,32 @@ export  async function getAllmembers(){
         return {error:"Can't fetched data"}
     }
 }
-
-export  async function getProject({projname}){
+export  async function getAllprojects(){
     try {
-        const {data} =   await axios.get(`/api/project/${projname}`);
+        const {data} = await axios.get(`/api/getallprojects`);
+
         return {data};
     } catch (error) {
-        return {error:"Project doesn't exists"}
+        return {error:"Can't fetched data"}
     }
 }
-
 
 // adding members and project
 
 export async function createMember(credentials){
     try {
         const { data : { msg }, status } = await axios.post('/api/createmember', credentials);
+
+        return Promise.resolve(msg , status)
+    } catch (error) {
+        return Promise.reject({ error })
+    }
+}
+
+
+export async function createProject(credentials){
+    try {
+        const { data : { msg }, status } = await axios.post('/api/createproject', credentials);
 
         return Promise.resolve(msg , status)
     } catch (error) {
