@@ -47,10 +47,9 @@ function Events() {
             {showConfetti ? (
               <>
                
-                <h1 className="text-7xl">BeliefSat-0 has been launched !!!</h1>
-                <div>
-                        <img src="https://media.tenor.com/Enn7lYXb5FoAAAAi/rocket-spaceship.gif" alt="Blended GIF" class="w-full"/>
-                    </div>
+             
+                <h1 className="text-5xl">BeliefSat-0 has been launched !!!</h1>
+
 
               </>
             ) : (
@@ -60,7 +59,7 @@ function Events() {
                 <p className="text-xl mb-8"> From ISRO'S PSLV C-58 mission</p>
 
                 <Countdown
-                  date={new Date("2024-01-01T00:00:00")}
+                  date={new Date("2024-01-01T10:00:00")}
                   renderer={({ days, hours, minutes, seconds }) => (
                     <div className="text-2xl flex flex-row ">
                      <span className="bg-white border-slate-black text-black mx-2 p-2 border-4 border-t-teal-400 rounded-md    flex flex-col items-center justify-center "><b>{days}</b><i className="text-xs">days</i> </span>
