@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: client-nll-frontend
+    image: client-nll
+    build:
+      context: .
+    ports:
+        - 80:80
+    environment:
+        VITE_SERVER_DOMAIN: 'http://localhost:8080'

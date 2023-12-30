@@ -15,7 +15,7 @@ function Teams() {
   return (
     <>
       <Navbar bgcolor="#fafaf9" textColor="#000000" />
-      <div className="py-20 font-poppins justify-between items-center h-screen mx-auto px-5 mt-5 mb-9">
+      <div className="py-20 font-poppins justify-between items-center h-max mx-auto px-5 mt-5 ">
         <div className="space-x-4">
           <Button
             onClick={() => handleButtonClick("Beliefsat-0")}
@@ -55,7 +55,7 @@ function Teams() {
           />
         
         </div>
-        <div className="results m-4">
+        <div className="results m-4 ">
           {selectedLabel && <CardSlider label={selectedLabel} />}
         </div>
       </div>

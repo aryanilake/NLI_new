@@ -1,0 +1,12 @@
+version: '3.8'  #specifies docker compose version
+services:
+  web:
+    container_name: backend-nll
+    image: backend-nll
+    build:
+      context: .
+    ports:
+      - "80:80"
+    environment:
+      USER_ENV: subhadip
+      USER_PASSWORD: subhadip

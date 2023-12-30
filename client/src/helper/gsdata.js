@@ -1,10 +1,10 @@
 export const columns = [
-  { field: "id", headerName: "ID", type: "number", width: 90 },
-  { field: "sss", headerName: "SSS", width: 90 },
-  { field: "reset", headerName: "Reset", width: 160, sortable: false },
-  { field: "wd_lsb", headerName: "WD_LSB", width: 150, editable: false },
-  { field: "wd_msb", headerName: "WD_MSB", width: 150, editable: false },
-  { field: "temp1", headerName: "Temp1", width: 150, editable: false },
+//   { field: "id", headerName: "ID", type: "number", width: 90 },
+  { field: "sss", headerName: "SSS", width: 180 },
+  { field: "reset", headerName: "Reset", width: 180, sortable: false },
+  { field: "wd_lsb", headerName: "WD_LSB", width: 180, editable: false },
+  { field: "wd_msb", headerName: "WD_MSB", width: 180, editable: false },
+  { field: "temp1", headerName: "Temp1", width: 180, editable: false },
   { field: "temp2", headerName: "Temp2", width: 150, editable: false },
   { field: "packet_no", headerName: "Packet No", width: 150, editable: false },
 ];

@@ -4,7 +4,7 @@ import gs from "../../assets/gs.jpg";
 import Headers from "../../components/Headers";
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
-import { day1, day2,day3, columns } from "../../helper/gsdata"; // Import rows for Day 1
+import { day1, day2, day3, columns } from "../../helper/gsdata"; // Import rows for Day 1
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 
@@ -57,8 +57,8 @@ function GroundStation() {
                   rows={day1}
                   columns={columns}
                   pageSize={6}
-                  checkboxSelection
-                  disableRowSelectionOnClick
+                  // checkboxSelection
+                  // disableRowSelectionOnClick
                 />
               </Box>
             ) : selectedDay === 2 ? (
@@ -69,13 +69,7 @@ function GroundStation() {
                   marginTop: "10px",
                 }}
               >
-                <DataGrid
-                  rows={day2}
-                  columns={columns}
-                  pageSize={6}
-                  checkboxSelection
-                  disableRowSelectionOnClick
-                />
+                <DataGrid rows={day2} columns={columns} pageSize={6} />
               </Box>
             ) : (
               <Box
@@ -84,13 +78,7 @@ function GroundStation() {
                   justifyContent: "center",
                 }}
               >
-                <DataGrid
-                  rows={day3}
-                  columns={columns}
-                  pageSize={6}
-                  checkboxSelection
-                  disableRowSelectionOnClick
-                />
+                <DataGrid rows={day3} columns={columns} pageSize={6} />
               </Box>
             )}
           </div>

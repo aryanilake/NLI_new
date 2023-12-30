@@ -62,7 +62,7 @@ const CardSlider = ({ label }) => {
   console.log(images);
 
   return (
-    <div className="flex flex-col items-center mb-10">
+    <div className="flex flex-col items-center mb-10 h-max">
       <div className="mb-4">
         <Pagination
           currentPage={currentPage}
@@ -91,7 +91,7 @@ const CardSlider = ({ label }) => {
                 </span>
               </div>
               <div className="name">
-                <h1 className="ml-2 text-3xl font-[Poppins] text-white">
+                <h1 className="ml-2 text-2xl font-[Poppins] text-white">
                   {image.fname} {image.lname}
                 </h1>
               </div>

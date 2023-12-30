@@ -14,6 +14,14 @@ import Diversity3OutlinedIcon from "@mui/icons-material/Diversity3Outlined";
 export default function Dashboard() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
+  const handleButtonClick = (route) => {
+    window.location.href = route;
+  };
+
+ 
+
+
   return (
     <Box m="20px" overflow="scroll">
       <Box display="flex" justifyContent="space-between" alignItems="center">
@@ -104,8 +112,7 @@ export default function Dashboard() {
             fontWeight: "bold",
             padding: "10px 20px",
           }}
-          onClick={() => window.open("/createmember", "_blank")}
-        >
+          onClick={() => handleButtonClick("/createmember")}        >
           <DownloadOutlined sx={{ mr: "10px" }} />
           Add Members
         </Button>

@@ -14,6 +14,10 @@ import ProjectsData from "../../components/ProjectsData";
 export default function Projects() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
+  const handleButtonClick = (route) => {
+    window.location.href = route;
+  };
   return (
     <Box m="20px" overflow="scroll">
       <Box display="flex" justifyContent="space-between" alignItems="center">
@@ -104,8 +108,9 @@ export default function Projects() {
             fontWeight: "bold",
             padding: "10px 20px",
           }}
-          onClick={() => window.open("/createproject", "_blank")}
-        >
+          onClick={() => handleButtonClick("/createproject")}        
+          >
+        
           <DownloadOutlined sx={{ mr: "10px" }} />
           Add Projects
         </Button>
