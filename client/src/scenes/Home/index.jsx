@@ -292,7 +292,6 @@ function Home() {
             <div className="flex justify-center">
               <Foundercard imageUrl={hero} title="Rohit Bokade" />
               <Foundercard imageUrl={hero} title="Supriya Bhide" />
-              <Foundercard imageUrl={hero} title="Umesh Shinde" />
             </div>
           </section>
 
