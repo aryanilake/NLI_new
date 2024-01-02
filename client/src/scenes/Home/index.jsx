@@ -20,6 +20,8 @@ import hardware from "../../assets/hardware.jpg"
 import structure from "../../assets/structure.jpg"
 import data from "../../assets/data.jpg"
 import document from "../../assets/document.webp"
+import rohit from "../../assets/rohit.jpg"
+import supriya from "../../assets/supriya.jpg"
 
 import radio from "../../assets/radio.webp"
 import gsap from "gsap";
@@ -290,12 +292,12 @@ function Home() {
           <section>
             <Headers title="Founders" />
             <div className="flex justify-center">
-              <Foundercard imageUrl={hero} title="Rohit Bokade" />
-              <Foundercard imageUrl={hero} title="Supriya Bhide" />
+              <Foundercard imageUrl={rohit} title="Rohit Bokade" />
+              <Foundercard imageUrl={supriya} title="Supriya Bhide" />
             </div>
           </section>
 
-          <div className="Testimonials mb-10 ">
+          {/* <div className="Testimonials mb-10 ">
           <Headers title="Testimonials" />
             <Swiper
               modules={[Navigation, Pagination]}
@@ -327,7 +329,7 @@ function Home() {
               </SwiperSlide>
           
             </Swiper>
-          </div>
+          </div> */}
         </main>
 
       </div>
