@@ -110,6 +110,7 @@ const CardSlider = ({ label }) => {
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
+                      
                       viewBox="0 0 19 18"
                       className="w-6 h-6"
                       fill="rgb(149, 157, 165)"

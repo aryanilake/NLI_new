@@ -79,11 +79,8 @@ function Projects() {
           />
         </div>
         <div className="results m-4">
-          {isDatabaseConnected ? (
-            selectedLabel && <Projectscontent label={selectedLabel} />
-          ) : (
-            <p>Unable to connect to the server.</p>
-          )}
+          
+          {selectedLabel && <Projectscontent label={selectedLabel} />}
         </div>
       </div>
     </>

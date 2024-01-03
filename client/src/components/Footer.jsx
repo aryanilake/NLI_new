@@ -11,7 +11,7 @@ function Footer() {
   return (
     <div className="text-black font-poppins ">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8">
-        <div className="text-center lg:text-left mb-4 lg:mb-0">
+        <div className="text-center  lg:text-left mb-4 lg:mb-0">
           <img className="rounded mb-6" src={kjsit} alt="KJSIT Logo" />
           <span className="text-lg font-semibold">
             KJ SOMAIYA INSTITIUTE OF TECHNOLOGY
