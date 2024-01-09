@@ -29,7 +29,7 @@ function Projectscontent({ label }) {
   return (
     <div>
       <div className="text m-5">
-        <p className="text-3xl">{data.about}</p>
+        <p className="text-1xl">{data.about}</p>
       </div>
       <div className="flex flex-row m-2">
       {data.link1 && (
