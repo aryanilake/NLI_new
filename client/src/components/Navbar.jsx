@@ -63,22 +63,33 @@ const Navbar = ({bgcolor , textColor}) => {
       >
         <h1 className="ml-2 text-3xl mt-9 font-bold">New Leap Labs</h1>
         <ul className="pt-24">
+        <Link to="/" className="block">
           <li className="p-4 relative group">
             Home
             <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
           </li>
+          </Link>
+
+          <Link to="/teams" className="block">
           <li className="p-4 relative group">
             Teams
             <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
           </li>
+          </Link>
+
+          <Link to="/projects" className="block">
           <li className="p-4 relative group">
             Projects
             <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
           </li>
+          </Link>
+
+          <Link to="/groundstation" className="block">
           <li className="p-4 relative group">
             GroundStation
             <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
           </li>
+          </Link>
         </ul>
       </div>
     </div>

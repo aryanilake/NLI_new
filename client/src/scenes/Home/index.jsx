@@ -10,13 +10,14 @@ import TestimonialCard from "../../components/TestimonialCard";
 import hero from "../../assets/hero.webp";
 import Headers from "../../components/Headers";
 import CardsDomain from "../../components/CardsDomain";
+import Cd from "../../components/Cd";
 import Foundercard from "../../components/Foundercard";
 import belifsat from "../../assets/belifsat.jpg";
 import beliefsat1 from "../../assets/beliefsat1.jpg";
 import avruti from "../../assets/avruti.jpg"
 import software from "../../assets/software.png"
 import embedded from "../../assets/embedded.jpg"
-import hardware from "../../assets/hardware.jpg"
+import pcb from "../../assets/pcb.jpg"
 import structure from "../../assets/structure.jpg"
 import data from "../../assets/data.jpg"
 import document from "../../assets/document.webp"
@@ -69,6 +70,14 @@ function Home() {
     });
   }, []);
 
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setViewportWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <>
       <motion.div
@@ -88,7 +97,7 @@ function Home() {
       </motion.div>
 
       <div className="home ">
-        <section className="hero relative flex h-[95vh] py-20 w-full  overflow-hidden justify-center ">
+        <section className="hero relative flex h-[50vh] py- w-full overflow-hidden justify-center sm:h-[95vh] py-20 w-full overflow-hidden justify-center ">
           <div className="z-10 flex flex-col w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300 font-[poppins] reduced-letter-spacing">
             <motion.div
               transition={{
@@ -102,7 +111,7 @@ function Home() {
               }}
               initial="hidden"
               animate="visible"
-              className="title text-9xl   text-[#262626] py-16 "
+              className="title text-5xl sm:text-9xl text-[#262626] py-16 "
             >
               <h1 className=" overflow-visible">New Leap Labs</h1>
               <h1
@@ -151,10 +160,10 @@ function Home() {
 
         {/* black */}
         <main className="start h-max mb-10 px-5 md:px-10 xl:px-20 2xl:px-28 ">
-          <section className="about select-none flex my-20 md:my-[12%] py-10 flex-col items-center justify-center overflow-hidden ">
+          <section className="about select-none flex my-20 md:my-[9%] py-5 flex-col items-center justify-center overflow-hidden ">
             <div className=" flex w-full items-center space-x-20">
-              <h1 className=" text-heading-1 text-[4rem]   leading-[1.25em] md:leading-[1.08em]">
-                We fosters innovation by inspiring students in satellite technology, contributing prestigious awards, and advancing indigenous nano-satellite development for societal impact.
+              <h1 className=" text-heading-1 text-[1.5rem]   leading-[1.25em] md:text-[3rem]">
+                We foster innovation by inspiring students in satellite technology, contributing towards prestigious awards, and advancing indigenous nano-satellite development for societal impact.
               </h1>
             </div>
           </section>
@@ -175,12 +184,12 @@ function Home() {
                   <div className="mt-4">
                     <div className="flex space-x-2 mb-3">
                       <p className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl">
-                        2003
+                        2018
                       </p>
                     </div>
                     <div className="2xl:space-y-3">
                       <h3 className=" text-3xl font-medium uppercase text-primary-200">
-                        BeleifSat-0
+                        BeliefSat-1
                       </h3>
                     </div>
                   </div>
@@ -200,12 +209,12 @@ function Home() {
                 <div className="mt-4">
                   <div className="flex space-x-2 mb-3">
                     <p className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl">
-                      2003
+                      2019
                     </p>
                   </div>
                   <div className="2xl:space-y-3">
                     <h3 className=" text-3xl font-medium uppercase text-primary-200">
-                      BeleifSat-1
+                      Ground Station
                     </h3>
                   </div>
                 </div>
@@ -224,7 +233,7 @@ function Home() {
                 <div className="mt-4">
                   <div className="flex space-x-2 mb-3">
                     <p className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl">
-                      2003
+                      2023
                     </p>
                   </div>
                   <div className="2xl:space-y-3">
@@ -238,10 +247,12 @@ function Home() {
           </section>
 
           <section className="mb-10">
-            <Headers title="Our Domains" />
-            <div className=" ">
+            <Headers title="Domains" />
+            {viewportWidth >= 768 ? (
+        <div>
+          <div className=" ">
               {/* First Row */}
-              <div className="flex justify-center">
+              <div className="items-center justify-center md:flex justify-center">
                 <CardsDomain
                   imageUrl={software}
                   title="Software"
@@ -258,22 +269,22 @@ function Home() {
                   description="Radio frequency domain involves electromagnetic waves for wireless communication, spanning from 3 kHz to 300 GHz."
                 />
                 <CardsDomain
-                  imageUrl={hardware}
-                  title="Hardware"
+                  imageUrl={structure}
+                  title="Structure Design"
                   description="Hardware domain involves designing, building, and maintaining physical computer components, including processors, memory, and peripherals."
                 />
               </div>
 
               {/* Second Row */}
-              <div className="flex justify-center">
+              <div className="md:flex justify-center">
                 <CardsDomain
                   imageUrl={data}
                   title="Data Science"
                   description="Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making."
                 />
                 <CardsDomain
-                  imageUrl={structure}
-                  title="Structure Design"
+                  imageUrl={pcb}
+                  title="PCB Design"
                   description="PCB design involves creating circuit layouts on boards for electronic devices, optimizing connectivity and functionality."
                 />
                 <CardsDomain
@@ -284,8 +295,72 @@ function Home() {
                 />
               </div>
             </div>
+        </div>
+      ) : (
+        <div>
+          <div className="">
+             {/* First Row */}
+             <div className="test flex py-10 items-center justify-center">
+                <Cd
+                  imageUrl={software}
+                  title="Software"
+                  description="Software domain involves designing, developing, and maintaining applications and systems for diverse purposes."
+                />
+                </div>
+                <div className="test flex py-10 items-center justify-center">
+                <Cd
+                  imageUrl={embedded}
+                  title="Embedded"
+                  description="Embedded domain involves designing computer systems for specific functions, integrating hardware and software for efficiency."
+                />
+                </div>
+                <div className="test flex py-10 items-center justify-center">
+                <Cd
+                  imageUrl={radio}
+                  title="Radio Frequency"
+                  description="Radio frequency domain involves electromagnetic waves for wireless communication, spanning from 3 kHz to 300 GHz."
+                />
+                </div>
+                <div className="test flex py-10 items-center justify-center">
+                <Cd
+                  imageUrl={structure}
+                  title="Structure Design"
+                  description="Hardware domain involves designing, building, and maintaining physical computer components, including processors, memory, and peripherals."
+                />
+                </div>
+              </div>
+
+              {/* Second Row */}
+              <div className="md:flex justify-center">
+              <div className="test flex py-10 items-center justify-center">
+                <Cd
+                  imageUrl={data}
+                  title="Data Science"
+                  description="Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making."
+                />
+                </div>
+                <div className="test flex py-10 items-center justify-center">
+                <Cd
+                  imageUrl={pcb}
+                  title="PCB Design"
+                  description="PCB design involves creating circuit layouts on boards for electronic devices, optimizing connectivity and functionality."
+                />
+                </div>
+                <div className="test flex py-10 items-center justify-center">
+                <Cd
+                  imageUrl={document}
+                  title="Non-technical"
+                  description="This domain involves communication, process management, and user-focused content creation for clarity and efficiency.
+                  "
+                />
+                </div>
+              </div>
+        </div>
+      )}
+            
           </section>
         </main>
+        
 
         {/* white */}
         <main className="px-5 md:px-10 xl:px-20 2xl:px-28 ">
@@ -296,6 +371,7 @@ function Home() {
               <Foundercard imageUrl={supriya} title="Supriya Bhide" />
             </div>
           </section>
+          
 
           {/* <div className="Testimonials mb-10 ">
           <Headers title="Testimonials" />
