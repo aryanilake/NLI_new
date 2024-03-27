@@ -22,25 +22,27 @@ const NewPage = () => {
             isActive={true}
           />
         </div>
-        <div className="mainc pt-2 flex flex-row">
-          <div className="leftmain w-[50%]">
-            <div className="imgc w-[80%] overflow-hidden flex justify-center items-center flex-col">
+        <div className="mainc pt-2 md:flex flex-row">
+          <div className="leftmain justify-center items-center w-[100%] md: w-[50%]">
+            <div className="imgc w-[100%] overflow-hidden flex justify-center items-center md:w-[80%] flex justify-center items-center flex-col">
               <img className="rounded-lg h-[50vh] " src={location.state.profile} alt="" srcset="" />
               <h2 className="mt-2 flex justify-center items-center text-3xl">
-              {location.state.fname} {location.state.lname}
+                {location.state.fname} {location.state.lname}
               </h2>
+
             </div>
             <div className="projnames mt-10">
               <ol className="flex  flex-row">
-                <li className="m-2 text-2xl">{location.state.project1}</li>
-                <li className="m-2 text-2xl">{location.state.project2}</li>
-                <li className="m-2 text-2xl">{location.state.project3}</li>
-                
+                <li className="m-2 text-xl font-bold md:m-2 text-2xl">{location.state.project1}</li>
+                <li className="m-2 text-xl font-bold md:m-2 text-2xl">{location.state.project2}</li>
+                <li className="m-2 text-xl font-bold md:m-2 text-2xl">{location.state.project3}</li>
+
               </ol>
             </div>
             <div className="link flex flex-row">
               <button className="w-8 h-10 flex items-center justify-center ml-4 mt-2">
                 <a href={location.state.Linkedin} target="_blank" rel="noopener noreferrer">
+                  Linked
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 19 18"
@@ -54,21 +56,22 @@ const NewPage = () => {
 
             </div>
           </div>
-          <div className="righftmain w-[50%]">
+          <div className="righftmain  md:w-[50%]">
             <div className="details">
-              <ol className="flex  flex-row">
+              <ol className="md:flex  flex-row">
                 <li className="m-2 text-2xl">{location.state.Domain}</li>
-                <li className="m-2 text-2xl">{location.state.email}</li>
+                {/* <br /> */}
+                <li className="m-2 text-lg md:m-2 text-2xl">{location.state.email}</li>
               </ol>
             </div>
             <div className="m-2 about">
-              <h2 className=" text-2xl ">About</h2>
+              <h2 className=" text-2xl font-bold ">About</h2>
               <span className="h-max">{location.state.About}</span>
             </div>
             <div className="details">
               <ol className="flex  flex-row">
-                <li className="m-2 text-2xl">KJSIT</li>
-                <li className="m-2 text-2xl">{location.state.College} Department</li>
+                <li className="m-2 text-2xl font-bold">KJSIT</li>
+                <li className="m-2 text-lg md:m-2 text-2xl">{location.state.College} Department</li>
               </ol>
             </div>
           </div>
@@ -80,5 +83,5 @@ const NewPage = () => {
 
 export default NewPage;
 
-// 
+//
 //  <h2> {location.state.lname}</h2>
