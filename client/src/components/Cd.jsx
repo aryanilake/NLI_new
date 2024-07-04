@@ -16,10 +16,10 @@ export default function ActionAreaCard({ imageUrl, title, description }) {
           alt=""
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h4" component="div">
             {title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body1" color="text.secondary">
             {description}
           </Typography>
         </CardContent>

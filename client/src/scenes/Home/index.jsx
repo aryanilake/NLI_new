@@ -48,12 +48,12 @@ function Home() {
     ScrollTrigger.create({
       trigger: ".start", 
       start: "top center", 
-      end: "bottom bottom",
+      end: "bottom top",
       onUpdate: (self) => {
-        const progress = self.progress.toFixed(3);
+        const progress = (self.progress * 2).toFixed(3);
         console.log(progress);
 
-        if (progress > 0 && progress < 1) {
+        if (progress > 0 && progress < 1.8) {
           const backgroundColor = "#000000";
           const textColor = "#d1d1d7";
           changeBackgroundColor(backgroundColor, textColor);
@@ -80,7 +80,7 @@ function Home() {
 
   return (
     <>
-      <motion.div
+      {/* <motion.div
         transition={{
           ease: "linear",
           duration: 2,
@@ -94,12 +94,13 @@ function Home() {
         animate="visible"
       >
         <Navbar bgcolor={navbg} textColor={navtext} />
-      </motion.div>
+      </motion.div> */}
+      <Navbar bgcolor={navbg} textColor={navtext} />
 
       <div className="home ">
         <section className="hero relative flex h-[50vh] py- w-full overflow-hidden justify-center sm:h-[95vh] py-20 w-full overflow-hidden justify-center ">
-          <div className="z-10 flex flex-col w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300 font-[poppins] reduced-letter-spacing">
-            <motion.div
+          <div className="z-10 py-20 my-5 flex flex-col w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300 font-[poppins] reduced-letter-spacing">
+            {/* <motion.div
               transition={{
                 ease: "linear",
                 duration: 2,
@@ -122,10 +123,20 @@ function Home() {
               </h1>
 
               <h1 className=" overflow-visible">New Leap Labs</h1>
-            </motion.div>
+            </motion.div> */}
+            <div className="title text-5xl sm:text-9xl text-[#141313] py-20 ">
+
+            <h1 className=" overflow-visible">New Leap Labs</h1>
+              <h1
+                className=" text-transparent font-outline-4 flex justify-center
+                overflow-visible py-20"
+                >
+                KJSIT
+              </h1>
+                </div>
           </div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ scale: 2, opacity: 0 }} // initial scale and opacity
             animate={{ scale: 1, opacity: 1 }} // animate to normal scale and full opacity
             transition={{ duration: 2 }} // adjust the duration as needed
@@ -136,9 +147,11 @@ function Home() {
               alt=""
               className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-full h-auto"
             />
-          </motion.div>
-
-          <motion.div
+          </motion.div> */}
+          <div className="intro absolute my-12 mx-auto w-[85%] h-[75%] rounded-md bg-white rounded md:w-[72%] h-[100%] md:shadow-[0px_0px_50px_35px_rgba(0,0,0,0.3)]">
+              <img src={hero} alt="" className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-[100%] h-[100%]" />
+          </div>
+          {/* <motion.div
             transition={{
               ease: "linear",
               duration: 2,
@@ -155,14 +168,19 @@ function Home() {
             <span className=" rotate-90 text-body-3 text-xl  ">
               #webelieve
             </span>
-          </motion.div>
+          </motion.div> */}
+          <div className="absolute bottom-12 right-0 flex flex-col items-center justify-center space-y-8">
+           <span className=" rotate-90 text-body-3 text-xl  ">
+              #webelieve
+            </span>
+          </div>
         </section>
 
         {/* black */}
         <main className="start h-max mb-10 px-5 md:px-10 xl:px-20 2xl:px-28 ">
           <section className="about select-none flex my-20 md:my-[9%] py-5 flex-col items-center justify-center overflow-hidden ">
             <div className=" flex w-full items-center space-x-20">
-              <h1 className=" text-heading-1 text-[1.5rem]   leading-[1.25em] md:text-[3rem]">
+              <h1 className=" text-heading-1 text-[1.5rem]   leading-[1.25em] md:text-[2.5rem]">
                 We foster innovation by inspiring students in satellite technology, contributing towards prestigious awards, and advancing indigenous nano-satellite development for societal impact.
               </h1>
             </div>
@@ -366,7 +384,7 @@ function Home() {
         <main className="px-5 md:px-10 xl:px-20 2xl:px-28 ">
           <section>
             <Headers title="Founders" />
-            <div className="flex justify-center">
+            <div className="text-center md:flex justify-center">
               <Foundercard imageUrl={rohit} title="Rohit Bokade" />
               <Foundercard imageUrl={supriya} title="Supriya Bhide" />
             </div>
