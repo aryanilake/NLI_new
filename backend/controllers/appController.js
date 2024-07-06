@@ -1,5 +1,6 @@
 import Member from "../model/memberSchema.js";
 import Project from "../model/projSchema.js";
+import Achievement from "../model/achievementSchema.js";
 
 // member
 
@@ -36,7 +37,7 @@ export async function createmember(req, res) {
       departmentclg,
       about,
       linkedin,
-      profile ,
+      profile,
     } = req.body;
 
     // Check if the email already exists
@@ -174,6 +175,69 @@ export async function getAllprojects(req, res) {
   try {
     const projects = await Project.find({});
     return res.status(200).json(projects);
+  } catch (error) {
+    return res
+      .status(500)
+      .send({ error: error.message || "Internal Server Error" });
+  }
+}
+
+export async function createachievement(req, res) {
+  try {
+    const { achievementname, details, image = "" } = req.body;
+
+    // Check if the project already exists
+    const existAchieve = await Achievement.exists({ achievementname });
+
+    if (existAchieve) {
+      return res
+        .status(400)
+        .send({ error: "Achievement with this name already exists" });
+    }
+
+    const achievement = new Achievement({
+      achievementname,
+      details,
+      image: image || "",
+    });
+
+    await achievement.save();
+
+    res.status(201).send({ msg: "Achievement added successfully" });
+  } catch (error) {
+    res.status(500).send({ error: error.message || "Internal Server Error" });
+  }
+}
+
+export async function getAchievement(req, res) {
+  try {
+    const { achievementname } = req.params;
+
+    if (!achievementname) {
+      return res.status(400).send({ error: "Invalid Achievement name" });
+    }
+
+    const achievement = await Achievement.findOne({ achievementname });
+
+    if (!achievement) {
+      return res.status(404).send({ error: "Couldn't Find the achievement" });
+    }
+
+    // Mongoose returns unnecessary data with the object, so convert it into JSON
+    const { ...rest } = Object.assign({}, achievement.toJSON());
+
+    return res.status(200).send(rest);
+  } catch (error) {
+    return res
+      .status(500)
+      .send({ error: error.message || "Internal Server Error" });
+  }
+}
+
+export async function getAllachievements(req, res) {
+  try {
+    const achievements = await Achievement.find({});
+    return res.status(200).json(achievements);
   } catch (error) {
     return res
       .status(500)

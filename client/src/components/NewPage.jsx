@@ -42,7 +42,7 @@ const NewPage = () => {
             <div className="link flex flex-row">
               <button className="w-8 h-10 flex items-center justify-center ml-4 mt-2">
                 <a href={location.state.Linkedin} target="_blank" rel="noopener noreferrer">
-                  Linked
+                  
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 19 18"
