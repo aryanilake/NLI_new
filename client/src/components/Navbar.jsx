@@ -45,15 +45,9 @@ const Navbar = ({ bgcolor, textColor }) => {
           </Link>
         </li>
         <li className="p-4 relative group">
-          <Link to="/" className="block">
+          <Link to="/achievements" className="block">
             Achievements
             <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
-          </Link>
-        </li>
-        <li className="p-4 relative group">
-          <Link to="/events" className="block">
-            Events
-            <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
           </Link>
         </li>
       </ul>
@@ -97,7 +91,7 @@ const Navbar = ({ bgcolor, textColor }) => {
             </li>
           </Link>
 
-          <Link to="/events" className="block">
+          <Link to="/achievements" className="block">
             <li className="p-4 relative group">
 
               Achievements
@@ -105,13 +99,6 @@ const Navbar = ({ bgcolor, textColor }) => {
             </li>
           </Link>
 
-          <Link to="/events" className="block">
-            <li className="p-4 relative group">
-
-              Events
-              <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
-            </li>
-          </Link>
         </ul>
       </div>
     </div>

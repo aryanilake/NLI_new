@@ -25,6 +25,15 @@ export  async function getAllmembers(){
         return {error:"Can't fetched data"}
     }
 }
+export  async function getAllachievements(){
+    try {
+        const {data} = await axios.get(`/api/getallachievements`);
+
+        return {data};
+    } catch (error) {
+        return {error:"Can't fetched data"}
+    }
+}
 
 export  async function getProject({projname}){
     try {

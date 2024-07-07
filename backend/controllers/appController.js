@@ -236,8 +236,8 @@ export async function getAchievement(req, res) {
 
 export async function getAllachievements(req, res) {
   try {
-    const achievements = await Achievement.find({});
-    return res.status(200).json(achievements);
+    const achievement = await Achievement.find({});
+    return res.status(200).json(achievement);
   } catch (error) {
     return res
       .status(500)

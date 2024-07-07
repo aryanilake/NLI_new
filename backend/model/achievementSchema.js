@@ -15,13 +15,11 @@ const achievementSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-
-
-
-
-});
-
-
+},
+{
+    timestamps: true,
+}
+);
 const Achievement = mongoose.model('Achievement', achievementSchema);
 
 
