@@ -138,9 +138,11 @@ const Achievements = () => {
   return (
     <>
    
-      <Navbar bgcolor="#ffffff" textColor="#000000" />
- 
-      <div className="mt-24 text-2xl block">
+      <Navbar bgcolor="#fafaf9" textColor="#000000" />
+      <div className="mt-20 text-2xl block font-[poppins]">
+    <div className="text-center font-bold md:text-5xl">
+      Achievements
+    </div>
   {result.map((item, index) => ( 
   <div key={index} className="md:flex p-8 m-8">
     {index % 2 === 0 ? (
