@@ -134,7 +134,7 @@ const Achievements = () => {
   })
 
   // const [index, newIndex] = useState(2);
-  const index = 2
+  const index = 1
   return (
     <>
    
@@ -167,27 +167,31 @@ const Achievements = () => {
   </div>
 
 ))}
- {/* <div className="md:flex p-4">
+ <div className="md:flex md:flex p-8 m-8">
     {index % 2 === 0 ? (
       <>
         <div className="flex items-center md:w-1/2 text-center">
         Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making.Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making.
         </div>
         <div className="flex justify-center items-center md:w-1/2">
-          <img className="h-80" src={software} alt="Achievement" />
+        <div className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl">
+          <img className="h-80 w-screen duration-700 ease-in-out group-hover:scale-105" src={software} alt="Achievement" />
+        </div>
         </div>
       </>
     ) : (
       <>
         <div className="flex justify-center items-center md:w-1/2">
-          <img className="h-80" src={software} alt="Achievement" />
+        <div className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-2xl">
+          <img className="h-80 duration-700 ease-in-out group-hover:scale-105" src={software} alt="Achievement" />
+        </div>
         </div>
         <div className="flex items-center md:w-1/2 text-center">
         Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making.Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making.
         </div>
       </>
     )}
-  </div> */}
+  </div>
 
     
   
