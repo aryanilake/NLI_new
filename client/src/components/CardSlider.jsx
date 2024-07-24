@@ -62,16 +62,9 @@ const CardSlider = ({ label }) => {
   console.log(images);
 
   return (
-    <div className="flex flex-col items-center mb-10 h-max">
-      <div className="mb-4">
-        <Pagination
-          currentPage={currentPage}
-          imagesPerPage={imagesPerPage}
-          totalImages={images.length}
-          paginate={paginate}
-        />
-      </div>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-5 gap-4">
+    <div className="flex flex-col items-center mb-10 h-max pt-6" >
+      
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-5 gap-4 mb-3">
         {currentImages.map((image) => (
           <div className="relative group w-full">
             <img
@@ -123,7 +116,17 @@ const CardSlider = ({ label }) => {
           </div>
         ))}
       </div>
+      <div className="flex flex-col items-center mb-10 h-max">
+      <div className="mb-4">
+        <Pagination
+          currentPage={currentPage}
+          imagesPerPage={imagesPerPage}
+          totalImages={images.length}
+          paginate={paginate}
+        />
+      </div>
     </div>
+  </div>
   );
 };
 
