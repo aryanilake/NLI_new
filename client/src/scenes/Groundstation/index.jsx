@@ -17,20 +17,22 @@ function GroundStation() {
 
   return (
     <>
-      <Navbar bgcolor="#fafaf9" textColor="#000000" />
+      <Navbar bgcolor="#fafaf9" textColor="#000000" active={"groundstation"} />
       <div className="gs bg-transparent pt-[6rem]  flex justify-center items-center flex-col h-max mb-10 px-5 md:px-10 xl:px-20 2xl:px-28 ">
         <div className="hero w-full">
-          <div className="mainimg h-[30vh] md:h-[40vh] w-[150vh] overflow-hidden ml-9  rounded-3xl ">
-            <img
-              src={gs}
-              className="w-[150vh] h-[50vh]  transform hover:scale-110 transition-transform duration-300 ease-in-out"
-              alt="gs"
-              srcset=""
-            />
+          <div className="mainimg h-[30vh] md:h-[40vh] flex items-center w-full overflow-hidden justify-center  rounded-3xl ">
+            <div className="mainimg rounded-3xl overflow-hidden h-[40vh]">
+              <img
+                src={gs}
+                className="w-[160vh] h-[50vh] transform hover:scale-110 transition-transform duration-300 ease-in-out"
+                alt="gs"
+                srcset=""
+              />
+            </div>
           </div>
           <div className="heads flex justify-center items-center mt-5">
             <h1 className="text-9xl text-slate-200 font-sans  reduced-letter-spacing">
-              <Headers title="TELEMETRY" />
+              <Headers title="TELEMETRY" size="12vh" />
             </h1>
           </div>
           <Box>
@@ -57,8 +59,8 @@ function GroundStation() {
                   rows={day1}
                   columns={columns}
                   pageSize={6}
-                  // checkboxSelection
-                  // disableRowSelectionOnClick
+                // checkboxSelection
+                // disableRowSelectionOnClick
                 />
               </Box>
             ) : selectedDay === 2 ? (

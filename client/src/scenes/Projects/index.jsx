@@ -7,7 +7,7 @@ import Projectscontent from "../../components/Projectscontent";
 function Projects() {
   const [selectedLabel, setSelectedLabel] = useState("Beliefsat-0");
   const [isDatabaseConnected, setDatabaseConnected] = useState(false);
-  
+
   useEffect(() => {
     // Replace the URL with the actual endpoint you want to check
     const serverCheckUrl = "http://localhost:8080";
@@ -38,7 +38,7 @@ function Projects() {
 
   return (
     <>
-      <Navbar bgcolor="#fafaf9" textColor="#000000" />
+      <Navbar bgcolor="#fafaf9" textColor="#000000" active={"projects"} />
       <div className="py-20  justify-between items-center h-max mx-auto px-5 mt-5 mb-9">
         <div className="space-x-4">
           <Button

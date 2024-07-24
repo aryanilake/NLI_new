@@ -106,99 +106,86 @@
 // export default Achievements;
 
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react';
 import Navbar from "../../components/Navbar";
-import software from "../../assets/software.png"
+import software from "../../assets/software.png";
 import { getAllachievements } from '../../helper/helper';
+import Headers from "../../components/Headers";
+// import Spline from '@splinetool/react-spline';
+
 
 const Achievements = () => {
   const [result, setResult] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchData = useCallback(async () => {
+    try {
+      const result = await getAllachievements();
+      const res1 = result.data.map((item) => ({
+        aname: item.name,
+        image: item.image,
+        details: item.details,
+        date: item.date
+      }));
+      setResult(res1);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
-    const fetchData = async ()=> {
-      try{
-        const result = await getAllachievements();
-        console.log(result);
-        const res1 = result.data.map((item) =>({
-            aname : item.name,
-            image : item.image,
-            details : item.details
-        })
-      );
-      setResult(res1);
-      }catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
     fetchData();
-  })
+  }, [fetchData]);
 
-  // const [index, newIndex] = useState(2);
-  const index = 1
   return (
     <>
-   
-      <Navbar bgcolor="#fafaf9" textColor="#000000" />
+      <Navbar bgcolor="#fafaf9" textColor="#000000" active={"achievements"} />
       <div className="mt-20 text-2xl block font-[poppins]">
-    <div className="text-center font-bold md:text-5xl">
-      Achievements
-    </div>
-  {result.map((item, index) => ( 
-  <div key={index} className="md:flex p-8 m-8">
-    {index % 2 === 0 ? (
-      <>
-        <div className="flex items-center md:w-1/2 text-center justify-center">
-          {item.details}
+        <div className="text-center font-bold md:text-5xl">
+          <Headers title="Achievements" />
         </div>
-        <div className="flex justify-center items-center md:w-1/2">
-          <img className="h-80" src={item.image} alt="Achievement" />
-        </div>
-      </>
-    ) : (
-      <>
-        <div className="flex justify-center items-center md:w-1/2">
-          <img className="h-80" src={item.image} alt="Achievement" />
-        </div>
-        <div className="flex justify-center md:w-1/2 items-center text-center">
-          {item.details}
-        </div>
-      </>
-    )}
-  </div>
-
-))}
- <div className="md:flex md:flex p-8 m-8">
-    {index % 2 === 0 ? (
-      <>
-        <div className="flex items-center md:w-1/2 text-center">
-        Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making.Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making.
-        </div>
-        <div className="flex justify-center items-center md:w-1/2">
-        <div className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl">
-          <img className="h-80 w-screen duration-700 ease-in-out group-hover:scale-105" src={software} alt="Achievement" />
-        </div>
-        </div>
-      </>
-    ) : (
-      <>
-        <div className="flex justify-center items-center md:w-1/2">
-        <div className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-2xl">
-          <img className="h-80 duration-700 ease-in-out group-hover:scale-105" src={software} alt="Achievement" />
-        </div>
-        </div>
-        <div className="flex items-center md:w-1/2 text-center">
-        Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making.Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making.
-        </div>
-      </>
-    )}
-  </div>
-
-    
-  
-</div>
-
+        {loading ? (
+          <>
+            <div className='p-5'>Loading...</div>
+            {/* <Spline scene="https://prod.spline.design/JMJrmDJrTm2R4abx/scene.splinecode" /> */}
+          </>
+        ) : (
+          result.map((item, index) => (
+            <div key={index} className="md:flex p-8 m-8">
+              {index % 2 === 1 ? (
+                <>
+                  <div className="flex items-center justify-center md:w-1/2">
+                    <div className="flex flex-col items-center justify-center text-center">
+                      <div>{item.details}</div>
+                      <div className="mt-4">{item.date}</div>
+                    </div>
+                  </div>
+                  <div className="flex justify-center items-center md:w-1/2">
+                    <img className="h-80 md:shadow-[0px_0px_50px_15px_rgba(0,0,0,0.3)]" src={item.image} alt="Achievement" />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="flex justify-center items-center md:w-1/2">
+                    <img className="h-80 md:shadow-[0px_0px_50px_15px_rgba(0,0,0,0.3)]" src={item.image} alt="Achievement" />
+                  </div>
+                  <div className="flex items-center justify-center md:w-1/2">
+                    <div className="flex flex-col items-center justify-center text-center">
+                      <div>{item.details}</div>
+                      <div className="mt-4">{item.date}</div>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+          ))
+        )}
+      </div>
     </>
-  )
+  );
 }
 
-export default Achievements
+export default Achievements;
+

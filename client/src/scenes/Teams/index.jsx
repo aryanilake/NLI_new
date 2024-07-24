@@ -3,6 +3,11 @@ import React, { useState } from "react";
 import Button from "../../components/Button";
 import CardSlider from "../../components/CardSlider";
 import Navbar from "../../components/Navbar";
+import Headers from "../../components/Headers";
+import Foundercard from "../../components/Foundercard";
+
+import rohit from "../../assets/rohit.jpg"
+import supriya from "../../assets/supriya.jpg"
 
 function Teams() {
   const [selectedLabel, setSelectedLabel] = useState("Beliefsat-0");
@@ -14,7 +19,7 @@ function Teams() {
 
   return (
     <>
-      <Navbar bgcolor="#fafaf9" textColor="#000000" />
+      <Navbar bgcolor="#fafaf9" textColor="#000000" active={"about"} />
       <div className="py-20 font-poppins justify-between items-center h-max mx-auto px-5 mt-5 ">
         <div className="space-x-4">
           <Button
@@ -53,10 +58,15 @@ function Teams() {
             type="button"
             isActive={selectedLabel === "Crown-GS" ? true : false}
           />
-        
+
         </div>
         <div className="results m-4 ">
           {selectedLabel && <CardSlider label={selectedLabel} />}
+        </div>
+        <Headers title="Founders" size="10vh" />
+        <div className="text-center md:flex justify-center">
+          <Foundercard imageUrl={rohit} title="Rohit Bokade" />
+          <Foundercard imageUrl={supriya} title="Supriya Bhide" />
         </div>
       </div>
     </>

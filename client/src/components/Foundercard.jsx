@@ -1,6 +1,6 @@
 import React from "react";
 
-function Foundercard({ imageUrl, title }) {
+function Foundercard({ imageUrl, title, size }) {
   return (
     <div>
       <div className="max-w-[50vh]  rounded overflow-hidden mx-3 ">

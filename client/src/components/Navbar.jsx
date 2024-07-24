@@ -3,14 +3,14 @@ import logo from "../assets/NEWLEAPLABS.png";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ bgcolor, textColor }) => {
+const Navbar = ({ bgcolor, textColor, active }) => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
-
+  console.log(active)
 
   return (
     <div className=" w-full z-20 fixed top-0 left-0 right-0 font-poppins flex justify-between items-center h-20  mx-auto px-6  text-black" style={{ backgroundColor: bgcolor, color: textColor, transition: "0.3 ease-in-out" }}>
@@ -23,31 +23,36 @@ const Navbar = ({ bgcolor, textColor }) => {
         <li className="p-4 relative group">
           <Link to="/" className="block">
             Home
-            <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
+            {(active == "home") ? <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>}
+
           </Link>
         </li>
         <li className="p-4 relative group">
           <Link to="/teams" className="block">
-            Teams
-            <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
+            About Us
+            {(active == "about") ? <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>}
+            {/* <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div> */}
           </Link>
         </li>
         <li className="p-4 relative group">
           <Link to="/projects" className="block">
             Projects
-            <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
+            {(active == "projects") ? <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>}
+            {/* <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div> */}
           </Link>
         </li>
         <li className="p-4 relative group">
           <Link to="/groundstation" className="block">
             Ground Station
-            <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
+            {(active == "groundstation") ? <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>}
+            {/* <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div> */}
           </Link>
         </li>
         <li className="p-4 relative group">
           <Link to="/achievements" className="block">
             Achievements
-            <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
+            {(active == "achievements") ? <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>}
+            {/* <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div> */}
           </Link>
         </li>
       </ul>
@@ -72,7 +77,7 @@ const Navbar = ({ bgcolor, textColor }) => {
 
           <Link to="/teams" className="block">
             <li className="p-4 relative group">
-              Teams
+              About us
               <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
             </li>
           </Link>

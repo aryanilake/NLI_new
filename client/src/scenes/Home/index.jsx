@@ -29,6 +29,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import Navbar from "../../components/Navbar";
 
+import { Link } from "react-router-dom";
 
 function Home() {
   const [navbg, setNavbg] = useState("#fafaf9");
@@ -46,8 +47,8 @@ function Home() {
     };
 
     ScrollTrigger.create({
-      trigger: ".start", 
-      start: "top center", 
+      trigger: ".start",
+      start: "top center",
       end: "bottom top",
       onUpdate: (self) => {
         const progress = (self.progress * 2).toFixed(3);
@@ -95,7 +96,7 @@ function Home() {
       >
         <Navbar bgcolor={navbg} textColor={navtext} />
       </motion.div> */}
-      <Navbar bgcolor={navbg} textColor={navtext} />
+      <Navbar bgcolor={navbg} textColor={navtext} active={"home"} />
 
       <div className="home ">
         <section className="hero relative flex h-[50vh] py- w-full overflow-hidden justify-center sm:h-[95vh] py-20 w-full overflow-hidden justify-center ">
@@ -126,14 +127,14 @@ function Home() {
             </motion.div> */}
             <div className="title text-5xl sm:text-9xl text-[#141313] py-20 ">
 
-            <h1 className=" overflow-visible">New Leap Labs</h1>
+              <h1 className=" overflow-visible">New Leap Labs</h1>
               <h1
                 className=" text-transparent font-outline-4 flex justify-center
                 overflow-visible py-20"
-                >
+              >
                 KJSIT
               </h1>
-                </div>
+            </div>
           </div>
 
           {/* <motion.div
@@ -149,7 +150,7 @@ function Home() {
             />
           </motion.div> */}
           <div className="intro absolute my-12 mx-auto w-[85%] h-[75%] rounded-md bg-white rounded md:w-[72%] h-[100%] md:shadow-[0px_0px_50px_35px_rgba(0,0,0,0.3)]">
-              <img src={hero} alt="" className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-[100%] h-[100%]" />
+            <img src={hero} alt="" className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-[100%] h-[100%]" />
           </div>
           {/* <motion.div
             transition={{
@@ -170,7 +171,7 @@ function Home() {
             </span>
           </motion.div> */}
           <div className="absolute bottom-12 right-0 flex flex-col items-center justify-center space-y-8">
-           <span className=" rotate-90 text-body-3 text-xl  ">
+            <span className=" rotate-90 text-body-3 text-xl  ">
               #webelieve
             </span>
           </div>
@@ -187,17 +188,19 @@ function Home() {
           </section>
 
           <section>
-            <Headers title="Projects" />
+            <Headers title="Projects" size="13vh" />
             <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12 ">
               <div className=" col-span-1 md:col-span-12">
                 <div>
                   <div className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl">
-                    <img
-                      className="w-screen duration-700 ease-in-out group-hover:scale-105"
-                      src={belifsat}
-                      alt=""
-                      srcset=""
-                    />
+                    <Link to="/projects" className="block">
+                      <img
+                        className="w-screen duration-700 ease-in-out group-hover:scale-105"
+                        src={belifsat}
+                        alt=""
+                        srcset=""
+                      />
+                    </Link>
                   </div>
                   <div className="mt-4">
                     <div className="flex space-x-2 mb-3">
@@ -214,15 +217,8 @@ function Home() {
                 </div>
               </div>
               <div className="col-span-1 pt-0 md:col-span-7 md:pt-16">
-                <div>
-                  <div className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl">
-                    <img
-                      className="w-screen duration-700 ease-in-out group-hover:scale-105"
-                      src={beliefsat1}
-                      alt=""
-                      srcset=""
-                    />
-                  </div>
+                <div className="overflow-auto w-[700px] h-[500px] rounded-lg">
+                  <img src={beliefsat1} alt="Large Image" className="w-full h-auto" />
                 </div>
                 <div className="mt-4">
                   <div className="flex space-x-2 mb-3">
@@ -237,7 +233,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-span-1 pt-0 md:col-span-5 md:pt-80">
+              <div className="col-span-1 pt-0 md:col-span-5 md:pt-[100px]">
                 <div>
                   <div className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl">
                     <img
@@ -265,131 +261,131 @@ function Home() {
           </section>
 
           <section className="mb-10">
-            <Headers title="Domains" />
+            <Headers title="Domains" size="13vh" />
             {viewportWidth >= 768 ? (
-        <div>
-          <div className=" ">
-              {/* First Row */}
-              <div className="items-center justify-center md:flex justify-center">
-                <CardsDomain
-                  imageUrl={software}
-                  title="Software"
-                  description="Software domain involves designing, developing, and maintaining applications and systems for diverse purposes."
-                />
-                <CardsDomain
-                  imageUrl={embedded}
-                  title="Embedded"
-                  description="Embedded domain involves designing computer systems for specific functions, integrating hardware and software for efficiency."
-                />
-                <CardsDomain
-                  imageUrl={radio}
-                  title="Radio Frequency"
-                  description="Radio frequency domain involves electromagnetic waves for wireless communication, spanning from 3 kHz to 300 GHz."
-                />
-                <CardsDomain
-                  imageUrl={structure}
-                  title="Structure Design"
-                  description="Hardware domain involves designing, building, and maintaining physical computer components, including processors, memory, and peripherals."
-                />
-              </div>
+              <div>
+                <div className=" ">
+                  {/* First Row */}
+                  <div className="items-center justify-center md:flex justify-center">
+                    <CardsDomain
+                      imageUrl={software}
+                      title="Software"
+                      description="Software domain involves designing, developing, and maintaining applications and systems for diverse purposes."
+                    />
+                    <CardsDomain
+                      imageUrl={embedded}
+                      title="Embedded"
+                      description="Embedded domain involves designing computer systems for specific functions, integrating hardware and software for efficiency."
+                    />
+                    <CardsDomain
+                      imageUrl={radio}
+                      title="Radio Frequency"
+                      description="Radio frequency domain involves electromagnetic waves for wireless communication, spanning from 3 kHz to 300 GHz."
+                    />
+                    <CardsDomain
+                      imageUrl={structure}
+                      title="Structure Design"
+                      description="Hardware domain involves designing, building, and maintaining physical computer components, including processors, memory, and peripherals."
+                    />
+                  </div>
 
-              {/* Second Row */}
-              <div className="md:flex justify-center">
-                <CardsDomain
-                  imageUrl={data}
-                  title="Data Science"
-                  description="Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making."
-                />
-                <CardsDomain
-                  imageUrl={pcb}
-                  title="PCB Design"
-                  description="PCB design involves creating circuit layouts on boards for electronic devices, optimizing connectivity and functionality."
-                />
-                <CardsDomain
-                  imageUrl={document}
-                  title="Non-technical"
-                  description="This domain involves communication, process management, and user-focused content creation for clarity and efficiency.
+                  {/* Second Row */}
+                  <div className="md:flex justify-center">
+                    <CardsDomain
+                      imageUrl={data}
+                      title="Data Science"
+                      description="Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making."
+                    />
+                    <CardsDomain
+                      imageUrl={pcb}
+                      title="PCB Design"
+                      description="PCB design involves creating circuit layouts on boards for electronic devices, optimizing connectivity and functionality."
+                    />
+                    <CardsDomain
+                      imageUrl={document}
+                      title="Non-technical"
+                      description="This domain involves communication, process management, and user-focused content creation for clarity and efficiency.
                   "
-                />
-              </div>
-            </div>
-        </div>
-      ) : (
-        <div>
-          <div className="">
-             {/* First Row */}
-             <div className="test flex py-10 items-center justify-center">
-                <Cd
-                  imageUrl={software}
-                  title="Software"
-                  description="Software domain involves designing, developing, and maintaining applications and systems for diverse purposes."
-                />
-                </div>
-                <div className="test flex py-10 items-center justify-center">
-                <Cd
-                  imageUrl={embedded}
-                  title="Embedded"
-                  description="Embedded domain involves designing computer systems for specific functions, integrating hardware and software for efficiency."
-                />
-                </div>
-                <div className="test flex py-10 items-center justify-center">
-                <Cd
-                  imageUrl={radio}
-                  title="Radio Frequency"
-                  description="Radio frequency domain involves electromagnetic waves for wireless communication, spanning from 3 kHz to 300 GHz."
-                />
-                </div>
-                <div className="test flex py-10 items-center justify-center">
-                <Cd
-                  imageUrl={structure}
-                  title="Structure Design"
-                  description="Hardware domain involves designing, building, and maintaining physical computer components, including processors, memory, and peripherals."
-                />
+                    />
+                  </div>
                 </div>
               </div>
+            ) : (
+              <div>
+                <div className="">
+                  {/* First Row */}
+                  <div className="test flex py-10 items-center justify-center">
+                    <Cd
+                      imageUrl={software}
+                      title="Software"
+                      description="Software domain involves designing, developing, and maintaining applications and systems for diverse purposes."
+                    />
+                  </div>
+                  <div className="test flex py-10 items-center justify-center">
+                    <Cd
+                      imageUrl={embedded}
+                      title="Embedded"
+                      description="Embedded domain involves designing computer systems for specific functions, integrating hardware and software for efficiency."
+                    />
+                  </div>
+                  <div className="test flex py-10 items-center justify-center">
+                    <Cd
+                      imageUrl={radio}
+                      title="Radio Frequency"
+                      description="Radio frequency domain involves electromagnetic waves for wireless communication, spanning from 3 kHz to 300 GHz."
+                    />
+                  </div>
+                  <div className="test flex py-10 items-center justify-center">
+                    <Cd
+                      imageUrl={structure}
+                      title="Structure Design"
+                      description="Hardware domain involves designing, building, and maintaining physical computer components, including processors, memory, and peripherals."
+                    />
+                  </div>
+                </div>
 
-              {/* Second Row */}
-              <div className="md:flex justify-center">
-              <div className="test flex py-10 items-center justify-center">
-                <Cd
-                  imageUrl={data}
-                  title="Data Science"
-                  description="Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making."
-                />
-                </div>
-                <div className="test flex py-10 items-center justify-center">
-                <Cd
-                  imageUrl={pcb}
-                  title="PCB Design"
-                  description="PCB design involves creating circuit layouts on boards for electronic devices, optimizing connectivity and functionality."
-                />
-                </div>
-                <div className="test flex py-10 items-center justify-center">
-                <Cd
-                  imageUrl={document}
-                  title="Non-technical"
-                  description="This domain involves communication, process management, and user-focused content creation for clarity and efficiency.
+                {/* Second Row */}
+                <div className="md:flex justify-center">
+                  <div className="test flex py-10 items-center justify-center">
+                    <Cd
+                      imageUrl={data}
+                      title="Data Science"
+                      description="Data science involves extracting insights from data using statistical, mathematical, and computational techniques for informed decision-making."
+                    />
+                  </div>
+                  <div className="test flex py-10 items-center justify-center">
+                    <Cd
+                      imageUrl={pcb}
+                      title="PCB Design"
+                      description="PCB design involves creating circuit layouts on boards for electronic devices, optimizing connectivity and functionality."
+                    />
+                  </div>
+                  <div className="test flex py-10 items-center justify-center">
+                    <Cd
+                      imageUrl={document}
+                      title="Non-technical"
+                      description="This domain involves communication, process management, and user-focused content creation for clarity and efficiency.
                   "
-                />
+                    />
+                  </div>
                 </div>
               </div>
-        </div>
-      )}
-            
+            )}
+
           </section>
         </main>
-        
+
 
         {/* white */}
         <main className="px-5 md:px-10 xl:px-20 2xl:px-28 ">
-          <section>
+          {/* <section>
             <Headers title="Founders" />
             <div className="text-center md:flex justify-center">
               <Foundercard imageUrl={rohit} title="Rohit Bokade" />
               <Foundercard imageUrl={supriya} title="Supriya Bhide" />
             </div>
-          </section>
-          
+          </section> */}
+
 
           {/* <div className="Testimonials mb-10 ">
           <Headers title="Testimonials" />
