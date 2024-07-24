@@ -32,7 +32,7 @@ function GroundStation() {
           </div>
           <div className="heads flex justify-center items-center mt-5">
             <h1 className="text-9xl text-slate-200 font-sans  reduced-letter-spacing">
-              <Headers title="TELEMETRY" size="12vh" />
+              <Headers title="TELEMETRY" size="10vh" />
             </h1>
           </div>
           <Box>

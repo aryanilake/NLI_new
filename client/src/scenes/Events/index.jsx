@@ -144,7 +144,7 @@ const Achievements = () => {
       <Navbar bgcolor="#fafaf9" textColor="#000000" active={"achievements"} />
       <div className="mt-20 text-2xl block font-[poppins]">
         <div className="text-center font-bold md:text-5xl">
-          <Headers title="Achievements" />
+          <Headers title="Achievements" size="12vh" />
         </div>
         {loading ? (
           <>
