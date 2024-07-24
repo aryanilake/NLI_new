@@ -20,10 +20,10 @@ function GroundStation() {
       <Navbar bgcolor="#fafaf9" textColor="#000000" />
       <div className="gs bg-transparent pt-[6rem]  flex justify-center items-center flex-col h-max mb-10 px-5 md:px-10 xl:px-20 2xl:px-28 ">
         <div className="hero w-full">
-          <div className="mainimg h-[30vh] md:h-[70vh] overflow-hidden  rounded-3xl ">
+          <div className="mainimg h-[30vh] md:h-[40vh] w-[150vh] overflow-hidden ml-9  rounded-3xl ">
             <img
               src={gs}
-              className="w-full  transform hover:scale-110 transition-transform duration-300 ease-in-out"
+              className="w-[150vh] h-[50vh]  transform hover:scale-110 transition-transform duration-300 ease-in-out"
               alt="gs"
               srcset=""
             />

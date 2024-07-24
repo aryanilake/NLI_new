@@ -51,7 +51,7 @@ const CardSlider = ({ label }) => {
   }, [label]);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const imagesPerPage = 9;
+  const imagesPerPage = 10;
 
   const indexOfLastImage = currentPage * imagesPerPage;
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
@@ -71,7 +71,7 @@ const CardSlider = ({ label }) => {
           paginate={paginate}
         />
       </div>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-5 gap-4">
         {currentImages.map((image) => (
           <div className="relative group w-full">
             <img
