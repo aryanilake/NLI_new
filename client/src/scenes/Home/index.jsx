@@ -13,6 +13,7 @@ import CardsDomain from "../../components/CardsDomain";
 import Cd from "../../components/Cd";
 import Foundercard from "../../components/Foundercard";
 import belifsat from "../../assets/belifsat.jpg";
+import space from "../../assets/space.jpg";
 import beliefsat1 from "../../assets/beliefsat1.jpg";
 import avruti from "../../assets/avruti.jpg"
 import software from "../../assets/software.png"
@@ -35,41 +36,41 @@ function Home() {
   const [navbg, setNavbg] = useState("#fafaf9");
   const [navtext, setNavtext] = useState("#000000");
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const changeBackgroundColor = (color, text) => {
-      gsap.to(".home", {
-        backgroundColor: color,
-        color: text,
-        duration: 0.2,
-        ease: "power1.inOut",
-      });
-    };
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   const changeBackgroundColor = (color, text) => {
+  //     gsap.to(".home", {
+  //       backgroundColor: color,
+  //       color: text,
+  //       duration: 0.2,
+  //       ease: "power1.inOut",
+  //     });
+  //   };
 
-    ScrollTrigger.create({
-      trigger: ".start",
-      start: "top center",
-      end: "bottom top",
-      onUpdate: (self) => {
-        const progress = (self.progress * 2).toFixed(3);
-        console.log(progress);
+  //   ScrollTrigger.create({
+  //     trigger: ".start",
+  //     start: "top center",
+  //     end: "bottom top",
+  //     onUpdate: (self) => {
+  //       const progress = (self.progress * 2).toFixed(3);
+  //       console.log(progress);
 
-        if (progress > 0 && progress < 1.8) {
-          const backgroundColor = "#000000";
-          const textColor = "#d1d1d7";
-          changeBackgroundColor(backgroundColor, textColor);
-          setNavbg("#000000");
-          setNavtext("#d1d1d7");
-        } else {
-          const backgroundColor = "transparent";
-          const textColor = "#000000";
-          changeBackgroundColor(backgroundColor, textColor);
-          setNavbg("#fafaf9");
-          setNavtext("#000000");
-        }
-      },
-    });
-  }, []);
+  //       if (progress > 0 && progress < 1.8) {
+  //         const backgroundColor = "#000000";
+  //         const textColor = "#d1d1d7";
+  //         changeBackgroundColor(backgroundColor, textColor);
+  //         setNavbg("#000000");
+  //         setNavtext("#d1d1d7");
+  //       } else {
+  //         const backgroundColor = "transparent";
+  //         const textColor = "#000000";
+  //         changeBackgroundColor(backgroundColor, textColor);
+  //         setNavbg("#fafaf9");
+  //         setNavtext("#000000");
+  //       }
+  //     },
+  //   });
+  // }, []);
 
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
@@ -96,10 +97,10 @@ function Home() {
       >
         <Navbar bgcolor={navbg} textColor={navtext} />
       </motion.div> */}
-      <Navbar bgcolor={navbg} textColor={navtext} active={"home"} />
+      <Navbar bgcolor={"#000000"} textColor={"#FFFFFF"} active={"home"} />
 
       <div className="home ">
-        <section className="hero relative flex h-[50vh] py- w-full overflow-hidden justify-center sm:h-[95vh] py-20 w-full overflow-hidden justify-center ">
+        <section className="hero relative flex h-[50vh] py-2 w-full overflow-hidden justify-center sm:h-[120vh] py-15 w-full overflow-hidden justify-center ">
           <div className="z-10 py-20 my-5 flex flex-col w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300 font-[poppins] reduced-letter-spacing">
             {/* <motion.div
               transition={{
@@ -125,7 +126,7 @@ function Home() {
 
               <h1 className=" overflow-visible">New Leap Labs</h1>
             </motion.div> */}
-            <div className="title text-5xl sm:text-9xl text-[#141313] py-20 ">
+            <div className="title text-5xl sm:text-9xl text-[#FFFFFF] py-20 ">
 
               <h1 className=" overflow-visible">New Leap Labs</h1>
               <h1
@@ -149,8 +150,8 @@ function Home() {
               className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-full h-auto"
             />
           </motion.div> */}
-          <div className="intro absolute my-12 mx-auto w-[85%] h-[75%] rounded-md bg-white rounded md:w-[72%] h-[100%] md:shadow-[0px_0px_50px_35px_rgba(0,0,0,0.3)]">
-            <img src={hero} alt="" className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-[100%] h-[100%]" />
+          <div className="intro absolute my-12 mx-auto w-[85%] h-[75%] rounded-md bg-white rounded md:w-[100%] h-[100%] ">
+            <img src={space} alt="" className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md lg:aspect-[11/9] w-[100%] h-[100%]" />
           </div>
           {/* <motion.div
             transition={{

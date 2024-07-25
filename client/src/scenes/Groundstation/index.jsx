@@ -20,7 +20,7 @@ function GroundStation() {
       <Navbar bgcolor="#fafaf9" textColor="#000000" active={"groundstation"} />
       <div className="gs bg-transparent pt-[6rem]  flex justify-center items-center flex-col h-max mb-10 px-5 md:px-10 xl:px-20 2xl:px-28 ">
         <div className="hero w-full">
-          <div className="mainimg h-[30vh] md:h-[40vh] flex items-center w-full overflow-hidden justify-center  rounded-3xl ">
+          <div className="mainimg h-[30vh] md:h-[40vh] flex items-center w-full overflow-hidden justify-center rounded-3xl ">
             <div className="mainimg rounded-3xl overflow-hidden h-[40vh]">
               <img
                 src={gs}
@@ -29,6 +29,9 @@ function GroundStation() {
                 srcset=""
               />
             </div>
+          </div>
+          <div className="mt-6 text-xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, eius? Ratione mollitia, omnis id suscipit, veniam ipsam aliquid error minima ducimus totam molestiae. Explicabo expedita odio sint ab, assumenda soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusantium minus, optio atque, quis blanditiis corporis debitis iusto assumenda nisi placeat, impedit earum quas consequatur maiores perspiciatis provident et totam! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, labore! Hic iste accusantium officia at non adipisci obcaecati veniam, illum repudiandae quidem fugit, consequuntur velit alias in saepe ipsa. Reprehenderit!
           </div>
           <div className="heads flex justify-center items-center mt-5">
             <h1 className="text-9xl text-slate-200 font-sans  reduced-letter-spacing">
