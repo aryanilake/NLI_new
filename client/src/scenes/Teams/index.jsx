@@ -19,7 +19,7 @@ function Teams() {
 
   return (
     <>
-      <Navbar bgcolor="#fafaf9" textColor="#000000" active={"about"} />
+      <Navbar bgcolor="#fafaf9" textColor="#000000" active={"teams"} />
       <div className="py-20 font-poppins justify-between items-center h-max mx-auto px-5 mt-5 ">
         <div className="space-x-4">
           <Button
@@ -62,11 +62,6 @@ function Teams() {
         </div>
         <div className="results m-4 ">
           {selectedLabel && <CardSlider label={selectedLabel} />}
-        </div>
-        <Headers title="Founders" size="10vh" />
-        <div className="text-center md:flex justify-center">
-          <Foundercard imageUrl={rohit} title="Rohit Bokade" />
-          <Foundercard imageUrl={supriya} title="Supriya Bhide" />
         </div>
       </div>
     </>

@@ -10,7 +10,7 @@ import BackToTopButton from "./BackToTopButton";
 
 function Footer() {
   return (
-    <div className="text-black font-poppins ">
+    <div className="text-black mt-[-2vh] font-poppins bg-white ">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between py-1">
         <div className="text-center p-5 lg:text-left mb-4 lg:mb-0 w-full">
           <img className="rounded mb-6" src={kjsit} alt="KJSIT Logo" />
@@ -36,7 +36,7 @@ function Footer() {
       </div>
 
 
-      <div className="bg-black text-white py-4 font-[poppins]">
+      <div className="bg-white text-black py-4 font-[poppins]">
         <div className="text-center flex justify-between items-center px-6 ">
           <span className="text-sm">All rights reserved</span>
           <BackToTopButton />

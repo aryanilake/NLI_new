@@ -5,6 +5,7 @@ import Home from "./scenes/Home";
 import Projects from "./scenes/Projects";
 import Groundstation from "./scenes/Groundstation";
 import Teams from "./scenes/Teams";
+import Founders from "./scenes/Founders";
 import NewPage from "./components/NewPage";
 import Lenis from "@studio-freight/lenis";
 import Footer from "./components/Footer";
@@ -28,6 +29,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/teams" element={<Teams />} />
+        <Route path="/founders" element={<Founders />} />
         <Route path="/groundstation" element={<Groundstation />} />
         <Route path="/achievements" element={<Achievements />} />
 

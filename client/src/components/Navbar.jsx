@@ -5,18 +5,18 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ bgcolor, textColor, active }) => {
   const [nav, setNav] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
   console.log(active)
-
   return (
     <div className=" w-full z-20 fixed top-0 left-0 right-0 font-poppins flex justify-between items-center h-20  mx-auto px-6  text-black" style={{ backgroundColor: bgcolor, color: textColor, transition: "0.3 ease-in-out" }}>
       <div className="flex  justify-between items-center">
         <img src={logo} className="h-12 w-auto rounded-full border border-black"></img>
-        <div className="p-2 text-2xl font-bold">New Leap Labs</div>
+        <div className="p-2 text-2xl font-bold font-serif">New Leap Labs</div>
         {/* <h1 className="font-[poppins] ml-2 text-3xl font-bold">NLL</h1> */}
       </div>
 
@@ -49,12 +49,42 @@ const Navbar = ({ bgcolor, textColor, active }) => {
             {/* <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div> */}
           </Link>
         </li>
-        <li className="p-4 relative group">
+        {/* <li className="p-4 relative group">
           <Link to="/teams" className="block">
             About Us
             {(active == "about") ? <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>}
+            <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
+          </Link>
+        </li> */}
+        <li className="p-4 relative group" onMouseEnter={() => {setDropdown(true)}} onMouseLeave={() => setDropdown(false)}>
+          <div>
+            About Us
+            {(active == "about") ? <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div></div>}
+
+          </div>
+            {dropdown ? <ul className="absolute fixed flex flex-col top-18 gap-2">
+            <li>
+              <div className="">
+              <Link to="/teams" className="block">
+            Teams
+            {(active == "team") ? <div className="absolute left-0 right-0 bottom-10 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div ></div>}
             {/* <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div> */}
           </Link>
+              </div>
+          </li>
+          <li>
+            <div>
+
+            <Link to="/founders" className="block">
+            Founders & Mentors
+            {(active == "founders") ? <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div ></div>}
+            {/* <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div> */}
+          </Link>
+            </div>
+          </li>
+          </ul> : <div/> }
+          
+          
         </li>
       </ul>
       <div onClick={handleNav} className="block md:hidden">

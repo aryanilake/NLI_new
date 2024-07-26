@@ -99,14 +99,14 @@ function Home() {
       </motion.div> */}
       <Navbar bgcolor={"#000000"} textColor={"#FFFFFF"} active={"home"} />
 
-      <div className="home ">
+      <div className="home "style={{backgroundColor:"#000000"}}>
         <section className="hero relative flex h-[50vh] py-2 w-full overflow-hidden justify-center sm:h-[120vh] py-15 w-full overflow-hidden justify-center ">
           <div className="z-10 py-20 my-5 flex flex-col w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300 font-[poppins] reduced-letter-spacing">
-            {/* <motion.div
+            <motion.div
               transition={{
                 ease: "linear",
                 duration: 2,
-                delay: 1.7,
+                delay: 1.0,
               }}
               variants={{
                 hidden: { opacity: 0, y: 75 },
@@ -114,19 +114,19 @@ function Home() {
               }}
               initial="hidden"
               animate="visible"
-              className="title text-5xl sm:text-9xl text-[#262626] py-16 "
+              className="title text-5xl sm:text-9xl text-[#FFFFFF] py-20 "
             >
               <h1 className=" overflow-visible">New Leap Labs</h1>
               <h1
                 className=" text-transparent font-outline-4 flex justify-center
-  overflow-visible"
+  overflow-visible py-20"
               >
                 KJSIT
               </h1>
 
-              <h1 className=" overflow-visible">New Leap Labs</h1>
-            </motion.div> */}
-            <div className="title text-5xl sm:text-9xl text-[#FFFFFF] py-20 ">
+              {/* <h1 className=" overflow-visible">New Leap Labs</h1> */}
+            </motion.div>
+            {/* <div className="title text-5xl sm:text-9xl text-[#FFFFFF] py-20 ">
 
               <h1 className=" overflow-visible">New Leap Labs</h1>
               <h1
@@ -135,24 +135,24 @@ function Home() {
               >
                 KJSIT
               </h1>
-            </div>
+            </div> */}
           </div>
 
-          {/* <motion.div
+          <motion.div
             initial={{ scale: 2, opacity: 0 }} // initial scale and opacity
             animate={{ scale: 1, opacity: 1 }} // animate to normal scale and full opacity
             transition={{ duration: 2 }} // adjust the duration as needed
-            className="intro absolute mx-auto w-[55%] rounded-md"
+            className="intro absolute mx-auto w-[55%] rounded-md md:w-[100%] h-[80%]"
           >
             <motion.img
-              src={hero}
+              src={space}
               alt=""
-              className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-full h-auto"
+              className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-[100%] h-[100%]"
             />
-          </motion.div> */}
-          <div className="intro absolute my-12 mx-auto w-[85%] h-[75%] rounded-md bg-white rounded md:w-[100%] h-[100%] ">
+          </motion.div>
+          {/* <div className="intro absolute my-12 mx-auto w-[85%] h-[75%] rounded-md bg-white rounded md:w-[100%] h-[100%] ">
             <img src={space} alt="" className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md lg:aspect-[11/9] w-[100%] h-[100%]" />
-          </div>
+          </div> */}
           {/* <motion.div
             transition={{
               ease: "linear",
@@ -171,18 +171,18 @@ function Home() {
               #webelieve
             </span>
           </motion.div> */}
-          <div className="absolute bottom-12 right-0 flex flex-col items-center justify-center space-y-8">
-            <span className=" rotate-90 text-body-3 text-xl  ">
+          <div className="absolute bottom-12 mb-[25vh] right-0 text-[#FFFFFF] flex flex-col items-center justify-center space-y-8">
+            <span className="rotate-90 text-body-3 text-2xl  ">
               #webelieve
             </span>
           </div>
         </section>
 
         {/* black */}
-        <main className="start h-max mb-10 px-5 md:px-10 xl:px-20 2xl:px-28 ">
-          <section className="about select-none flex my-20 md:my-[9%] py-5 flex-col items-center justify-center overflow-hidden ">
+        <main className="start h-max px-5 md:px-10 mt-[-25vh] xl:px-20 2xl:px-28 ">
+          <section className="about select-none flex my-20 md:mb-[3%] py-5 flex-col items-center justify-center overflow-hidden ">
             <div className=" flex w-full items-center space-x-20">
-              <h1 className=" text-heading-1 text-[1.5rem]   leading-[1.25em] md:text-[2.5rem]">
+              <h1 className=" text-heading-1 text-[1.5rem] font-serif text-[#FFFFFF] leading-[1.25em] md:text-[2.5rem]">
                 We foster innovation by inspiring students in satellite technology, contributing towards prestigious awards, and advancing indigenous nano-satellite development for societal impact.
               </h1>
             </div>
@@ -190,7 +190,7 @@ function Home() {
 
           <section>
             <Headers title="Projects" size="13vh" />
-            <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12 ">
+            <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12 font-serif">
               <div className=" col-span-1 md:col-span-12">
                 <div>
                   <div className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl">
@@ -205,12 +205,12 @@ function Home() {
                   </div>
                   <div className="mt-4">
                     <div className="flex space-x-2 mb-3">
-                      <p className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl">
+                      <p className="rounded-full bg-transparent border text-[#FFFFFF] border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl">
                         2018
                       </p>
                     </div>
                     <div className="2xl:space-y-3">
-                      <h3 className=" text-3xl font-medium uppercase text-primary-200">
+                      <h3 className=" text-3xl font-medium uppercase text-[#FFFFFF] text-primary-200">
                         BeliefSat-1
                       </h3>
                     </div>
@@ -223,12 +223,12 @@ function Home() {
                 </div>
                 <div className="mt-4">
                   <div className="flex space-x-2 mb-3">
-                    <p className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl">
+                    <p className="rounded-full bg-transparent border text-[#FFFFFF] border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl">
                       2019
                     </p>
                   </div>
                   <div className="2xl:space-y-3">
-                    <h3 className=" text-3xl font-medium uppercase text-primary-200">
+                    <h3 className=" text-3xl font-medium uppercase text-[#FFFFFF] text-primary-200">
                       Ground Station
                     </h3>
                   </div>
@@ -247,12 +247,12 @@ function Home() {
                 </div>
                 <div className="mt-4">
                   <div className="flex space-x-2 mb-3">
-                    <p className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl">
+                    <p className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl text-[#FFFFFF]">
                       2023
                     </p>
                   </div>
                   <div className="2xl:space-y-3">
-                    <h3 className=" text-3xl font-medium uppercase text-primary-200">
+                    <h3 className=" text-3xl font-medium uppercase text-primary-200 text-[#FFFFFF]">
                       Avruti
                     </h3>
                   </div>
@@ -265,7 +265,7 @@ function Home() {
             <Headers title="Domains" size="13vh" />
             {viewportWidth >= 768 ? (
               <div>
-                <div className=" ">
+                <div className="text-[#FFFFFF] ">
                   {/* First Row */}
                   <div className="items-center justify-center md:flex justify-center">
                     <CardsDomain
@@ -375,55 +375,8 @@ function Home() {
 
           </section>
         </main>
-
-
-        {/* white */}
-        <main className="px-5 md:px-10 xl:px-20 2xl:px-28 ">
-          {/* <section>
-            <Headers title="Founders" />
-            <div className="text-center md:flex justify-center">
-              <Foundercard imageUrl={rohit} title="Rohit Bokade" />
-              <Foundercard imageUrl={supriya} title="Supriya Bhide" />
-            </div>
-          </section> */}
-
-
-          {/* <div className="Testimonials mb-10 ">
-          <Headers title="Testimonials" />
-            <Swiper
-              modules={[Navigation, Pagination]}
-              spaceBetween={30}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-            >
-              <SwiperSlide>
-                <TestimonialCard
-                  text="Jai Shree Ram"
-                  author="Shree Hari"
-                  company="Global Foundation"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <TestimonialCard
-                  text="Jai Shree Ram"
-                  author="Shree Hari"
-                  company="Global Foundation"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <TestimonialCard
-                  text="Jai Shree Ram"
-                  author="Shree Hari"
-                  company="Global Foundation"
-                />
-              </SwiperSlide>
-          
-            </Swiper>
-          </div> */}
-        </main>
-
       </div>
+        <div className="bg-[#FF0000] h-[21px] mt-[-7vh]"></div>
     </>
   );
 }
