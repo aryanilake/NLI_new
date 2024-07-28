@@ -20,18 +20,18 @@ function GroundStation() {
       <Navbar bgcolor="#fafaf9" textColor="#000000" active={"groundstation"} />
       <div className="gs bg-transparent pt-[6rem]  flex justify-center items-center flex-col h-max mb-10 px-5 md:px-10 xl:px-20 2xl:px-28 ">
         <div className="hero w-full">
-          <div className="mainimg h-[30vh] md:h-[40vh] flex items-center w-full overflow-hidden justify-center rounded-3xl ">
-            <div className="mainimg rounded-3xl overflow-hidden h-[40vh]">
+          <div className="mainimg h-[30vh] md:h-[50vh] flex items-center w-full overflow-hidden justify-center rounded-3xl ">
+            <div className="mainimg rounded-3xl overflow-hidden h-[50vh]">
               <img
                 src={gs}
-                className="w-[160vh] h-[50vh] transform hover:scale-110 transition-transform duration-300 ease-in-out"
+                className="w-[160vh] h-[60vh] transform hover:scale-110 transition-transform duration-300 ease-in-out"
                 alt="gs"
                 srcset=""
               />
             </div>
           </div>
-          <div className="mt-6 text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, eius? Ratione mollitia, omnis id suscipit, veniam ipsam aliquid error minima ducimus totam molestiae. Explicabo expedita odio sint ab, assumenda soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusantium minus, optio atque, quis blanditiis corporis debitis iusto assumenda nisi placeat, impedit earum quas consequatur maiores perspiciatis provident et totam! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, labore! Hic iste accusantium officia at non adipisci obcaecati veniam, illum repudiandae quidem fugit, consequuntur velit alias in saepe ipsa. Reprehenderit!
+          <div className="mt-6 text-2xl font-serif text-justify">
+          The ground station is essential for satellite communication, serving as a hub for data acquisition, control, and payload transmission. It includes advanced antennas, receivers, and transmitters. The ground system comprises ground stations and control centers working together to support spacecraft and users. Transceivers in these stations are crucial for data transmission, telemetry, and command operations, ensuring reliable communication with satellites. Satellite tracking uses QFH, monopole, and Yagi-Uda antennas, with signal reception through SDRs or Baofengs and image reception using SDRs and decoding software.
           </div>
           <div className="heads flex justify-center items-center mt-5">
             <h1 className="text-9xl text-slate-200 font-sans  reduced-letter-spacing">

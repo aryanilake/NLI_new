@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import logo from "../assets/NEWLEAPLABS.png";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import da from "../assets/downarrow.svg";
+import up from "../assets/uparrow.svg";
 
 const Navbar = ({ bgcolor, textColor, active }) => {
   const [nav, setNav] = useState(false);
@@ -56,35 +58,52 @@ const Navbar = ({ bgcolor, textColor, active }) => {
             <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div>
           </Link>
         </li> */}
-        <li className="p-4 relative group" onMouseEnter={() => {setDropdown(true)}} onMouseLeave={() => setDropdown(false)}>
+        <li className="p-4 relative group" onMouseEnter={() => { setDropdown(true) }} onMouseLeave={() => setDropdown(false)}>
           <div>
-            About Us
-            {(active == "about") ? <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div></div>}
+            {(active == "team" || active == "founders") ? 
+            <>
+              { dropdown ?
+                 <div>
+                  About Us <img className="h-8 w-8 inline-block" style={{color: textColor}} src={up} ></img>
+                  </div>
+                 : <div>About Us <img className="h-8 w-8 inline-block" src={da}></img></div>}
+                 </>
+            : 
+            <>
+            { dropdown ?
+                 <div>
+                 About Us <img className="h-8 w-8 inline-block" src={up}></img>
+                  </div>
+                 : <div>About Us <img className="h-8 w-8 inline-block" src={da}></img></div>}
+            <div></div>
+            </>
+            }
 
           </div>
-            {dropdown ? <ul className="absolute fixed flex flex-col top-18 gap-2">
+          {dropdown ? <ul className="absolute mt-2 right-1 flex flex-col top-18 gap-2 ">
             <li>
-              <div className="">
-              <Link to="/teams" className="block">
-            Teams
-            {(active == "team") ? <div className="absolute left-0 right-0 bottom-10 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div ></div>}
-            {/* <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div> */}
-          </Link>
+              <div className="mt-2 text-center">
+                <Link to="/teams" className="text-center">
+                  Teams
+                  {(active == "team") ? <div className="absolute left-0 right-0 bottom-13 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div ></div>}
+                  {/* <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div> */}
+                </Link>
               </div>
-          </li>
-          <li>
-            <div>
+            </li>
+            <hr className="bg-black h-0.5 mt-1"/>
+            <li>
+              <div className="text-center">
 
-            <Link to="/founders" className="block">
-            Founders & Mentors
-            {(active == "founders") ? <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div ></div>}
-            {/* <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div> */}
-          </Link>
-            </div>
-          </li>
-          </ul> : <div/> }
-          
-          
+                <Link to="/founders" className="block mb-3">
+                  Founders & Mentors
+                  {(active == "founders") ? <div className="absolute left-0 right-0 bottom-2 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div ></div>}
+                  {/* <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div> */}
+                </Link>
+              </div>
+            </li>
+          </ul> : <div />}
+
+
         </li>
       </ul>
       <div onClick={handleNav} className="block md:hidden">

@@ -19,7 +19,7 @@ function Teams() {
 
   return (
     <>
-      <Navbar bgcolor="#fafaf9" textColor="#000000" active={"teams"} />
+      <Navbar bgcolor="#fafaf9" textColor="#000000" active={"team"} />
       <div className="py-20 font-poppins justify-between items-center h-max mx-auto px-5 mt-5 ">
         <div className="space-x-4">
           <Button
