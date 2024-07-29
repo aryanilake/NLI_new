@@ -99,7 +99,7 @@ function Home() {
       </motion.div> */}
       <Navbar bgcolor={"#000000"} textColor={"#FFFFFF"} active={"home"} />
 
-      <div className="home "style={{backgroundColor:"#000000"}}>
+      <div className="home " style={{ backgroundColor: "#000000" }}>
         <section className="hero relative flex h-[50vh] py-2 w-full overflow-hidden justify-center sm:h-[120vh] py-15 w-full overflow-hidden justify-center ">
           <div className="z-10 py-20 my-5 flex flex-col w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300 font-[poppins] reduced-letter-spacing">
             <motion.div
@@ -150,6 +150,7 @@ function Home() {
               className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-[100%] h-[100%]"
             />
           </motion.div>
+
           {/* <div className="intro absolute my-12 mx-auto w-[85%] h-[75%] rounded-md bg-white rounded md:w-[100%] h-[100%] ">
             <img src={space} alt="" className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md lg:aspect-[11/9] w-[100%] h-[100%]" />
           </div> */}
@@ -376,7 +377,7 @@ function Home() {
           </section>
         </main>
       </div>
-        <div className="bg-[#FF0000] h-[21px] mt-[-7vh]"></div>
+      <div className="bg-[#FF0000] h-[21px] mt-[-7vh]"></div>
     </>
   );
 }

@@ -163,13 +163,13 @@ const Achievements = () => {
                     </div>
                   </div>
                   <div className="flex justify-center items-center md:w-1/2">
-                    <img className="h-80 md:shadow-[0px_0px_50px_15px_rgba(0,0,0,0.3)]" src={item.image} alt="Achievement" />
+                    <img className="h-80 rounded-2xl md:shadow-[0px_0px_50px_15px_rgba(0,0,0,0.3)]" src={item.image} alt="Achievement" />
                   </div>
                 </>
               ) : (
                 <>
                   <div className="flex justify-center items-center md:w-1/2">
-                    <img className="h-80 md:shadow-[0px_0px_50px_15px_rgba(0,0,0,0.3)]" src={item.image} alt="Achievement" />
+                    <img className="h-80 rounded-2xl md:shadow-[0px_0px_50px_15px_rgba(0,0,0,0.3)]" src={item.image} alt="Achievement" />
                   </div>
                   <div className="flex items-center justify-center md:w-1/2">
                     <div className="flex flex-col items-center justify-center text-center">

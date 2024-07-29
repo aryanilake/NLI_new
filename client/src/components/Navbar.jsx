@@ -60,23 +60,26 @@ const Navbar = ({ bgcolor, textColor, active }) => {
         </li> */}
         <li className="p-4 relative group" onMouseEnter={() => { setDropdown(true) }} onMouseLeave={() => setDropdown(false)}>
           <div>
-            {(active == "team" || active == "founders") ? 
-            <>
-              { dropdown ?
-                 <div>
-                  About Us <img className="h-8 w-8 inline-block" style={{color: textColor}} src={up} ></img>
+            {(active == "team" || active == "founders") ?
+              <>
+                {dropdown ?
+                  <div>
+                    About Us
+                    <svg className="inline-block h-4 w-4 ml-3" fill={textColor} height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve" transform="rotate(0)matrix(1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="16.5"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path> </g></svg>
+
                   </div>
-                 : <div>About Us <img className="h-8 w-8 inline-block" src={da}></img></div>}
-                 </>
-            : 
-            <>
-            { dropdown ?
-                 <div>
-                 About Us <img className="h-8 w-8 inline-block" src={up}></img>
+
+                  : <div>About Us <svg className="inline-block h-4 w-4 ml-2" fill={textColor} height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve" stroke="#000000" stroke-width="16.5"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="2.64"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path> </g></svg></div>}
+              </>
+              :
+              <>
+                {dropdown ?
+                  <div>
+                    About Us <svg className="inline-block h-4 w-4 ml-2" fill={textColor} height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve" transform="rotate(0)matrix(1, 0, 0, -1, 0, 0)" stroke="#000000" stroke-width="16.5"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path> </g></svg>
                   </div>
-                 : <div>About Us <img className="h-8 w-8 inline-block" src={da}></img></div>}
-            <div></div>
-            </>
+                  : <div>About Us <svg className="inline-block h-4 w-4 ml-2" fill={textColor} height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve" stroke="#000000" stroke-width="16.5"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="2.64"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path> </g></svg></div>}
+                <div></div>
+              </>
             }
 
           </div>
@@ -90,7 +93,7 @@ const Navbar = ({ bgcolor, textColor, active }) => {
                 </Link>
               </div>
             </li>
-            <hr className="bg-black h-0.5 mt-1"/>
+            <hr className="bg-black h-0.5 mt-1" />
             <li>
               <div className="text-center">
 

@@ -36,7 +36,7 @@ function Footer() {
       </div>
 
 
-      <div className="bg-white text-black py-4 font-[poppins]">
+      <div className="bg-black text-white py-4 font-[poppins]">
         <div className="text-center flex justify-between items-center px-6 ">
           <span className="text-sm">All rights reserved</span>
           <BackToTopButton />
