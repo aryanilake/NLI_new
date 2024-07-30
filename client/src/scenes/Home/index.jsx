@@ -13,6 +13,7 @@ import CardsDomain from "../../components/CardsDomain";
 import Cd from "../../components/Cd";
 import Foundercard from "../../components/Foundercard";
 import belifsat from "../../assets/belifsat.jpg";
+import earth from "../../assets/earth.png";
 import space from "../../assets/space.jpg";
 import beliefsat1 from "../../assets/beliefsat1.jpg";
 import avruti from "../../assets/avruti.jpg"
@@ -98,8 +99,8 @@ function Home() {
         <Navbar bgcolor={navbg} textColor={navtext} />
       </motion.div> */}
       <Navbar bgcolor={"#000000"} textColor={"#FFFFFF"} active={"home"} />
-
-      <div className="home " style={{ backgroundColor: "#000000" }}>
+      <img className="absolute  w-[800vh] h-[500vh] " src={earth} alt="" />
+      <div className="home relative" style={{ backgroundImage: { earth } }}>
         <section className="hero relative flex h-[50vh] py-2 w-full overflow-hidden justify-center sm:h-[120vh] py-15 w-full overflow-hidden justify-center ">
           <div className="z-10 py-20 my-5 flex flex-col w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300 font-[poppins] reduced-letter-spacing">
             <motion.div
@@ -144,11 +145,11 @@ function Home() {
             transition={{ duration: 2 }} // adjust the duration as needed
             className="intro absolute mx-auto w-[55%] rounded-md md:w-[100%] h-[80%]"
           >
-            <motion.img
+            {/* <motion.img
               src={space}
               alt=""
               className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-[100%] h-[100%]"
-            />
+            /> */}
           </motion.div>
 
           {/* <div className="intro absolute my-12 mx-auto w-[85%] h-[75%] rounded-md bg-white rounded md:w-[100%] h-[100%] ">
@@ -180,7 +181,7 @@ function Home() {
         </section>
 
         {/* black */}
-        <main className="start h-max px-5 md:px-10 mt-[-25vh] xl:px-20 2xl:px-28 ">
+        <main className="start h-max px-5 md:px-10 mt-[-25vh] xl:px-20 2xl:px-28">
           <section className="about select-none flex my-20 md:mb-[3%] py-5 flex-col items-center justify-center overflow-hidden ">
             <div className=" flex w-full items-center space-x-20">
               <h1 className=" text-heading-1 text-[1.5rem] font-serif text-[#FFFFFF] leading-[1.25em] md:text-[2.5rem]">
@@ -197,7 +198,7 @@ function Home() {
                   <div className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl">
                     <Link to="/projects" className="block">
                       <img
-                        className="w-screen duration-700 ease-in-out group-hover:scale-105"
+                        className="w-screen h-[60vh] duration-700 ease-in-out group-hover:scale-105"
                         src={belifsat}
                         alt=""
                         srcset=""
@@ -262,7 +263,7 @@ function Home() {
             </div>
           </section>
 
-          <section className="mb-10">
+          <section className="pb-[80px]">
             <Headers title="Domains" size="13vh" />
             {viewportWidth >= 768 ? (
               <div>
@@ -376,8 +377,8 @@ function Home() {
 
           </section>
         </main>
-      </div>
-      <div className="bg-[#FF0000] h-[21px] mt-[-7vh]"></div>
+      </div >
+      <div className="bg-[#FFFFFF] h-[15px] mt-[-7vh]"></div>
     </>
   );
 }

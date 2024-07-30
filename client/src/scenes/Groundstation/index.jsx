@@ -5,6 +5,7 @@ import Headers from "../../components/Headers";
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import { day1, day2, day3, columns } from "../../helper/gsdata"; // Import rows for Day 1
+import { day11, day21, day31 } from "../../helper/gsdata1"; // Import rows for Day 1
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 
@@ -31,7 +32,7 @@ function GroundStation() {
             </div>
           </div>
           <div className="mt-6 text-2xl font-serif text-justify">
-          The ground station is essential for satellite communication, serving as a hub for data acquisition, control, and payload transmission. It includes advanced antennas, receivers, and transmitters. The ground system comprises ground stations and control centers working together to support spacecraft and users. Transceivers in these stations are crucial for data transmission, telemetry, and command operations, ensuring reliable communication with satellites. Satellite tracking uses QFH, monopole, and Yagi-Uda antennas, with signal reception through SDRs or Baofengs and image reception using SDRs and decoding software.
+            The ground station is essential for satellite communication, serving as a hub for data acquisition, control, and payload transmission. It includes advanced antennas, receivers, and transmitters. The ground system comprises ground stations and control centers working together to support spacecraft and users. Transceivers in these stations are crucial for data transmission, telemetry, and command operations, ensuring reliable communication with satellites. Satellite tracking uses QFH, monopole, and Yagi-Uda antennas, with signal reception through SDRs or Baofengs and image reception using SDRs and decoding software.
           </div>
           <div className="heads flex justify-center items-center mt-5">
             <h1 className="text-9xl text-slate-200 font-sans  reduced-letter-spacing">
@@ -58,13 +59,39 @@ function GroundStation() {
                   marginTop: "10px",
                 }}
               >
-                <DataGrid
-                  rows={day1}
-                  columns={columns}
-                  pageSize={6}
-                // checkboxSelection
-                // disableRowSelectionOnClick
-                />
+                <div className="bg-transparent">
+                  {/* <h1 className="text-2xl font-bold my-4 text-center ">Day 1</h1> */}
+                  <div className="overflow-x-auto">
+                    <table className="min-w-full bg-white border border-gray-200">
+                      <thead>
+                        <tr>
+                          <th className="py-2 px-4 border-b">SSS</th>
+                          <th className="py-2 px-4 border-b">Reset</th>
+                          <th className="py-2 px-4 border-b">WD LSB</th>
+                          <th className="py-2 px-4 border-b">WD MSB</th>
+                          <th className="py-2 px-4 border-b">Temp1</th>
+                          <th className="py-2 px-4 border-b">Temp2</th>
+                          <th className="py-2 px-4 border-b">Packet No</th>
+                          <th className="py-2 px-4 border-b">ID</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {day1.map((item) => (
+                          <tr key={item.id} className=" hover:bg-gray-200 text-center text-1xl">
+                            <td className="py-2 px-4 border-b">{item.sss}</td>
+                            <td className="py-2 px-4 border-b">{item.reset}</td>
+                            <td className="py-2 px-4 border-b">{item.wd_lsb}</td>
+                            <td className="py-2 px-4 border-b">{item.wd_msb}</td>
+                            <td className="py-2 px-4 border-b">{item.temp1}</td>
+                            <td className="py-2 px-4 border-b">{item.temp2}</td>
+                            <td className="py-2 px-4 border-b">{item.packet_no}</td>
+                            <td className="py-2 px-4 border-b">{item.id}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </Box>
             ) : selectedDay === 2 ? (
               <Box

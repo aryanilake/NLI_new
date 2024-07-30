@@ -6,7 +6,7 @@ import Navbar from "../../components/Navbar";
 import Headers from "../../components/Headers";
 import Foundercard from "../../components/Foundercard";
 
-import viveksir from "../../assets/principalsir.jpg"
+import viveksir from "../../assets/principalsir.png"
 import umeshsir from "../../assets/Umeshsir.jpg"
 import sureshsir from "../../assets/exprincipalsir.jpg"
 import rohit from "../../assets/rohit.jpg"

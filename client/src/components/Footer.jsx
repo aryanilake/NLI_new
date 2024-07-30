@@ -10,14 +10,14 @@ import BackToTopButton from "./BackToTopButton";
 
 function Footer() {
   return (
-    <div className="text-black mt-[-2vh] font-poppins bg-white ">
+    <div className="text-white mt-[-2vh] font-poppins bg-black ">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between py-1">
         <div className="text-center p-5 lg:text-left mb-4 lg:mb-0 w-full">
-          <img className="rounded mb-6" src={kjsit} alt="KJSIT Logo" />
+          <img className="rounded mb-1 w-[15vh] h-[15vh]" src={kjsit} alt="KJSIT Logo" />
           <span className="text-lg font-semibold">
             KJ SOMAIYA INSTITIUTE OF TECHNOLOGY
           </span>
-          <p className="mt-2 text-sm">
+          <p className="text-sm">
             Ayurvihar Complex, Eastern Express Highway East, Near Everard Nagar, 400022, Sion
           </p>
 
