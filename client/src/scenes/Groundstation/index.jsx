@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import gs from "../../assets/gs.jpg";
+import info from "../../assets/info.svg";
 import Headers from "../../components/Headers";
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
@@ -11,6 +12,7 @@ import ButtonGroup from "@mui/material/ButtonGroup";
 
 function GroundStation() {
   const [selectedDay, setSelectedDay] = useState(1); // Default to Day 1
+  const [id, setId] = useState(false);
 
   const handleDayButtonClick = (day) => {
     setSelectedDay(day);
@@ -59,33 +61,85 @@ function GroundStation() {
                   marginTop: "10px",
                 }}
               >
-                <div className="bg-transparent">
+                <div className="bg-[#fafaf9] border-black rounded-3xl">
                   {/* <h1 className="text-2xl font-bold my-4 text-center ">Day 1</h1> */}
-                  <div className="overflow-x-auto">
-                    <table className="min-w-full bg-white border border-gray-200">
+                  <div className="overflow-x-auto rounded-3xl">
+                    <table className="min-w-full border rounded-3xl">
                       <thead>
                         <tr>
-                          <th className="py-2 px-4 border-b">SSS</th>
-                          <th className="py-2 px-4 border-b">Reset</th>
-                          <th className="py-2 px-4 border-b">WD LSB</th>
-                          <th className="py-2 px-4 border-b">WD MSB</th>
-                          <th className="py-2 px-4 border-b">Temp1</th>
-                          <th className="py-2 px-4 border-b">Temp2</th>
-                          <th className="py-2 px-4 border-b">Packet No</th>
-                          <th className="py-2 px-4 border-b">ID</th>
+                          <th className=" border-b">
+                            <div className="flex text-center items-center justify-center">
+
+                              <div className="ml-5">
+                                ID
+                              </div>
+                              <img src={info} alt="" className="h-5 m-2 inline-block" />
+                            </div>
+                          </th>
+                          <th className=" border-b"><div className="flex text-center items-center justify-center">
+
+                            <div className="ml-5">
+                              lsb_reset
+                            </div>
+                            <img src={info} alt="" className="h-5 m-2 inline-block" />
+                          </div></th>
+                          <th className=" border-b">
+                            <div className="flex text-center items-center justify-center">
+
+                              <div className="">
+                                msb_reset
+                              </div>
+                              <img src={info} alt="" className="h-5 m-2 inline-block" />
+                            </div>
+                          </th>
+                          <th className=" border-b">
+                            <div className="flex text-center items-center justify-center">
+
+                              <div className="ml-5">
+                                WD LSB
+                              </div>
+                              <img src={info} alt="" className="h-5 m-2 inline-block" />
+                            </div>
+                          </th>
+                          <th className="border-b">
+                            <div className="flex text-center items-center justify-center">
+
+                              <div className="ml-5">
+                                WD MSB
+                              </div>
+                              <img src={info} alt="" className="h-5 m-2 inline-block" />
+                            </div>
+                          </th>
+                          <th className=" border-b">
+                            <div className="flex text-center items-center justify-center">
+
+                              <div className="ml-5">
+                                Temp1
+                              </div>
+                              <img src={info} alt="" className="h-5 m-2 inline-block" />
+                            </div>
+                          </th>
+                          <th className=" border-b">
+                            <div className="flex text-center items-center justify-center">
+
+                              <div className="ml-5">
+                                temp2
+                              </div>
+                              <img src={info} alt="" className="h-5 m-2 inline-block" />
+                            </div>
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
-                        {day1.map((item) => (
+                        {day11.map((item) => (
                           <tr key={item.id} className=" hover:bg-gray-200 text-center text-1xl">
-                            <td className="py-2 px-4 border-b">{item.sss}</td>
-                            <td className="py-2 px-4 border-b">{item.reset}</td>
+                            <td className="py-2 px-4 border-b">{item.id}</td>
+                            <td className="lsb-reset py-2 px-4 border-b">{item.packet_no}</td>
+                            <td className="msb-reset py-2 px-4 border-b">{item.msb_reset}</td>
                             <td className="py-2 px-4 border-b">{item.wd_lsb}</td>
                             <td className="py-2 px-4 border-b">{item.wd_msb}</td>
                             <td className="py-2 px-4 border-b">{item.temp1}</td>
                             <td className="py-2 px-4 border-b">{item.temp2}</td>
-                            <td className="py-2 px-4 border-b">{item.packet_no}</td>
-                            <td className="py-2 px-4 border-b">{item.id}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -101,16 +155,77 @@ function GroundStation() {
                   marginTop: "10px",
                 }}
               >
-                <DataGrid rows={day2} columns={columns} pageSize={6} />
+                <div className="bg-[#fafaf9] border-black rounded-3xl">
+                  {/* <h1 className="text-2xl font-bold my-4 text-center ">Day 1</h1> */}
+                  <div className="overflow-x-auto rounded-3xl">
+                    <table className="min-w-full border rounded-3xl">
+                      <thead>
+                        <tr>
+                          <th className="py-2 px-4 border-b">ID</th>
+                          <th className="py-2 px-4 border-b">lsb_reset</th>
+                          <th className="py-2 px-4 border-b">msb_reset</th>
+                          <th className="py-2 px-4 border-b">WD LSB</th>
+                          <th className="py-2 px-4 border-b">WD MSB</th>
+                          <th className="py-2 px-4 border-b">Temp1</th>
+                          <th className="py-2 px-4 border-b">Temp2</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {day21.map((item) => (
+                          <tr key={item.id} className=" hover:bg-gray-200 text-center text-1xl">
+                            <td className="py-2 px-4 border-b">{item.id}</td>
+                            <td className="lsb-reset py-2 px-4 border-b">{item.packet_no}</td>
+                            <td className="msb-reset py-2 px-4 border-b">{item.msb_reset}</td>
+                            <td className="py-2 px-4 border-b">{item.wd_lsb}</td>
+                            <td className="py-2 px-4 border-b">{item.wd_msb}</td>
+                            <td className="py-2 px-4 border-b">{item.temp1}</td>
+                            <td className="py-2 px-4 border-b">{item.temp2}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </Box>
             ) : (
               <Box
                 sx={{
-                  display: "flex",
-                  justifyContent: "center",
+                  border: "1px solid black",
+                  borderRadius: "5px",
+                  marginTop: "10px",
                 }}
               >
-                <DataGrid rows={day3} columns={columns} pageSize={6} />
+                <div className="bg-[#fafaf9] border-black rounded-3xl">
+                  {/* <h1 className="text-2xl font-bold my-4 text-center ">Day 1</h1> */}
+                  <div className="overflow-x-auto rounded-3xl">
+                    <table className="min-w-full border rounded-3xl">
+                      <thead>
+                        <tr>
+                          <th className="py-2 px-4 border-b">ID</th>
+                          <th className="py-2 px-4 border-b">lsb_reset</th>
+                          <th className="py-2 px-4 border-b">msb_reset</th>
+                          <th className="py-2 px-4 border-b">WD LSB</th>
+                          <th className="py-2 px-4 border-b">WD MSB</th>
+                          <th className="py-2 px-4 border-b">Temp1</th>
+                          <th className="py-2 px-4 border-b">Temp2</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {day31.map((item) => (
+                          <tr key={item.id} className=" hover:bg-gray-200 text-center text-1xl">
+                            <td className="py-2 px-4 border-b">{item.id}</td>
+                            <td className="lsb-reset py-2 px-4 border-b">{item.packet_no}</td>
+                            <td className="msb-reset py-2 px-4 border-b">{item.msb_reset}</td>
+                            <td className="py-2 px-4 border-b">{item.wd_lsb}</td>
+                            <td className="py-2 px-4 border-b">{item.wd_msb}</td>
+                            <td className="py-2 px-4 border-b">{item.temp1}</td>
+                            <td className="py-2 px-4 border-b">{item.temp2}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </Box>
             )}
           </div>

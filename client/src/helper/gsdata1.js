@@ -1,7 +1,7 @@
 export const columns = [
     //   { field: "id", headerName: "ID", type: "number", width: 90 },
     { field: "sss", headerName: "SSS", width: 180 },
-    { field: "reset", headerName: "Reset", width: 180, sortable: false },
+    { field: "msb_reset", headerName: "msb_reset", width: 180, sortable: false },
     { field: "wd_lsb", headerName: "WD_LSB", width: 180, editable: false },
     { field: "wd_msb", headerName: "WD_MSB", width: 180, editable: false },
     { field: "temp1", headerName: "Temp1", width: 180, editable: false },
@@ -13,7 +13,7 @@ export const columns = [
 export const day11 = [
     {
         sss: 35,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 36.21,
@@ -23,7 +23,7 @@ export const day11 = [
     },
     {
         sss: 34,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 35.61,
@@ -33,7 +33,7 @@ export const day11 = [
     },
     {
         sss: 39,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 35.81,
@@ -43,7 +43,7 @@ export const day11 = [
     },
     {
         sss: 39,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 36.11,
@@ -53,7 +53,7 @@ export const day11 = [
     },
     {
         sss: 39,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 36.21,
@@ -65,7 +65,7 @@ export const day11 = [
 export const day21 = [
     {
         sss: 39,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 36.31,
@@ -75,7 +75,7 @@ export const day21 = [
     },
     {
         sss: 39,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 36.31,
@@ -85,7 +85,7 @@ export const day21 = [
     },
     {
         sss: 39,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 36.31,
@@ -97,7 +97,7 @@ export const day21 = [
 export const day31 = [
     {
         sss: 33,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 36.21,
@@ -107,7 +107,7 @@ export const day31 = [
     },
     {
         sss: 34,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 35.61,
@@ -117,7 +117,7 @@ export const day31 = [
     },
     {
         sss: 39,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 35.81,
@@ -127,7 +127,7 @@ export const day31 = [
     },
     {
         sss: 39,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 36.11,
@@ -137,7 +137,7 @@ export const day31 = [
     },
     {
         sss: 39,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 36.21,
@@ -147,7 +147,7 @@ export const day31 = [
     },
     {
         sss: 39,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 36.31,
@@ -157,7 +157,7 @@ export const day31 = [
     },
     {
         sss: 39,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 36.31,
@@ -167,7 +167,7 @@ export const day31 = [
     },
     {
         sss: 39,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 36.31,
@@ -177,7 +177,7 @@ export const day31 = [
     },
     {
         sss: 39,
-        reset: 0,
+        msb_reset: 0,
         wd_lsb: 255,
         wd_msb: 255,
         temp1: 36.41,
