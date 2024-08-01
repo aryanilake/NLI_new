@@ -32,6 +32,7 @@ import ScrollTrigger from "gsap/src/ScrollTrigger";
 import Navbar from "../../components/Navbar";
 
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer";
 
 function Home() {
   const [navbg, setNavbg] = useState("#fafaf9");
@@ -198,7 +199,7 @@ function Home() {
                   <div className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl">
                     <Link to="/projects" className="block">
                       <img
-                        className="w-screen h-[60vh] duration-700 ease-in-out group-hover:scale-105"
+                        className="w-screen h-[90vh] duration-700 ease-in-out group-hover:scale-105"
                         src={belifsat}
                         alt=""
                         srcset=""
@@ -377,8 +378,11 @@ function Home() {
 
           </section>
         </main>
+
+        <Footer />
+
       </div >
-      <div className="bg-[#FFFFFF] h-[15px] mt-[-7vh]"></div>
+      <div className="  mt-[-3vh]"></div>
     </>
   );
 }
