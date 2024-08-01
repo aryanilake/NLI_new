@@ -172,7 +172,7 @@ function GroundStation() {
                               {temp2 ? (
                                 <>
                                   <div className=" w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                    Temperature sensor 1 reading (Temperature of Payload )
+                                    Temperature sensor 2 reading (Temperature of Transreceiver)
                                   </div>
                                 </>
                               ) : null
@@ -310,7 +310,7 @@ function GroundStation() {
                               {temp2 ? (
                                 <>
                                   <div className=" w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                    Temperature sensor 1 reading (Temperature of Payload )
+                                    Temperature sensor 2 reading (Temperature of Transreceiver)
                                   </div>
                                 </>
                               ) : null
@@ -448,7 +448,7 @@ function GroundStation() {
                               {temp2 ? (
                                 <>
                                   <div className=" w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                    Temperature sensor 1 reading (Temperature of Payload )
+                                    Temperature sensor 2 reading (Temperature of Transreceiver)
                                   </div>
                                 </>
                               ) : null
