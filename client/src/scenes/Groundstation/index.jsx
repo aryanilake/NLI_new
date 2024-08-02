@@ -9,6 +9,8 @@ import { day1, day2, day3, columns } from "../../helper/gsdata"; // Import rows 
 import { day11, day21, day31 } from "../../helper/gsdata1"; // Import rows for Day 1
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import Footer from "../../components/Footer";
+import DataTable from "../../components/DataTable";
 
 function GroundStation() {
   const [selectedDay, setSelectedDay] = useState(1); // Default to Day 1
@@ -61,282 +63,14 @@ function GroundStation() {
           </Box>
           <div className="datatable">
             {selectedDay === 1 ? (
-              <Box
-                sx={{
-                  border: "1px solid black",
-                  borderRadius: "5px",
-                  marginTop: "10px",
-                }}
-              >
-                <div className="bg-[#fafaf9] border-black rounded-3xl">
-                  {/* <h1 className="text-2xl font-bold my-4 text-center ">Day 1</h1> */}
-                  <div className="overflow-x-auto rounded-3xl">
-                    <table className="min-w-full border rounded-3xl">
-                      <thead>
-                        <tr>
-                          <th className=" border-b">
-                            <div className="flex text-center items-center justify-center">
-                              ID
-                            </div>
-                          </th>
-                          <th className=" border-b"><div className="flex text-center items-center justify-center">
-
-                            <div className="ml-5">
-                              lsb_reset
-                            </div>
-                            <img style={{ cursor: "pointer" }} onMouseEnter={() => setLsb(!lsb)} onMouseLeave={() => setLsb(!lsb)} src={info} alt="" className="h-5 m-2 inline-block" />
-                            {lsb ? (
-                              <>
-                                <div className=" w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                  LSB of total number of system resets.
-                                </div>
-                              </>
-                            ) : null
-                            }
-                          </div></th>
-                          <th className=" border-b">
-                            <div className="flex text-center items-center justify-center">
-
-                              <div className="">
-                                msb_reset
-                              </div>
-                              <img style={{ cursor: "pointer" }} onMouseEnter={() => setMsb(!msb)} onMouseLeave={() => setMsb(!msb)} src={info} alt="" className="h-5 m-2 inline-block" />
-                              {msb ? (
-                                <>
-                                  <div className=" w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                    MSB of total number of system resets.
-                                  </div>
-                                </>
-                              ) : null
-                              }
-                            </div>
-                          </th>
-                          <th className=" border-b">
-                            <div className="flex text-center items-center justify-center">
-
-                              <div className="ml-5">
-                                WD LSB
-                              </div>
-                              <img style={{ cursor: "pointer" }} onMouseEnter={() => setWdlsb(!wdlsb)} onMouseLeave={() => setWdlsb(!wdlsb)} src={info} alt="" className="h-5 m-2 inline-block" />
-                              {wdlsb ? (
-                                <>
-                                  <div className="p-1 w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                    LSB of total number of resets induced by watchdog
-                                  </div>
-                                </>
-                              ) : null
-                              }
-                            </div>
-                          </th>
-                          <th className="border-b">
-                            <div className="flex text-center items-center justify-center">
-
-                              <div className="ml-5">
-                                WD MSB
-                              </div>
-                              <img style={{ cursor: "pointer" }} onMouseEnter={() => setWdmsb(!wdmsb)} onMouseLeave={() => setWdmsb(!wdmsb)} src={info} alt="" className="h-5 m-2 inline-block" />
-                              {wdmsb ? (
-                                <>
-                                  <div className="p-1 w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                    MSB of total number of resets induced by watchdog
-                                  </div>
-                                </>
-                              ) : null
-                              }
-                            </div>
-                          </th>
-                          <th className=" border-b">
-                            <div className="flex text-center items-center justify-center">
-
-                              <div className="ml-5">
-                                Temp1
-                              </div>
-                              <img style={{ cursor: "pointer" }} onMouseEnter={() => setTemp1(!temp1)} onMouseLeave={() => setTemp1(!temp1)} src={info} alt="" className="h-5 m-2 inline-block" />
-                              {temp1 ? (
-                                <>
-                                  <div className=" w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                    Temperature sensor 1 reading (Temperature of Payload )
-                                  </div>
-                                </>
-                              ) : null
-                              }
-                            </div>
-                          </th>
-                          <th className=" border-b">
-                            <div className="flex text-center items-center justify-center">
-
-                              <div className="ml-5">
-                                Temp2
-                              </div>
-                              <img style={{ cursor: "pointer" }} onMouseEnter={() => setTemp2(!temp2)} onMouseLeave={() => setTemp2(!temp2)} src={info} alt="" className="h-5 m-2 inline-block" />
-                              {temp2 ? (
-                                <>
-                                  <div className=" w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                    Temperature sensor 2 reading (Temperature of Transreceiver)
-                                  </div>
-                                </>
-                              ) : null
-                              }
-                            </div>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {day11.map((item) => (
-                          <tr key={item.id} className=" hover:bg-gray-200 text-center text-1xl">
-                            <td className="py-2 px-4 border-b">{item.id}</td>
-                            <td className="lsb-reset py-2 px-4 border-b">{item.packet_no}</td>
-                            <td className="msb-reset py-2 px-4 border-b">{item.msb_reset}</td>
-                            <td className="py-2 px-4 border-b">{item.wd_lsb}</td>
-                            <td className="py-2 px-4 border-b">{item.wd_msb}</td>
-                            <td className="py-2 px-4 border-b">{item.temp1}</td>
-                            <td className="py-2 px-4 border-b">{item.temp2}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </Box>
+              <DataTable className="" data={day11} />
             ) : selectedDay === 2 ? (
-              <Box
-                sx={{
-                  border: "1px solid black",
-                  borderRadius: "5px",
-                  marginTop: "10px",
-                }}
-              >
-                <div className="bg-[#fafaf9] border-black rounded-3xl">
-                  {/* <h1 className="text-2xl font-bold my-4 text-center ">Day 1</h1> */}
-                  <div className="overflow-x-auto rounded-3xl">
-                    <table className="min-w-full border rounded-3xl">
-                      <thead>
-                        <tr>
-                          <th className=" border-b">
-                            <div className="flex text-center items-center justify-center">
-                              ID
-                            </div>
-                          </th>
-                          <th className=" border-b"><div className="flex text-center items-center justify-center">
-
-                            <div className="ml-5">
-                              lsb_reset
-                            </div>
-                            <img style={{ cursor: "pointer" }} onMouseEnter={() => setLsb(!lsb)} onMouseLeave={() => setLsb(!lsb)} src={info} alt="" className="h-5 m-2 inline-block" />
-                            {lsb ? (
-                              <>
-                                <div className=" w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                  LSB of total number of system resets.
-                                </div>
-                              </>
-                            ) : null
-                            }
-                          </div></th>
-                          <th className=" border-b">
-                            <div className="flex text-center items-center justify-center">
-
-                              <div className="">
-                                msb_reset
-                              </div>
-                              <img style={{ cursor: "pointer" }} onMouseEnter={() => setMsb(!msb)} onMouseLeave={() => setMsb(!msb)} src={info} alt="" className="h-5 m-2 inline-block" />
-                              {msb ? (
-                                <>
-                                  <div className=" w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                    MSB of total number of system resets.
-                                  </div>
-                                </>
-                              ) : null
-                              }
-                            </div>
-                          </th>
-                          <th className=" border-b">
-                            <div className="flex text-center items-center justify-center">
-
-                              <div className="ml-5">
-                                WD LSB
-                              </div>
-                              <img style={{ cursor: "pointer" }} onMouseEnter={() => setWdlsb(!wdlsb)} onMouseLeave={() => setWdlsb(!wdlsb)} src={info} alt="" className="h-5 m-2 inline-block" />
-                              {wdlsb ? (
-                                <>
-                                  <div className="p-1 w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                    LSB of total number of resets induced by watchdog
-                                  </div>
-                                </>
-                              ) : null
-                              }
-                            </div>
-                          </th>
-                          <th className="border-b">
-                            <div className="flex text-center items-center justify-center">
-
-                              <div className="ml-5">
-                                WD MSB
-                              </div>
-                              <img style={{ cursor: "pointer" }} onMouseEnter={() => setWdmsb(!wdmsb)} onMouseLeave={() => setWdmsb(!wdmsb)} src={info} alt="" className="h-5 m-2 inline-block" />
-                              {wdmsb ? (
-                                <>
-                                  <div className="p-1 w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                    MSB of total number of resets induced by watchdog
-                                  </div>
-                                </>
-                              ) : null
-                              }
-                            </div>
-                          </th>
-                          <th className=" border-b">
-                            <div className="flex text-center items-center justify-center">
-
-                              <div className="ml-5">
-                                Temp1
-                              </div>
-                              <img style={{ cursor: "pointer" }} onMouseEnter={() => setTemp1(!temp1)} onMouseLeave={() => setTemp1(!temp1)} src={info} alt="" className="h-5 m-2 inline-block" />
-                              {temp1 ? (
-                                <>
-                                  <div className=" w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                    Temperature sensor 1 reading (Temperature of Payload )
-                                  </div>
-                                </>
-                              ) : null
-                              }
-                            </div>
-                          </th>
-                          <th className=" border-b">
-                            <div className="flex text-center items-center justify-center">
-
-                              <div className="ml-5">
-                                Temp2
-                              </div>
-                              <img style={{ cursor: "pointer" }} onMouseEnter={() => setTemp2(!temp2)} onMouseLeave={() => setTemp2(!temp2)} src={info} alt="" className="h-5 m-2 inline-block" />
-                              {temp2 ? (
-                                <>
-                                  <div className=" w-[30vh] absolute flex bottom-[-22vh] bg-[#FFFFFF] rounded-2xl " style={{ border: "2px solid black" }}>
-                                    Temperature sensor 2 reading (Temperature of Transreceiver)
-                                  </div>
-                                </>
-                              ) : null
-                              }
-                            </div>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {day21.map((item) => (
-                          <tr key={item.id} className=" hover:bg-gray-200 text-center text-1xl">
-                            <td className="py-2 px-4 border-b">{item.id}</td>
-                            <td className="lsb-reset py-2 px-4 border-b">{item.packet_no}</td>
-                            <td className="msb-reset py-2 px-4 border-b">{item.msb_reset}</td>
-                            <td className="py-2 px-4 border-b">{item.wd_lsb}</td>
-                            <td className="py-2 px-4 border-b">{item.wd_msb}</td>
-                            <td className="py-2 px-4 border-b">{item.temp1}</td>
-                            <td className="py-2 px-4 border-b">{item.temp2}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </Box>
+              <DataTable className="" data={day21} />
             ) : (
+
+              <>
+                <DataTable className="" data={day31} />
+                {/*
               <Box
                 sx={{
                   border: "1px solid black",
@@ -345,7 +79,7 @@ function GroundStation() {
                 }}
               >
                 <div className="bg-[#fafaf9] border-black rounded-3xl">
-                  {/* <h1 className="text-2xl font-bold my-4 text-center ">Day 1</h1> */}
+
                   <div className="overflow-x-auto rounded-3xl">
                     <table className="min-w-full border rounded-3xl">
                       <thead>
@@ -474,10 +208,13 @@ function GroundStation() {
                   </div>
                 </div>
               </Box>
+*/}
+              </>
             )}
           </div>
         </div>
       </div>
+      <Footer bg={"white"} text={"black"} />
     </>
   );
 }

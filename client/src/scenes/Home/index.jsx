@@ -100,8 +100,8 @@ function Home() {
         <Navbar bgcolor={navbg} textColor={navtext} />
       </motion.div> */}
       <Navbar bgcolor={"#000000"} textColor={"#FFFFFF"} active={"home"} />
-      <img className="absolute  w-[800vh] h-[500vh] " src={earth} alt="" />
-      <div className="home relative" style={{ backgroundImage: { earth } }}>
+      {/* <img className="absolute  w-[2000vh] h-[500vh] " src={earth} alt="" /> */}
+      <div className="home bg-black" >
         <section className="hero relative flex h-[50vh] py-2 w-full overflow-hidden justify-center sm:h-[120vh] py-15 w-full overflow-hidden justify-center ">
           <div className="z-10 py-20 my-5 flex flex-col w-full items-center text-title 2xl:text-[10vw] 2xl:space-y-16 font-bold uppercase text-accent-300 font-[poppins] reduced-letter-spacing">
             <motion.div
@@ -146,11 +146,11 @@ function Home() {
             transition={{ duration: 2 }} // adjust the duration as needed
             className="intro absolute mx-auto w-[55%] rounded-md md:w-[100%] h-[80%]"
           >
-            {/* <motion.img
+            <motion.img
               src={space}
               alt=""
               className="aspect-[11/16] sm:aspect-[5/6] md:aspect-[7/7] rounded-md opacity-50 lg:aspect-[11/9] w-[100%] h-[100%]"
-            /> */}
+            />
           </motion.div>
 
           {/* <div className="intro absolute my-12 mx-auto w-[85%] h-[75%] rounded-md bg-white rounded md:w-[100%] h-[100%] ">
@@ -379,10 +379,9 @@ function Home() {
           </section>
         </main>
 
-        <Footer />
-
       </div >
       <div className="  mt-[-3vh]"></div>
+      <Footer bg={"black"} text={"white"} />
     </>
   );
 }

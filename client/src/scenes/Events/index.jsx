@@ -111,6 +111,7 @@ import Navbar from "../../components/Navbar";
 import software from "../../assets/software.png";
 import { getAllachievements } from '../../helper/helper';
 import Headers from "../../components/Headers";
+import Footer from '../../components/Footer';
 // import Spline from '@splinetool/react-spline';
 
 
@@ -183,6 +184,7 @@ const Achievements = () => {
           ))
         )}
       </div>
+      <Footer bg={"white"} text={"black"} />
     </>
   );
 }

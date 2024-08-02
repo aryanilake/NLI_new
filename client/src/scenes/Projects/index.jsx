@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../../components/Button";
 import Navbar from "../../components/Navbar";
 import Projectscontent from "../../components/Projectscontent";
+import Footer from "../../components/Footer";
 
 function Projects() {
   const [selectedLabel, setSelectedLabel] = useState("Beliefsat-0");
@@ -86,6 +87,7 @@ function Projects() {
           )}
         </div>
       </div>
+      <Footer bg={"white"} text={"black"} />
     </>
   );
 }

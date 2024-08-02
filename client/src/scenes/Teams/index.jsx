@@ -9,6 +9,8 @@ import Foundercard from "../../components/Foundercard";
 import rohit from "../../assets/rohit.jpg"
 import supriya from "../../assets/supriya.jpg"
 
+import Footer from "../../components/Footer";
+
 function Teams() {
   const [selectedLabel, setSelectedLabel] = useState("Beliefsat-0");
 
@@ -64,6 +66,7 @@ function Teams() {
           {selectedLabel && <CardSlider label={selectedLabel} />}
         </div>
       </div>
+      <Footer bg={"white"} text={"black"} />
     </>
   );
 }

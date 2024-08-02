@@ -11,6 +11,7 @@ import umeshsir from "../../assets/Umeshsir.jpg"
 import sureshsir from "../../assets/exprincipalsir.jpg"
 import rohit from "../../assets/rohit.jpg"
 import supriya from "../../assets/supriya.jpg"
+import Footer from "../../components/Footer";
 
 function Founders() {
 
@@ -22,14 +23,16 @@ function Founders() {
         <div className="text-center md:flex justify-center">
           <Foundercard imageUrl={rohit} title="Rohit Bokade" />
           <Foundercard imageUrl={supriya} title="Supriya Bhide" />
+          <Foundercard imageUrl={umeshsir} title="Dr. Umesh Shinde" />
         </div>
         <Headers title="Mentors" size="10vh" />
         <div className="text-center md:flex justify-center">
-          <Foundercard imageUrl={umeshsir} title="Dr. Umesh Sinde" />
-          <Foundercard imageUrl={sureshsir} title="Dr. Suresh Ukrande" />
+          <Foundercard imageUrl={umeshsir} title="Dr. Umesh Shinde" />
+          <Foundercard imageUrl={sureshsir} title="Dr. Suresh Ukarande" />
           <Foundercard imageUrl={viveksir} title="Dr. Vivek Sunnapwar" />
         </div>
       </div>
+      <Footer bg={"white"} text={"black"} />
     </>
   );
 }
