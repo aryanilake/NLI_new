@@ -14,6 +14,7 @@ import Footer from "../../components/Footer";
 function Teams() {
   const [selectedLabel, setSelectedLabel] = useState("Beliefsat-0");
 
+
   const handleButtonClick = (label) => {
     // console.log(`Clicked: ${label}`);
     setSelectedLabel(label);

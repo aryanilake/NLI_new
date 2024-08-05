@@ -8,6 +8,7 @@ import Footer from "../../components/Footer";
 function Projects() {
   const [selectedLabel, setSelectedLabel] = useState("Beliefsat-0");
   const [isDatabaseConnected, setDatabaseConnected] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Replace the URL with the actual endpoint you want to check
@@ -27,7 +28,9 @@ function Projects() {
         console.error("Error checking server connection:", error);
         setDatabaseConnected(false);
       }
+
     };
+
 
     // Call the function to check server connection
     checkServerConnection();
