@@ -23,7 +23,7 @@ function Founders() {
         <div className="text-center md:flex justify-center">
           <Foundercard imageUrl={rohit} title="Rohit Bokade" />
           <Foundercard imageUrl={supriya} title="Supriya Bhide" />
-          <Foundercard imageUrl={umeshsir} title="Dr. Umesh Shinde" />
+          {/* <Foundercard imageUrl={umeshsir} title="Dr. Umesh Shinde" /> */}
         </div>
         <Headers title="Mentors" size="10vh" />
         <div className="text-center md:flex justify-center">

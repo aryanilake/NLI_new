@@ -10,6 +10,7 @@ import NewPage from "./components/NewPage";
 import Lenis from "@studio-freight/lenis";
 import Footer from "./components/Footer";
 import Achievements from "./scenes/Events"
+import Activities from "./scenes/Activities"
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/founders" element={<Founders />} />
         <Route path="/groundstation" element={<Groundstation />} />
         <Route path="/achievements" element={<Achievements />} />
+        <Route path="/activities" element={<Activities />} />
 
         <Route path="/newpage" element={<NewPage />} />
 

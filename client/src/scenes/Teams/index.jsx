@@ -6,13 +6,10 @@ import Navbar from "../../components/Navbar";
 import Headers from "../../components/Headers";
 import Foundercard from "../../components/Foundercard";
 
-import rohit from "../../assets/rohit.jpg"
-import supriya from "../../assets/supriya.jpg"
-
 import Footer from "../../components/Footer";
 
 function Teams() {
-  const [selectedLabel, setSelectedLabel] = useState("Beliefsat-0");
+  const [selectedLabel, setSelectedLabel] = useState("BeliefSat-0");
 
 
   const handleButtonClick = (label) => {
@@ -26,16 +23,16 @@ function Teams() {
       <div className="py-20 font-poppins justify-between items-center h-max mx-auto px-5 mt-5 ">
         <div className="space-x-4">
           <Button
-            onClick={() => handleButtonClick("Beliefsat-0")}
-            label="Beliefsat-0"
+            onClick={() => handleButtonClick("BeliefSat-0")}
+            label="BeliefSat-0"
             type="button"
-            isActive={selectedLabel === "Beliefsat-0" ? true : false}
+            isActive={selectedLabel === "BeliefSat-0" ? true : false}
           />
           <Button
-            onClick={() => handleButtonClick("Beliefsat-1")}
-            label="Beliefsat-1"
+            onClick={() => handleButtonClick("BeliefSat-1")}
+            label="BeliefSat-1"
             type="button"
-            isActive={selectedLabel === "Beliefsat-1" ? true : false}
+            isActive={selectedLabel === "BeliefSat-1" ? true : false}
           />
           <Button
             onClick={() => handleButtonClick("Avruti")}
@@ -57,7 +54,7 @@ function Teams() {
           />
           <Button
             onClick={() => handleButtonClick("Crown-GS")}
-            label="Crown-GS"
+            label="Groundstation"
             type="button"
             isActive={selectedLabel === "Crown-GS" ? true : false}
           />

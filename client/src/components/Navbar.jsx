@@ -83,7 +83,7 @@ const Navbar = ({ bgcolor, textColor, active }) => {
             }
 
           </div>
-          {dropdown ? <ul className="absolute mt-2 right-1 flex flex-col top-18 gap-2 ">
+          {dropdown ? <ul className="absolute mt-2 right-1 flex flex-col top-18 gap-2 bg-white/70 backdrop-blur-sm">
             <li>
               <div className="mt-2 text-center">
                 <Link to="/teams" className="text-center">
@@ -93,13 +93,24 @@ const Navbar = ({ bgcolor, textColor, active }) => {
                 </Link>
               </div>
             </li>
-            <hr className="bg-black h-0.5 mt-1" />
+            <hr className="bg-black h-1 mt-2" />
             <li>
               <div className="text-center">
 
-                <Link to="/founders" className="block mb-3">
+                <Link to="/founders" className="block">
                   Founders & Mentors
-                  {(active == "founders") ? <div className="absolute left-0 right-0 bottom-2 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div ></div>}
+                  {(active == "founders") ? <div className="absolute left-0 right-0  h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div ></div>}
+                  {/* <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div> */}
+                </Link>
+              </div>
+            </li>
+            <hr className="bg-black h-1 mt-1" />
+            <li>
+              <div className="text-center">
+
+                <Link to="/activities" className="block mb-3">
+                  Events & Activities
+                  {(active == "activities") ? <div className="absolute left-0 right-0 bottom-2 h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div ></div>}
                   {/* <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div> */}
                 </Link>
               </div>

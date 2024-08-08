@@ -1,6 +1,7 @@
 import Member from "../model/memberSchema.js";
 import Project from "../model/projSchema.js";
 import Achievement from "../model/achievementSchema.js";
+import Activities from "../model/activitiesSchema.js";
 
 // member
 
@@ -238,6 +239,17 @@ export async function getAllachievements(req, res) {
   try {
     const achievement = await Achievement.find({});
     return res.status(200).json(achievement);
+  } catch (error) {
+    return res
+      .status(500)
+      .send({ error: error.message || "Internal Server Error" });
+  }
+}
+
+export async function getAllactivities(req, res) {
+  try {
+    const activities = await Activities.find({});
+    return res.status(200).json(activities);
   } catch (error) {
     return res
       .status(500)

@@ -6,7 +6,7 @@ import Projectscontent from "../../components/Projectscontent";
 import Footer from "../../components/Footer";
 
 function Projects() {
-  const [selectedLabel, setSelectedLabel] = useState("Beliefsat-0");
+  const [selectedLabel, setSelectedLabel] = useState("BeliefSat-0");
   const [isDatabaseConnected, setDatabaseConnected] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -46,16 +46,16 @@ function Projects() {
       <div className="py-20  justify-between items-center h-max mx-auto px-5 mt-5 mb-9">
         <div className="space-x-4">
           <Button
-            onClick={() => handleButtonClick("Beliefsat-0")}
-            label="Beliefsat-0"
+            onClick={() => handleButtonClick("BeliefSat-0")}
+            label="BeliefSat-0"
             type="button"
-            isActive={selectedLabel === "Beliefsat-0" ? true : false}
+            isActive={selectedLabel === "BeliefSat-0" ? true : false}
           />
           <Button
-            onClick={() => handleButtonClick("Beliefsat-1")}
-            label="Beliefsat-1"
+            onClick={() => handleButtonClick("BeliefSat-1")}
+            label="BeliefSat-1"
             type="button"
-            isActive={selectedLabel === "Beliefsat-1" ? true : false}
+            isActive={selectedLabel === "BeliefSat-1" ? true : false}
           />
           <Button
             onClick={() => handleButtonClick("Avruti")}
@@ -74,12 +74,6 @@ function Projects() {
             label="Somaiya-Pod"
             type="button"
             isActive={selectedLabel === "Somaiya-Pod" ? true : false}
-          />
-          <Button
-            onClick={() => handleButtonClick("Crown-GS")}
-            label="Crown-GS"
-            type="button"
-            isActive={selectedLabel === "Crown-GS" ? true : false}
           />
         </div>
         <div className="results m-4">

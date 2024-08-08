@@ -12,6 +12,7 @@ router.route('/createproject').post(controller.createproject)
 router.route('/getallmembers').get(controller.getAllmembers)
 router.route('/getallprojects').get(controller.getAllprojects)
 router.route('/getallachievements').get(controller.getAllachievements)
+router.route('/getallactivities').get(controller.getAllactivities)
 
 router.route('/member/:email').get(controller.getMember)
 router.route('/project/:projname').get(controller.getProject)
