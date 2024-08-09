@@ -43,6 +43,15 @@ export async function getAllactivities() {
         return { error: "Can't fetched data" }
     }
 }
+export async function getAllevents() {
+    try {
+        const { data } = await axios.get(`/api/getallevents`);
+
+        return { data };
+    } catch (error) {
+        return { error: "Can't fetched data" }
+    }
+}
 
 export async function getProject({ projname }) {
     try {

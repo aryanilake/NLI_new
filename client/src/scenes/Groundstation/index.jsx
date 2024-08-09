@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import { day1, day2, day3, columns } from "../../helper/gsdata"; // Import rows for Day 1
 import { day11, day21, day31 } from "../../helper/gsdata1"; // Import rows for Day 1
+import { antennas } from "../../helper/gstypes"; // Import rows for Day 1
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Footer from "../../components/Footer";
@@ -23,10 +24,10 @@ function GroundStation() {
   const [temp1, setTemp1] = useState(false);
   const [temp2, setTemp2] = useState(false);
 
+  const [path, setPath] = useState();
   const handleDayButtonClick = (day) => {
     setSelectedDay(day);
   };
-
   return (
     <>
       <Navbar bgcolor="#fafaf9" textColor="#000000" active={"groundstation"} />
@@ -44,6 +45,23 @@ function GroundStation() {
           </div>
           <div className="mt-6 text-2xl font-serif text-justify">
             The ground station is essential for satellite communication, serving as a hub for data acquisition, control, and payload transmission. It includes advanced antennas, receivers, and transmitters. The ground system comprises ground stations and control centers working together to support spacecraft and users. Transceivers in these stations are crucial for data transmission, telemetry, and command operations, ensuring reliable communication with satellites. Satellite tracking uses QFH, monopole, and Yagi-Uda antennas, with signal reception through SDRs or Baofengs and image reception using SDRs and decoding software.
+          </div>
+          <div className="gstypes">
+            <Headers title="ANTENNA TYPES" size="6vh" />
+            <div className="grid grid-cols-2 gap-4">
+              {antennas.map((item) => (
+                <>
+                  <div>
+
+                    <div className="title flex justify-center align-center text-5xl">{item.title}</div>
+                    <div className="flex justify-center align-center">
+                      <img style={{ maxHeight: "60vh" }} src={item.image}></img>
+                    </div>
+                    <div className="details text-justify">{item.details}</div>
+                  </div>
+                </>
+              ))}
+            </div>
           </div>
           <div className="heads flex justify-center items-center mt-5">
             <h1 className="text-9xl text-slate-200 font-sans  reduced-letter-spacing">
