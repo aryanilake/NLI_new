@@ -196,17 +196,18 @@ function Home() {
             <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12 font-serif">
               <div className=" col-span-1 md:col-span-12">
                 <div>
-                  <div className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl">
+                  <div className="img group flex items-center justify-center overflow-hidden duration-200 ease-linear hover:rounded-3xl">
                     <Link to="/projects" className="block">
                       <img
-                        className="w-screen h-[90vh] duration-700 ease-in-out group-hover:scale-105"
-                        src={belifsat}
+                        // className="w-screen h-[90vh] duration-700 ease-in-out group-hover:scale-105"
+                        className="w-[150vh] h-[90vh]"
+                        src={beliefsat1}
                         alt=""
                         srcset=""
                       />
                     </Link>
                   </div>
-                  <div className="mt-4">
+                  <div className="ml-[25vh] mt-4">
                     <div className="flex space-x-2 mb-3">
                       <p className="rounded-full bg-transparent border text-[#FFFFFF] border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl">
                         2018

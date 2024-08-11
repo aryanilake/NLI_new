@@ -53,11 +53,11 @@ function GroundStation() {
                 <>
                   <div>
 
-                    <div className="title flex justify-center align-center text-5xl">{item.title}</div>
+                    <div className="title flex justify-center align-center text-3xl p-5 font-bold">{item.title}</div>
                     <div className="flex justify-center align-center">
-                      <img style={{ maxHeight: "60vh" }} src={item.image}></img>
+                      <img style={{width:"70vh", height:"70vh" , maxHeight: "90vh" }} src={item.image}></img>
                     </div>
-                    <div className="details text-justify">{item.details}</div>
+                    <div className="details text-justify p-5">{item.details}</div>
                   </div>
                 </>
               ))}

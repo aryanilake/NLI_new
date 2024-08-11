@@ -9,7 +9,7 @@ import Founders from "./scenes/Founders";
 import NewPage from "./components/NewPage";
 import Lenis from "@studio-freight/lenis";
 import Footer from "./components/Footer";
-import Achievements from "./scenes/Events"
+import Achievements from "./scenes/Achievements"
 import Activities from "./scenes/Activities"
 
 
