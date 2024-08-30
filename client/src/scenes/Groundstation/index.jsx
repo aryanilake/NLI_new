@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import { day1, day2, day3, columns } from "../../helper/gsdata"; // Import rows for Day 1
 import { day11, day21, day31 } from "../../helper/gsdata1"; // Import rows for Day 1
-import { antennas } from "../../helper/gstypes"; // Import rows for Day 1
+import { antennas , inverted } from "../../helper/gstypes"; // Import rows for Day 1
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Footer from "../../components/Footer";
@@ -53,14 +53,26 @@ function GroundStation() {
                 <>
                   <div>
 
-                    <div className="title flex justify-center align-center text-3xl p-5 font-bold">{item.title}</div>
+                    <div className="title flex justify-center align-center text-4xl p-5 font-bold">{item.title}</div>
                     <div className="flex justify-center align-center">
                       <img style={{width:"70vh", height:"70vh" , maxHeight: "90vh" }} src={item.image}></img>
                     </div>
-                    <div className="details text-justify p-5">{item.details}</div>
+                    <div className="details text-justify p-5 text-2xl">{item.details}</div>
                   </div>
                 </>
               ))}
+            </div>
+            <div className="">
+                <>
+                  <div>
+
+                    <div className="title flex justify-center align-center text-4xl p-5 font-bold">{inverted.title}</div>
+                    <div className="flex justify-center align-center">
+                      <img style={{width:"150vh", height:"60vh" , maxHeight: "90vh" }} src={inverted.image}></img>
+                    </div>
+                    <div className="details text-justify p-5 text-2xl">{inverted.details}</div>
+                  </div>
+                </>
             </div>
           </div>
           <div className="heads flex justify-center items-center mt-5">

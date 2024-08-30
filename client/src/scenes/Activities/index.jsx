@@ -23,7 +23,7 @@ const Activities = () => {
                 date: item.date
             }));
             const res2 = result1.data.map((item) => ({
-                aname: item.name,
+                name: item.name,
                 image: item.image,
                 details: item.details,
                 date: item.date
@@ -34,6 +34,7 @@ const Activities = () => {
             console.error("Error fetching data:", error);
         } finally {
             setLoading(false);
+            console.log(result1);
         }
     }, []);
 
@@ -46,7 +47,7 @@ const Activities = () => {
             <Navbar bgcolor="#fafaf9" textColor="#000000" active={"activities"} />
             <div className="mt-20 text-2xl block font-[poppins]">
                 <div className="text-center font-bold md:text-5xl">
-                    <Headers title="Events & Activities" size="12vh" />
+                    <Headers title="Activities" size="12vh" />
                 </div>
                 {loading ? (
                     <>
@@ -99,6 +100,7 @@ const Activities = () => {
                                 <>
                                     <div className="flex items-center justify-center md:w-1/2">
                                         <div className="flex flex-col items-center justify-center text-center">
+                                            <div className="font-bold text-3xl">{item.name}</div>
                                             <div>{item.details}</div>
                                             <div className="mt-4">{item.date}</div>
                                         </div>
@@ -114,6 +116,7 @@ const Activities = () => {
                                     </div>
                                     <div className="flex items-center justify-center md:w-1/2">
                                         <div className="flex flex-col items-center justify-center text-center">
+                                            <div className="font-bold text-3xl">{item.name}</div>
                                             <div>{item.details}</div>
                                             <div className="mt-4">{item.date}</div>
                                         </div>
