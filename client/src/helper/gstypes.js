@@ -1,13 +1,16 @@
 
+import monopole from '../assets/monopole.jpg';
+import qfh from '../assets/QFH antenna.jpg';
+
 export const antennas = [
     {
         title: "Monopole antenna",
-        image: "/public/assets/monopole.jpg",
+        image: monopole,
         details: "The monopole antenna serves as a versatile and extensively utilized antenna type that is suitable for a variety of communication applications. With its straightforward design, ease of construction, and omnidirectional radiation pattern, it is a favored option in broadcasting, mobile communications,satellite communications and other RF systems."
     },
     {
         title: "QFH antenna",
-        image: "/src/assets/QFH antenna.jpg",
+        image: qfh,
         details: "The Quadrifilar Helix (QFH) antenna is recognized for its circular polarization and capacity to pick up signals from low-earth orbit (LEO) satellites, making it an effective choice for Very High Frequency (VHF) applications, including receiving weather satellite signals."
     },
     {
