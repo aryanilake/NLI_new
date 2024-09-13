@@ -32,7 +32,7 @@ function Projectscontent({ label }) {
 
   return (
     <div>
-      {loading ? <div className='p-5 text-[6vh]'>Loading...</div> : (
+      {loading ? <div className='p-5 text-2xl'>Loading...</div> : (
         <>
           <div className="flex items-center justify-center rounded-3xl">
             <img className="w-1/2 h-1/2 md:shadow-[0px_0px_50px_15px_rgba(0,0,0,0.3)] rounded-3xl" style={{ maxHeight: "70vh", maxWidth: "100vh" }} src={data.photo} alt="" />

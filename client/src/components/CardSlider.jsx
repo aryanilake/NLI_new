@@ -66,7 +66,7 @@ const CardSlider = ({ label }) => {
 
   return (
     <>
-      {loading ? (<div className='p-5 text-[6vh]'>Loading...</div>) : (
+      {loading ? (<div className='p-5 text-2xl'>Loading...</div>) : (
         <div className="flex flex-col items-center mb-10 h-max pt-6" >
 
           <div className="grid grid-cols-2 gap-4 md:grid-cols-5 gap-4 mb-3">
