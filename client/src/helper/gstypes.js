@@ -2,7 +2,7 @@
 export const antennas = [
     {
         title: "Monopole antenna",
-        image: "/src/assets/monopole.jpg",
+        image: "monopole.jpg",
         details: "The monopole antenna serves as a versatile and extensively utilized antenna type that is suitable for a variety of communication applications. With its straightforward design, ease of construction, and omnidirectional radiation pattern, it is a favored option in broadcasting, mobile communications,satellite communications and other RF systems."
     },
     {
