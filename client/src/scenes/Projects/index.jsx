@@ -12,7 +12,7 @@ function Projects() {
 
   useEffect(() => {
     // Replace the URL with the actual endpoint you want to check
-    const serverCheckUrl = "http://localhost:8080";
+    const serverCheckUrl = "https://nllbackend.onrender.com";
 
     const checkServerConnection = async () => {
       try {
