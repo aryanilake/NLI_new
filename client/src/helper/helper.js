@@ -9,7 +9,7 @@ axios.defaults.baseURL = import.meta.env.VITE_SERVER_DOMAIN;
 
 export async function getMember({ email }) {
     try {
-        const { data } = await axios.get(`/api/member/${email}`);
+        const { data } = await axios.get(`https://nllbackend.onrender.com/api/member/${email}`);
         return { data };
     } catch (error) {
         return { error: "Email doesn't exists" }
@@ -18,7 +18,7 @@ export async function getMember({ email }) {
 
 export async function getAllmembers() {
     try {
-        const { data } = await axios.get(`/api/getallmembers`);
+        const { data } = await axios.get(`https://nllbackend.onrender.com/api/getallmembers`);
 
         return { data };
     } catch (error) {
@@ -27,7 +27,7 @@ export async function getAllmembers() {
 }
 export async function getAllachievements() {
     try {
-        const { data } = await axios.get(`/api/getallachievements`);
+        const { data } = await axios.get(`https://nllbackend.onrender.com/api/getallachievements`);
 
         return { data };
     } catch (error) {
@@ -36,7 +36,7 @@ export async function getAllachievements() {
 }
 export async function getAllactivities() {
     try {
-        const { data } = await axios.get(`/api/getallactivities`);
+        const { data } = await axios.get(`https://nllbackend.onrender.com/api/getallactivities`);
 
         return { data };
     } catch (error) {
@@ -45,7 +45,7 @@ export async function getAllactivities() {
 }
 export async function getAllevents() {
     try {
-        const { data } = await axios.get(`/api/getallevents`);
+        const { data } = await axios.get(`https://nllbackend.onrender.com/api/getallevents`);
 
         return { data };
     } catch (error) {
@@ -55,7 +55,7 @@ export async function getAllevents() {
 
 export async function getProject({ projname }) {
     try {
-        const { data } = await axios.get(`/api/project/${projname}`);
+        const { data } = await axios.get(`https://nllbackend.onrender.com/api/project/${projname}`);
         return { data };
     } catch (error) {
         return { error: "Project doesn't exists" }
@@ -67,7 +67,7 @@ export async function getProject({ projname }) {
 
 export async function createMember(credentials) {
     try {
-        const { data: { msg }, status } = await axios.post('/api/createmember', credentials);
+        const { data: { msg }, status } = await axios.post('https://nllbackend.onrender.com/api/createmember', credentials);
 
         return Promise.resolve(msg, status)
     } catch (error) {
