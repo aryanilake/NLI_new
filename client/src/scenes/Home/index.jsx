@@ -12,7 +12,7 @@ import Headers from "../../components/Headers";
 import CardsDomain from "../../components/CardsDomain";
 import Cd from "../../components/Cd";
 import Foundercard from "../../components/Foundercard";
-import belifsat from "../../assets/belifsat.jpg";
+import beliefsat from "../../assets/belifsat.jpg";
 import earth from "../../assets/earth.png";
 import space from "../../assets/space.jpg";
 import beliefsat1 from "../../assets/beliefsat1.jpg";
@@ -201,7 +201,7 @@ function Home() {
                       <img
                         // className="w-screen h-[90vh] duration-700 ease-in-out group-hover:scale-105"
                         className="w-[150vh] h-[90vh]"
-                        src={beliefsat1}
+                        src={beliefsat}
                         alt=""
                         srcset=""
                       />
