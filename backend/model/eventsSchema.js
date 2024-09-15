@@ -1,6 +1,12 @@
 import mongoose from "mongoose";
 
 const eventsSchema = mongoose.Schema({
+
+    eventsname: {
+        type: String,
+        required: true,
+        unique: true,
+    },
     image: {
         type: String,
     },
@@ -12,11 +18,6 @@ const eventsSchema = mongoose.Schema({
     date: {
         type: String,
         required: true,
-    },
-     eventsname: {
-        type: String,
-        required: true,
-        unique: true,
     },
 },
     {
