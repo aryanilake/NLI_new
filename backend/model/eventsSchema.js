@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 
 const eventsSchema = mongoose.Schema({
-
-   
     image: {
         type: String,
     },
