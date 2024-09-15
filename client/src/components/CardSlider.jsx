@@ -54,7 +54,7 @@ const CardSlider = ({ label }) => {
   }, [label]);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const imagesPerPage = 10;
+  const imagesPerPage = 15;
 
   const indexOfLastImage = currentPage * imagesPerPage;
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
