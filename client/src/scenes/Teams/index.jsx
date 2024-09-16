@@ -26,13 +26,13 @@ function Teams() {
             onClick={() => handleButtonClick("BeliefSat-0")}
             label="Beliefsat-0"
             type="button"
-            isActive={selectedLabel === "Beliefsat-0" ? true : false}
+            isActive={selectedLabel === "BeliefSat-0" ? true : false}
           />
           <Button
             onClick={() => handleButtonClick("BeliefSat-1")}
             label="Beliefsat-1"
             type="button"
-            isActive={selectedLabel === "Beliefsat-1" ? true : false}
+            isActive={selectedLabel === "BeliefSat-1" ? true : false}
           />
           <Button
             onClick={() => handleButtonClick("Avruti")}
