@@ -23,16 +23,16 @@ function Teams() {
       <div className="py-20 font-poppins justify-between items-center h-max mx-auto px-5 mt-5 ">
         <div className="space-x-4">
           <Button
-            onClick={() => handleButtonClick("BeliefSat-0")}
-            label="Beliefsat-0"
+            onClick={() => handleButtonClick("Beliefsat-0")}
+            label="BeliefSat-0"
             type="button"
-            isActive={selectedLabel === "BeliefSat-0" ? true : false}
+            isActive={selectedLabel === "Beliefsat-0" ? true : false}
           />
           <Button
-            onClick={() => handleButtonClick("BeliefSat-1")}
-            label="Beliefsat-1"
+            onClick={() => handleButtonClick("Beliefsat-1")}
+            label="BeliefSat-1"
             type="button"
-            isActive={selectedLabel === "BeliefSat-1" ? true : false}
+            isActive={selectedLabel === "Beliefsat-1" ? true : false}
           />
           <Button
             onClick={() => handleButtonClick("Avruti")}
