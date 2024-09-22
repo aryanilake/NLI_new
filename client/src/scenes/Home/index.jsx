@@ -223,7 +223,7 @@ function Home() {
               </div>
               <div className="col-span-1 pt-0 md:col-span-7 md:pt-16">
                 <div className="overflow-auto w-[700px] h-[500px] rounded-lg">
-                  <img src={beliefsat1} alt="Large Image" className="w-full h-auto" />
+                  <img src={beliefsat1} alt="Large Image" className="w-[50vh] md:w-full h-auto" />
                 </div>
                 <div className="mt-4">
                   <div className="flex space-x-2 mb-3">

@@ -4,6 +4,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import da from "../assets/downarrow.svg";
 import up from "../assets/uparrow.svg";
+import { styled } from "@mui/material";
 
 const Navbar = ({ bgcolor, textColor, active }) => {
   const [nav, setNav] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = ({ bgcolor, textColor, active }) => {
 
   console.log(active)
   return (
-    <div className=" w-full z-20 fixed top-0 left-0 right-0 font-poppins flex justify-between items-center h-20  mx-auto px-6  text-black" style={{ backgroundColor: bgcolor, color: textColor, transition: "0.3 ease-in-out" }}>
+    <div className="w-[45vh] mr-0 ml-0 md:w-full z-20 fixed top-0 left-0 right-0 font-poppins flex justify-between items-center h-20  mx-auto px-6  text-black" style={{ backgroundColor: bgcolor, color: textColor, transition: "0.3 ease-in-out" }}>
       <div className="flex  justify-between items-center">
         <img src={logo} className="h-12 w-auto rounded-full border border-black"></img>
         <div className="p-2 text-2xl font-bold font-serif">New Leap Labs</div>
@@ -124,10 +125,14 @@ const Navbar = ({ bgcolor, textColor, active }) => {
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
       <div
+      
         className={
           nav
-            ? "ease-in-out duration-500 fixed left-0 top-0 w-[60%] h-full border-r bg-white   "
+            ? "ease-in-out duration-500 fixed left-0 top-0 w-[60%] h-full border-r "
             : "fixed left-[-100] hidden"
+        }
+        style={
+          nav? {backgroundColor:bgcolor} : null
         }
       >
         <h1 className="ml-2 text-3xl mt-9 font-bold">New Leap Labs</h1>
