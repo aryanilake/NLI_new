@@ -290,7 +290,7 @@ function Home() {
                     <CardsDomain
                       imageUrl={structure}
                       title="Structure Design"
-                      description="Hardware domain involves designing, building, and maintaining physical computer components, including processors, memory, and peripherals."
+                      description="This domain involves creatively designing structures. It contains simulation and testing of structures that can sustain extreme temperatures and mechanical pressure."
                     />
                   </div>
 
