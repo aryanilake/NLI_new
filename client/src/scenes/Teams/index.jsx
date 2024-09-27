@@ -9,7 +9,7 @@ import Foundercard from "../../components/Foundercard";
 import Footer from "../../components/Footer";
 
 function Teams() {
-  const [selectedLabel, setSelectedLabel] = useState("BeliefSat-0");
+  const [selectedLabel, setSelectedLabel] = useState("Beliefsat-0");
 
 
   const handleButtonClick = (label) => {
