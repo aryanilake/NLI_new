@@ -104,9 +104,23 @@ export async function getMember(req, res) {
   }
 }
 
+// Updated appcontroller backend function
 export async function getAllmembers(req, res) {
+  const { label } = req.query; // Get the label from the query string
+
   try {
-    const members = await Member.find({});
+    // If label exists, filter members based on project1, project2, or project3
+    const filter = label
+      ? {
+          $or: [
+            { project1: label },
+            { project2: label },
+            { project3: label },
+          ],
+        }
+      : {}; // If no label, return all members
+
+    const members = await Member.find(filter); // Apply the filter
     return res.status(200).json(members);
   } catch (error) {
     return res
@@ -114,6 +128,38 @@ export async function getAllmembers(req, res) {
       .send({ error: error.message || "Internal Server Error" });
   }
 }
+
+
+
+// export async function getAllmembers(req, res) {
+//   try {
+//     const members = await Member.find({});
+//     const label = req.query.label; 
+//     const images = members.filter(item => 
+//       label === item.project1 || label === item.project2 || label === item.project3
+//     );
+    
+//     const currentPage = parseInt(req.query.page) || 1;
+//     const imagesPerPage = 10;
+//     const totalImages = images.length;
+
+//     const paginatedImages = images.slice((currentPage - 1) * imagesPerPage, currentPage * imagesPerPage);
+
+//   res.render('cardslider', {
+//     images: paginatedImages,
+//     currentPage,
+//     imagesPerPage,
+//     totalImages
+//   });
+
+
+//     return res.status(200).json(members);
+//   } catch (error) {
+//     return res
+//       .status(500)
+//       .send({ error: error.message || "Internal Server Error" });
+//   }
+// }
 
 // project
 

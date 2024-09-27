@@ -6,8 +6,8 @@ const Connection = async (username,password) => {
   const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    connectTimeoutMS: 30000,  // 30 seconds timeout for initial connection
-    socketTimeoutMS: 30000,   // 30 seconds timeout for socket operations
+    connectTimeoutMS: 30000, 
+    socketTimeoutMS: 30000,   
   };
   try {
     await mongoose.connect(URL,options);

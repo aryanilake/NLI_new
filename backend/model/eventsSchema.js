@@ -5,7 +5,6 @@ const eventsSchema = mongoose.Schema({
     eventsname: {
         type: String,
         required: true,
-        unique: true,
     },
     image: {
         type: String,

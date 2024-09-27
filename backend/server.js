@@ -12,6 +12,9 @@ const app = express();
 const port = process.env.PORT || 8080;
 dotenv.config();
 // app.use('/',router);
+app.set("view engine" , "ejs");
+app.set('views', path.resolve("./views"));
+
 app.use(express.json());
 app.use(cors());
 app.use(morgan("tiny"));
