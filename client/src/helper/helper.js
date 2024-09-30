@@ -53,6 +53,16 @@ export async function getAllevents() {
     }
 }
 
+export async function getAllprojects() {
+    try {
+        const { data } = await axios.get(`https://nllbackend.onrender.com/api/getallprojects`);
+
+        return { data };
+    } catch (error) {
+        return { error: "Can't fetched data" }
+    }
+}
+
 export async function getProject({ projname }) {
     try {
         const { data } = await axios.get(`https://nllbackend.onrender.com/api/project/${projname}`);
