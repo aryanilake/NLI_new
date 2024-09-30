@@ -11,11 +11,37 @@ import Lenis from "@studio-freight/lenis";
 import Footer from "./components/Footer";
 import Achievements from "./scenes/Achievements"
 import Activities from "./scenes/Activities"
-
+import { getAllachievements } from './helper/helper'; 
+import { useState,useEffect } from "react";
 
 function App() {
   const lenis = new Lenis();
 
+  const [achievementsData, setAchievementsData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  
+  // Fetch achievements data when the app loads
+  useEffect(() => {
+    const fetchAchievements = async () => {
+      try {
+        const response = await getAllachievements();
+        console.log("Fetched achievements data:", response); // Log the response
+        if (Array.isArray(response.data)) {
+          setAchievementsData(response.data);
+        } else {
+          console.error("Expected an array but received:", response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching achievements:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAchievements();
+  }, []);
+
+   
 
   function raf(time) {
     lenis.raf(time);
@@ -32,7 +58,7 @@ function App() {
         <Route path="/teams" element={<Teams />} />
         <Route path="/founders" element={<Founders />} />
         <Route path="/groundstation" element={<Groundstation />} />
-        <Route path="/achievements" element={<Achievements />} />
+        <Route path="/achievements" element={<Achievements achievements={achievementsData} loading={loading} />} />
         <Route path="/activities" element={<Activities />} />
 
         <Route path="/newpage" element={<NewPage />} />
