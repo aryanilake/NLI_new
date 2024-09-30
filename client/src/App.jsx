@@ -30,7 +30,7 @@ function App() {
         const achievementsResponse = await getAllachievements();
         const activitiesResponse = await getAllactivities();
         const eventsResponse = await getAllevents();
-        const projectsResponse = await getAllprojects();  // Fetching projects
+        const projectsResponse = await getAllprojects();  
 
         // Log the responses for debugging
         console.log("Fetched achievements:", achievementsResponse);
