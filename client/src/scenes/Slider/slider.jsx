@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 // import './AutoSlider.css'; // For styling
 import './styles.css'
-import CircularGallery from './CircularGallery'
+// import CircularGallery from './CircularGallery'
 const slidesData = [
   { image: 'http://localhost:5173/src/assets/BeliefSat-0%20Launch.jpg' },
   { image: 'http://localhost:5173/src/assets/BeliefSat-0.jpg' },
