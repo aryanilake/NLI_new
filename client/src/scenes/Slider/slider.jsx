@@ -1,27 +1,45 @@
 import React, { useEffect, useRef, useState } from 'react';
-// import './AutoSlider.css'; // For styling
-import './styles.css'
-import CircularGallery from './CircularGallery'
+import './styles.css';
+import CircularGallery from './CircularGallery';
+
+// Import images using correct relative paths
+import BeliefSat0Launch from '../../assets/BeliefSat-0 Launch.jpg';
+import BeliefSat0 from '../../assets/BeliefSat-0.jpg';
+import img1 from './images/img1.jpeg';
+import img2 from './images/img2.jpeg';
+import testing from './images/testing.jpg';
+import img3 from './images/img3.jpeg';
+import shindesir from './images/shindesir.jpg';
+import img4 from './images/img4.jpeg';
+import img5 from './images/img5.jpeg';
+import launchpic1 from './images/launchpic1.jpg';
+import launchpic2 from './images/launchpic2.jpg';
+import launchpic3 from './images/launchpic3.jpg';
+import launchpic4 from './images/launchpic4.jpg';
+import launchpic5 from './images/launchpic5.jpg';
+import launchpic6 from './images/launchpic6.jpg';
+import launchpic7 from './images/launchpic7.jpg';
+
 const slidesData = [
-  { image: 'http://localhost:5173/src/assets/BeliefSat-0%20Launch.jpg' },
-  { image: 'http://localhost:5173/src/assets/BeliefSat-0.jpg' },
-  { video: 'https://www.youtube.com/embed/3Swjlq9hlrM' }, // 👈 YouTube video
-  { image: './src/scenes/Slider/images/img1.jpeg' },
-  { image: './src/scenes/Slider/images/img2.jpeg' },
-  { video: 'https://www.youtube.com/embed/CT-K4qLuNTo' }, // 👈 YouTube video
-  { image: './src/scenes/Slider/images/testing.jpg' },
-  { image: './src/scenes/Slider/images/img3.jpeg' },
-  { image: './src/scenes/Slider/images/shindesir.jpg' },
-  { image: './src/scenes/Slider/images/img4.jpeg' },
-  { image: './src/scenes/Slider/images/img5.jpeg' },
-  { video: 'https://www.youtube.com/embed/0WILY1JaI8I' }, // 👈 YouTube video
-  { image: './src/scenes/Slider/images/launchpic1.jpg' },
-  { image: './src/scenes/Slider/images/launchpic2.jpg' },
-  { image: './src/scenes/Slider/images/launchpic3.jpg' },
-  { image: './src/scenes/Slider/images/launchpic4.jpg' },
-  { image: './src/scenes/Slider/images/launchpic5.jpg' },
-  { image: './src/scenes/Slider/images/launchpic6.jpg' },
-  { image: './src/scenes/Slider/images/launchpic7.jpg' },
+  { image: BeliefSat0Launch },
+  { image: BeliefSat0 },
+  { video: 'https://www.youtube.com/embed/3Swjlq9hlrM' },
+  { image: img1 },
+  { image: img2 },
+  { video: 'https://www.youtube.com/embed/CT-K4qLuNTo' },
+  { image: testing },
+  { image: img3 },
+  { image: shindesir },
+  { image: img4 },
+  { image: img5 },
+  { video: 'https://www.youtube.com/embed/0WILY1JaI8I' },
+  { image: launchpic1 },
+  { image: launchpic2 },
+  { image: launchpic3 },
+  { image: launchpic4 },
+  { image: launchpic5 },
+  { image: launchpic6 },
+  { image: launchpic7 },
 ];
 
 
