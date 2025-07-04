@@ -25,13 +25,13 @@ const Activities = ({ activitiesData, eventsData, loading }) => {
                     <div className="p-5">Loading...</div>
                 ) : (
                     activities.map((item, index) => (
-                        <div key={index} className="md:flex p-8 m-8">   
+                        <div key={index} className="md:flex p-8 ">   
                             {viewportWidth >= 768 ? (
                                 index % 2 === 1 ? (
                                     <>
                                         <div className="flex items-center justify-center md:w-1/2">
                                             <div className="flex flex-col items-center justify-center text-justify">
-                                                <div>{item.details}</div>
+                                                <div className="mt-4">{item.details}</div>
                                                 <div className="mt-4 font-bold">{item.date}</div>
                                             </div>
                                         </div>
@@ -46,7 +46,7 @@ const Activities = ({ activitiesData, eventsData, loading }) => {
                                         </div>
                                         <div className="flex items-center justify-center md:w-1/2">
                                             <div className="flex flex-col items-center justify-center text-justify">
-                                                <div>{item.details}</div>
+                                                <div className="mt-4">{item.details}</div>
                                                 <div className="mt-4 font-bold">{item.date}</div>
                                             </div>
                                         </div>
@@ -59,7 +59,7 @@ const Activities = ({ activitiesData, eventsData, loading }) => {
                                     </div>
                                     <div className="flex items-center justify-center md:w-1/2">
                                         <div className="flex flex-col items-center justify-center text-justify">
-                                            <div>{item.details}</div>
+                                            <div className="mt-4">{item.details}</div>
                                             <div className="mt-4 font-bold">{item.date}</div>
                                         </div>
                                     </div>
@@ -76,14 +76,14 @@ const Activities = ({ activitiesData, eventsData, loading }) => {
                     <div className="p-5">Loading...</div>
                 ) : (
                     events.map((item, index) => (
-                        <div key={index} className="md:flex p-8 m-8">
+                        <div key={index} className="md:flex p-8 ">
                             {viewportWidth >= 768 ? (
                                 index % 2 === 1 ? (
                                     <>
                                         <div className="flex items-center justify-center md:w-1/2">
                                             <div className="flex flex-col items-center justify-center text-justify">
                                                 <div className="font-bold text-3xl">{item.name}</div>
-                                                <div>{item.details}</div>
+                                                <div className="mt-4">{item.details}</div>
                                                 <div className="mt-4 font-bold">{item.date}</div>
                                             </div>
                                         </div>
@@ -98,8 +98,8 @@ const Activities = ({ activitiesData, eventsData, loading }) => {
                                         </div>
                                         <div className="flex items-center justify-center md:w-1/2">
                                             <div className="flex flex-col items-center justify-center text-justify padding-4">
-                                                <div className="font-bold text-3xl">{item.name}</div>
-                                                <div>{item.details}</div>
+                                                <div className="mt-4 font-bold text-3xl item-center">{item.name}</div>
+                                                <div className="mt-4">{item.details}</div>
                                                 <div className="mt-4 font-bold">{item.date}</div>
                                             </div>
                                         </div>
@@ -112,8 +112,8 @@ const Activities = ({ activitiesData, eventsData, loading }) => {
                                     </div>
                                     <div className="flex items-center justify-center md:w-1/2">
                                         <div className="flex flex-col items-center justify-center text-justify">
-                                            <div className="font-bold text-3xl">{item.name}</div>
-                                            <div>{item.details}</div>
+                                            <div className="mt-4 font-bold text-3xl item-center">{item.name}</div>
+                                            <div className="mt-4">{item.details}</div>
                                             <div className="mt-4 font-bold">{item.date}</div>
                                         </div>
                                     </div>

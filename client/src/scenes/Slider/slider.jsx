@@ -5,7 +5,7 @@ import './styles.css'
 // import CircularGallery from './CircularGallery'
 // =======
 import './styles.css';
-import CircularGallery from './CircularGallery';
+// import CircularGallery from './CircularGallery';
 
 // Import images using correct relative paths
 import BeliefSat0Launch from '../../assets/BeliefSat-0 Launch.jpg';

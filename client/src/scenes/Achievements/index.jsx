@@ -141,14 +141,14 @@ const Achievements = ({ loading }) => {
         ) : (
           Array.isArray(achievements) && achievements.length > 0 ? ( // Ensure achievements is an array
             achievements.map((item, index) => (
-              <div key={index} className="md:flex p-8 m-8">
+              <div key={index} className="md:flex p-8 ">
                 {viewportWidth >= 768 ? (
                 index % 2 === 1 ? (
                   <>
                     <div className="flex items-center justify-center md:w-1/2">
                       <div className="flex flex-col items-center justify-center text-justify">
-                        <div>{item.details}</div>
-                        <div className="mt-4">{item.date}</div>
+                        <div className="mt-4">{item.details}</div>
+                        <div className="mt-4 font-bold">{item.date}</div>
                       </div>
                     </div>
                     <div className="flex justify-center items-center md:w-1/2">
@@ -158,11 +158,11 @@ const Achievements = ({ loading }) => {
                 ) : (
                   <>
                     <div className="flex justify-center items-center md:w-1/2">
-                      <img className="h-80 w-[550px] rounded-2xl md:shadow-[0px_0px_50px_15px_rgba(0,0,0,0.3)]" src={item.image} alt="Achievement" />
+                      <img className="h-80 w-[600px] rounded-2xl md:shadow-[0px_0px_50px_15px_rgba(0,0,0,0.3)]" src={item.image} alt="Achievement" />
                     </div>
                     <div className="flex items-center justify-center md:w-1/2">
                       <div className="flex flex-col items-center justify-center text-justify">
-                        <div>{item.details}</div>
+                        <div className="mt-4">{item.details}</div>
                         <div className="mt-4 font-bold">{item.date}</div>
                       </div>
                     </div>
@@ -174,7 +174,7 @@ const Achievements = ({ loading }) => {
                   </div>
                   <div className="flex items-center justify-center md:w-1/2">
                     <div className="m-2 flex flex-col items-center justify-center text-justify">
-                      <div>{item.details}</div>
+                      <div className="mt-4">{item.details}</div>
                       <div className="mt-4 font-bold">{item.date}</div>
                     </div>
                   </div>
