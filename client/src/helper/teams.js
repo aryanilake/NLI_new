@@ -27,7 +27,7 @@ import YashM from "../assets/YashM.jpg";
 import Aarya from "../assets/Aarya Gojare.jpg";
 import Shreya from "../assets/ShreyaP.jpg";
 import Trushali from "../assets/Trushali Phatak.jpeg";
-import Adtiya from "../assets/avatar3.png";
+import Adtiya from "../assets/Aditya.jpg";
 
 
 
