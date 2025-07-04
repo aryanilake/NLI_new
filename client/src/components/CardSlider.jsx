@@ -26,7 +26,8 @@ const CardSlider = ({ label }) => {
             (item) =>
               label === item.project1 ||
               label === item.project2 ||
-              label === item.project3
+              label === item.project3 ||
+              label === item.project4
           )
           .map((item) => ({
             fname: item.fname,
@@ -41,6 +42,7 @@ const CardSlider = ({ label }) => {
             project1: item.project1,
             project2: item.project2,
             project3: item.project3,
+            project4: item.project4,
             email: item.email,
           }));
 
@@ -79,31 +81,37 @@ const CardSlider = ({ label }) => {
                   alt={`${image.fname} ${image.lname}`}
                 />
                 <div className="rounded bg-gradient-to-b from-black via-black to-transparent absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bottom-0 p-4">
-                  <div className="info mt-2 items-start flex">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2 mt-2">
                     {image.YearLeft !== 0 && (
-                      <span className="border border-[#8c8c73] text-[#8c8c73] px-4 py-2 rounded-full font-[Poppins] mb-2">
+                      <span className="border border-[#8c8c73] text-[#8c8c73] px-2 py-2 rounded-full font-[Poppins] mb-2">
                         {image.YearLeft}
                       </span>
                     )}
 
-                    <span className="border border-[#8c8c73] text-[#8c8c73] px-4 py-2 mr-2 rounded-full font-[Poppins] mb-2">
-                      {image.Domain}
-                    </span>
+                    <span className="border border-[#8c8c73] text-[#8c8c73] px-3 py-2 mr-2 rounded-full font-[Poppins] mb-2
+  text-sm px-3 py-1
+  sm:text-base sm:px-4 sm:py-2
+">
+  {image.Domain}
+</span>
+
                   </div>
-                  <h3 className="text-white">{`${image.fname} ${image.lname}`}</h3>
+                  <h3 className="text-white text-sm font-semibold">{`${image.fname} ${image.lname}`}</h3>
 
                   <p className="text-white">
                     {
-                      (image.About.trim().split(" ").length > 25)
-                        ? `${image.About.trim().split(" ").slice(0, 25).join(" ")}...`
-                        : image.About.trim()
+                      window.innerWidth <= 768
+          ? image.About.trim().split(" ").slice(0, 7).join(" ") + "..."
+          : image.About.trim().split(" ").length > 25
+            ? image.About.trim().split(" ").slice(0, 25).join(" ") + "..."
+            : image.About.trim()
                     }
                   </p>
                   {/* <p className="text-white text-sm">{image.About}</p> */}
                   <div className="mt-2">
                     <button
                       onClick={() => handleButtonClick(image)}
-                      className="text-white py-2 px-4 bg-blue-600 rounded-full"
+                      className="text-white py-2 px-3 bg-blue-600 rounded-full"
                     >
                       View Profile
                     </button>

@@ -38,7 +38,7 @@ function Footer({ bg, text }) {
           </div>
           <div className="flex justify-start space-x-4 p-1">
             <a href="https://www.instagram.com/nll.kjsit/"><img src={instagram} alt="instagram" className="w-6 h-6"></img></a>
-            <a href="https://www.facebook.com/nlikjsieit/"><img src={facebook} alt="Facebook" className="w-6 h-6"></img></a>
+            {/* <a href="https://www.facebook.com/nlikjsieit/"><img src={facebook} alt="Facebook" className="w-6 h-6"></img></a> */}
             <a href="https://in.linkedin.com/company/new-leap-initiative-kjsit"><img src={linkedin} alt="LinkedIn" className="w-6 h-6" /></a>
             <a href="https://github.com/NewLeapKjsieit"><img src={github} alt="GitHub" className="w-6 h-6" /></a>
             <a href="https://twitter.com/NLIspaceclub"><img src={twitter} alt="Twitter" className="w-6 h-6" /></a>

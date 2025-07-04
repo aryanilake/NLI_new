@@ -105,8 +105,8 @@ export const teams = [
     yearleft: 0,
     active: true,
     project1: "Beliefsat-0",
-    project2: "na",
-    project3: "na",
+    project2: "",
+    project3: "",
     domain: "Software",
     departmentclg: "Information Technology",
     about:
