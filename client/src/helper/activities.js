@@ -5,8 +5,17 @@ import fd from "../assets/FIELD DAY.jpg";
 import qrp from "../assets/QRP day.jpg";
 import wi from "../assets/Winter Internship on product engineering.jpg";
 import fd2025 from "../assets/arsi_2025.jpg";
+import inspace from "../assets/inspace.png";
+
 
 export const activities = [
+  {
+    name: "Space Student Immersion Program at INSPACe Technical Centre",
+    details:
+      "Students from K. J. Somaiya Institute of Technology's New Leap Labs took part in a life-changing, practical space technology experience for a week as part of the Space Student Immersion Program at the IN-SPACe Technical Centre in Ahmedabad.  The curriculum provided in-depth knowledge of the advanced technologies used in the Indian space ecosystem, mission design frameworks, and satellite subsystems.  Students worked with real-world space science applications under the guidance of industry professionals, which enhanced their technical proficiency and stoked their passion for space innovation.",
+    date: "FEB 2025",
+    image: inspace,
+  },
   {
     name: "ARSI National Field Day & Hill Topping Contest 2025",
     details:
