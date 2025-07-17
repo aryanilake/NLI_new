@@ -33,7 +33,7 @@ export const achievements = [
     },
     {
         name: "ARISS SSTV Award – NA1913",
-        details: "Awarded to Umesh Shinde (VU3CDI) for receiving SSTV images from the International Space Station, commemorating NASA On The Air and the 35th anniversary of Amateur Radio on Human Spaceflight Missions. This achievement celebrates the use of amateur radio aboard the ISS to engage and inspire global radio enthusiasts.",
+        details: "Awarded to Dr.Umesh Shinde (VU3CDI) for receiving SSTV images from the International Space Station, commemorating NASA On The Air and the 35th anniversary of Amateur Radio on Human Spaceflight Missions. This achievement celebrates the use of amateur radio aboard the ISS to engage and inspire global radio enthusiasts.",
         date: "15-17 FEB 2019",
         image: sstv
     },
