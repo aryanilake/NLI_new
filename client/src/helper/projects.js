@@ -9,7 +9,7 @@ export const projects = [
     {
         projname: "BeliefSat-0",
         active: true,
-        about: "BeliefSat-0 is developed by students of K.J. Somaiya Institute of Technology to widen the reach of Amateur Radio-operators around the globe. The payload is a part of tribute to 100 years of Amateur Radio in India and meant to be in service to the Amateur radio community worldwide. The payload will perform UHF to VHF FM Voice Repeating and APRS Digipeating. Working of BeliefSat-0: The satellite will be launched through PSLV, this opportunity was presented to us by IN-SPACe (ISRO) as part of their POEM (PSLV Orbital Experimental Module). The satellite will be positioned in a 650km orbit with an 8 to 9-degree inclination. Its major function is voice repeating and APRS digipeating for the HAM radio community as our project main aim is to widen the reach of the HAM radio operators.",
+        about: "BeliefSat-0 is developed by students of K.J. Somaiya Institute of Technology to widen the reach of Amateur Radio-operators around the globe. The payload is a part of tribute to 100 years of Amateur Radio in India and meant to be in service to the Amateur radio community worldwide. The payload performs UHF to VHF FM Voice Repeating and APRS Digipeating. Working of BeliefSat-0: The satellite was launched through PSLV, this opportunity was presented by IN-SPACe (ISRO) as a part of their POEM (PSLV Orbital Experimental Module). The satellite was positioned in 350km orbit with 9-degree inclination. Its major function is voice repeating and APRS digipeating for the HAM radio community as our project main aim is to widen the reach of the HAM radio operators.",
         photo: beliefSat0
     },
     {
