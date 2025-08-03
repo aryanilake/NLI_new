@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: Generalsans;
-  src: url("client/public/GeneralSans-Regular.otf") format("otf");
+  src: url("/GeneralSans-Regular.otf") format("otf");
 }
 
 body {
