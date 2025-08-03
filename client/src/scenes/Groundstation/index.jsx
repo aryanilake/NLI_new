@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar";
-import gs from "/assets/gs.jpg";
+// import gs from ;
 import Headers from "../../components/Headers";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -28,7 +28,7 @@ function GroundStation() {
           <div className="mainimg h-[30vh] md:h-[50vh] flex items-center w-full overflow-hidden justify-center rounded-3xl">
             <div className="rounded-3xl overflow-hidden h-[50vh]">
               <img
-                src={gs}
+                src={"/assets/gs.jpg"}
                 className="w-[160vh] h-[60vh] transform hover:scale-110 transition-transform duration-300 ease-in-out"
                 alt="Ground Station"
               />

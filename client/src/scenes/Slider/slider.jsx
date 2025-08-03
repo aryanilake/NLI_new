@@ -5,47 +5,47 @@ import './styles.css'
 // import CircularGallery from './CircularGallery'
 // =======
 import './styles.css';
-// import CircularGallery from './CircularGallery';
+// // import CircularGallery from './CircularGallery';
 
-// Import images using correct relative paths
-import BeliefSat0Launch from '/assets/BeliefSat-0 Launch.jpg';
-import BeliefSat0 from '/assets/BeliefSat-0.jpg';
-import img1 from '/assets/img1.jpeg';
-import img2 from '/assets/img2.jpeg';
-import testing from '/assets/testing.jpg';
-import img3 from '/assets/img3.jpeg';
-import shindesir from '/assets/shindesir.jpg';
-import img4 from '/assets/img4.jpeg';
-import img5 from '/assets/img5.jpeg';
-import launchpic1 from '/assets/launchpic1.jpg';
-import launchpic2 from '/assets/launchpic2.jpg';
-import launchpic3 from '/assets/launchpic3.jpg';
-import launchpic4 from '/assets/launchpic4.jpg';
-import launchpic5 from '/assets/launchpic5.jpg';
-import launchpic6 from '/assets/launchpic6.jpg';
-import launchpic7 from '/assets/launchpic7.jpg';
+// // Import images using correct relative paths
+// import BeliefSat0Launch from '/assets/BeliefSat-0 Launch.jpg';
+// import BeliefSat0 from '/assets/BeliefSat-0.jpg';
+// import img1 from '/assets/img1.jpeg';
+// import img2 from '/assets/img2.jpeg';
+// import testing from '/assets/testing.jpg';
+// import img3 from '/assets/img3.jpeg';
+// import shindesir from '/assets/shindesir.jpg';
+// import img4 from '/assets/img4.jpeg';
+// import img5 from '/assets/img5.jpeg';
+// import launchpic1 from '/assets/launchpic1.jpg';
+// import launchpic2 from '/assets/launchpic2.jpg';
+// import launchpic3 from '/assets/launchpic3.jpg';
+// import launchpic4 from '/assets/launchpic4.jpg';
+// import launchpic5 from '/assets/launchpic5.jpg';
+// import launchpic6 from '/assets/launchpic6.jpg';
+// import launchpic7 from '/assets/launchpic7.jpg';
 
 // >>>>>>> 1381e71bfe506f954d8b2dbd81fb5ab9c62d09d4
 const slidesData = [
-  { image: BeliefSat0Launch },
-  { image: BeliefSat0 },
+  { image: '/assets/BeliefSat-0 Launch.jpg' },
+  { image: '/assets/BeliefSat-0.jpg' },
   { video: 'https://www.youtube.com/embed/3Swjlq9hlrM' },
-  { image: img1 },
-  { image: img2 },
+  { image: '/assets/img1.jpeg' },
+  { image: '/assets/img2.jpeg' },
   { video: 'https://www.youtube.com/embed/CT-K4qLuNTo' },
-  { image: testing },
-  { image: img3 },
-  { image: shindesir },
-  { image: img4 },
-  { image: img5 },
+  { image: '/assets/testing.jpg' },
+  { image: '/assets/img3.jpeg' },
+  { image: '/assets/shindesir.jpg' },
+  { image: '/assets/img4.jpeg' },
+  { image: '/assets/img5.jpeg' },
   { video: 'https://www.youtube.com/embed/0WILY1JaI8I' },
-  { image: launchpic1 },
-  { image: launchpic2 },
-  { image: launchpic3 },
-  { image: launchpic4 },
-  { image: launchpic5 },
-  { image: launchpic6 },
-  { image: launchpic7 },
+  { image: '/assets/launchpic1.jpg' },
+  { image: '/assets/launchpic2.jpg' },
+  { image: '/assets/launchpic3.jpg' },
+  { image: '/assets/launchpic4.jpg' },
+  { image: '/assets/launchpic5.jpg' },
+  { image: '/assets/launchpic6.jpg' },
+  { image: '/assets/launchpic7.jpg' },
 ];
 
 

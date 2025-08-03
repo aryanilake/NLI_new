@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import semicircle from '../../public/assets/semicircle.svg'
+// import semicircle from '/assets/semicircle.svg'
 
 function Headers({ title, size }) {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
@@ -12,10 +12,10 @@ function Headers({ title, size }) {
 
   return (
     <div className=' flex  items-center justify-center space-x-[2%] text-center'>
-      <div className='py-12'><img src={semicircle} alt="" /></div>
+      <div className='py-12'><img src={'/assets/semicircle.svg'} alt="" /></div>
       {viewportWidth >= 768 ? <div className='fonts-[poppins] font-medium w-fit uppercase text-[#818172]' style={{ fontSize: size }}>{title}</div> : <div className='fonts-[poppins] font-medium w-fit uppercase text-[#818172]' style={{ fontSize: "5vh" }} >{title}</div>}
 
-      <div className='py-12'><img src={semicircle} alt="" /></div>
+      <div className='py-12'><img src={'/assets/semicircle.svg'} alt="" /></div>
 
     </div>
   )

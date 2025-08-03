@@ -1,6 +1,6 @@
 // TooltipIcon.js
 import React, { useState } from 'react';
-import info from "../../public/assets/info.svg"; // Adjust the path as necessary
+// import info from "/assets/info.svg"; // Adjust the path as necessary
 
 const TooltipIcon = ({ alt, content }) => {
     const [showTooltip, setShowTooltip] = useState(false);
@@ -11,7 +11,7 @@ const TooltipIcon = ({ alt, content }) => {
                 style={{ cursor: 'pointer' }}
                 onMouseEnter={() => setShowTooltip(true)}
                 onMouseLeave={() => setShowTooltip(false)}
-                src={info}
+                src={'/assets/info.svg'}
                 alt={alt}
                 className="h-5"
             />
