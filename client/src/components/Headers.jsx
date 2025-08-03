@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import semicircle from '../assets/semicircle.svg'
+import semicircle from '../../public/assets/semicircle.svg'
 
 function Headers({ title, size }) {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);

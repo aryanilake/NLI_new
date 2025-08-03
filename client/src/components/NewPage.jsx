@@ -1,7 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import Button from "./Button";
-import gs from "../assets/gs.jpg";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 const NewPage = () => {

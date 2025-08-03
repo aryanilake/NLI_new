@@ -7,26 +7,25 @@ import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
 import TestimonialCard from "../../components/TestimonialCard";
-import hero from "../../assets/hero.webp";
+// import hero from "../../assets/hero.webp";
 import Headers from "../../components/Headers";
 import CardsDomain from "../../components/CardsDomain";
 import Cd from "../../components/Cd";
 import Foundercard from "../../components/Foundercard";
-import beliefsat from "../../assets/belifsat.jpg";
-import earth from "../../assets/earth.png";
-import space from "../../assets/space.jpg";
-import beliefsat1 from "../../assets/beliefsat1.jpg";
-import avruti from "../../assets/avruti.jpg"
-import software from "../../assets/software.png"
-import embedded from "../../assets/embedded.jpg"
-import pcb from "../../assets/pcb.jpg"
-import structure from "../../assets/structure.jpg"
-import data from "../../assets/data.jpg"
-import document from "../../assets/document.webp"
-import rohit from "../../assets/rohit.jpg"
-import supriya from "../../assets/supriya.jpg"
+import beliefsat from "/assets/belifsat.jpg";
+// import earth from "../../assets/earth.png";
+import space from "/assets/space.jpg";
+import beliefsat1 from "/assets/beliefsat1.jpg";
+import avruti from "/assets/avruti.jpg"
+import software from "/assets/software.png"
+import embedded from "/assets/embedded.jpg"
+// import pcb from "../../assets/pcb.jpg"
+import structure from "/assets/structure.jpg"
+import data from "/assets/data.jpg"
+import document from "/assets/document.webp"
+// import rohit from "../../assets/rohit.jpg
 import AutoSlider from '../../scenes/Slider/slider'
-import radio from "../../assets/radio.webp"
+import radio from "/assets/radio.webp"
 import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import Navbar from "../../components/Navbar";

@@ -1,11 +1,11 @@
-import spc from "../assets/Somaiya Space Conclave.jpg";
-import fd2023 from "../assets/Field Day 2023.jpg";
-import fd2024 from "../assets/Field Day 2024.jpg";
-import fd from "../assets/FIELD DAY.jpg";
-import qrp from "../assets/QRP day.jpg";
-import wi from "../assets/Winter Internship on product engineering.jpg";
-import fd2025 from "../assets/arsi_2025.jpg";
-import inspace from "../assets/inspace.png";
+import spc from "/assets/Somaiya Space Conclave.jpg";
+import fd2023 from "/assets/Field Day 2023.jpg";
+import fd2024 from "/assets/Field Day 2024.jpg";
+import fd from "/assets/FIELD DAY.jpg";
+import qrp from "/assets/QRP day.jpg";
+import wi from "/assets/Winter Internship on product engineering.jpg";
+import fd2025 from "/assets/arsi_2025.jpg";
+import inspace from "/assets/inspace.png";
 
 
 export const activities = [

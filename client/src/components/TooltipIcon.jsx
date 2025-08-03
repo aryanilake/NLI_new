@@ -1,6 +1,6 @@
 // TooltipIcon.js
 import React, { useState } from 'react';
-import info from "../assets/info.svg";
+import info from "../../public/assets/info.svg"; // Adjust the path as necessary
 
 const TooltipIcon = ({ alt, content }) => {
     const [showTooltip, setShowTooltip] = useState(false);

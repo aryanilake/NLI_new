@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar";
-import gs from "../../assets/gs.jpg";
+import gs from "/assets/gs.jpg";
 import Headers from "../../components/Headers";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";

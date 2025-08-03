@@ -1,11 +1,11 @@
-import monopole from '../assets/monopole.jpg';
-import qfh from '../assets/QFH antenna.jpg';
-import swr from '../assets/swr.jpg';
-import yagi from '../assets/Yagi-uda.jpg';
-import dipole from '../assets/Dipole antenna.jpg';
-import vna from '../assets/VNA.jpg';
-import transceiver from '../assets/Transceiver.jpg';
-import v from '../assets/Inverted_V(antenna).jpg';
+import monopole from '/assets/monopole.jpg';
+import qfh from '/assets/QFH antenna.jpg';
+import swr from '/assets/swr.jpg';
+import yagi from '/assets/Yagi-uda.jpg';
+import dipole from '/assets/Dipole antenna.jpg';
+import vna from '/assets/VNA.jpg';
+import transceiver from '/assets/Transceiver.jpg';
+import v from '/assets/Inverted_V(antenna).jpg';
 
 export const antennas = [
     {

@@ -1,10 +1,9 @@
 import React from "react";
-import twitter from "../assets/twitter.svg";
-import github from "../assets/github.svg";
-import linkedin from "../assets/linkedin.svg";
-import facebook from "../assets/facebook.svg";
-import instagram from "../assets/instagram.svg";
-import kjsit from "../assets/kjsit.png";
+import twitter from "../../public/assets/twitter.svg";
+import github from "../../public/assets/github.svg";
+import linkedin from "../../public/assets/linkedin.svg";
+import instagram from "../../public/assets/instagram.svg";
+import kjsit from "../../public/assets/kjsit.png";
 import BackToTopButton from "./BackToTopButton";
 import './footerStyles.css'
 //Importing icons

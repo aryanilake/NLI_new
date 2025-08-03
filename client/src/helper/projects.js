@@ -1,8 +1,8 @@
-import beliefSat0 from '../assets/BeliefSat-0.jpg'; 
-import beliefSat1 from '../assets/BeliefSat-1.jpg'; 
-import avruti from '../assets/Avruti1.jpg'; 
-import uass from '../assets/UASS.jpg'; 
-import somaiyaPod from '../assets/Somaiya-Pod.jpg'; 
+import beliefSat0 from '/assets/BeliefSat-0.jpg'; 
+import beliefSat1 from '/assets/BeliefSat-1.jpg'; 
+import avruti from '/assets/Avruti1.jpg'; 
+import uass from '/assets/UASS.jpg'; 
+import somaiyaPod from '/assets/Somaiya-Pod.jpg'; 
 // import crownGs from '../assets/Crown-GS.jpg'; 
 
 export const projects = [

@@ -8,22 +8,22 @@ import './styles.css';
 // import CircularGallery from './CircularGallery';
 
 // Import images using correct relative paths
-import BeliefSat0Launch from '../../assets/BeliefSat-0 Launch.jpg';
-import BeliefSat0 from '../../assets/BeliefSat-0.jpg';
-import img1 from './images/img1.jpeg';
-import img2 from './images/img2.jpeg';
-import testing from './images/testing.jpg';
-import img3 from './images/img3.jpeg';
-import shindesir from './images/shindesir.jpg';
-import img4 from './images/img4.jpeg';
-import img5 from './images/img5.jpeg';
-import launchpic1 from './images/launchpic1.jpg';
-import launchpic2 from './images/launchpic2.jpg';
-import launchpic3 from './images/launchpic3.jpg';
-import launchpic4 from './images/launchpic4.jpg';
-import launchpic5 from './images/launchpic5.jpg';
-import launchpic6 from './images/launchpic6.jpg';
-import launchpic7 from './images/launchpic7.jpg';
+import BeliefSat0Launch from '/assets/BeliefSat-0 Launch.jpg';
+import BeliefSat0 from '/assets/BeliefSat-0.jpg';
+import img1 from '/assets/img1.jpeg';
+import img2 from '/assets/img2.jpeg';
+import testing from '/assets/testing.jpg';
+import img3 from '/assets/img3.jpeg';
+import shindesir from '/assets/shindesir.jpg';
+import img4 from '/assets/img4.jpeg';
+import img5 from '/assets/img5.jpeg';
+import launchpic1 from '/assets/launchpic1.jpg';
+import launchpic2 from '/assets/launchpic2.jpg';
+import launchpic3 from '/assets/launchpic3.jpg';
+import launchpic4 from '/assets/launchpic4.jpg';
+import launchpic5 from '/assets/launchpic5.jpg';
+import launchpic6 from '/assets/launchpic6.jpg';
+import launchpic7 from '/assets/launchpic7.jpg';
 
 // >>>>>>> 1381e71bfe506f954d8b2dbd81fb5ab9c62d09d4
 const slidesData = [

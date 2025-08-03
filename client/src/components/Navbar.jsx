@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import logo from "../assets/NEWLEAPLABS.png";
+import logo from "../../public/assets/NEWLEAPLABS.png";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import da from "../assets/downarrow.svg";
-import up from "../assets/uparrow.svg";
+// import da from "../assets/downarrow.svg";
+// import up from "../assets/uparrow.svg";
 import { styled } from "@mui/material";
 
 const Navbar = ({ bgcolor, textColor, active }) => {

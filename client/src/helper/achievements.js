@@ -1,10 +1,10 @@
-import beliefSat from '../assets/BeliefSat-0 Launch.jpg'; 
-import jovianMoonContest from '../assets/jovianMoonContest.jpg'; 
-import antennaMakingContest from '../assets/antennaMakingContest.jpg'; 
-import utrr from '../assets/utrr.jpg'; 
-import productDemo from '../assets/productDemo.jpg';  
-import anveshan from '../assets/anveshan.jpg';
-import sstv from '../assets/SSTV_img_certificate.png';
+import beliefSat from '/assets/BeliefSat-0 Launch.jpg'; 
+import jovianMoonContest from '/assets/jovianMoonContest.jpg'; 
+import antennaMakingContest from '/assets/antennaMakingContest.jpg'; 
+import utrr from '/assets/utrr.jpg'; 
+import productDemo from '/assets/productDemo.jpg';  
+import anveshan from '/assets/anveshan.jpg';
+import sstv from '/assets/SSTV_img_certificate.png';
 
 export const achievements = [
     {

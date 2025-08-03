@@ -1,7 +1,7 @@
-import cqMumbai from '../assets/CQ Mumbai.jpg';  
-import vaani from '../assets/VAANI.jpg';       
-import arsiMeet from '../assets/ARSI Regional Meet.jpg';
-import  Wconclave from '../assets/Weather_conclave.jpg';
+import cqMumbai from '/assets/CQ Mumbai.jpg';  
+import vaani from '/assets/VAANI.jpg';       
+import arsiMeet from '/assets/ARSI Regional Meet.jpg';
+import  Wconclave from '/assets/Weather_conclave.jpg';
 
 export const events = [
     {
