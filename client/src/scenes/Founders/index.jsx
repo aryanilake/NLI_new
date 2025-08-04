@@ -21,15 +21,15 @@ function Founders() {
       <div className="py-20 font-poppins justify-between items-center h-max mx-auto px-5 mt-5 ">
         <Headers title="Founders" size="10vh" />
         <div className="text-center md:flex justify-center">
-          <Foundercard imageUrl={"/assets/rohit.jpg"} title="Rohit Bokade" />
-          <Foundercard imageUrl={"/assets/supriya.jpg"} title="Supriya Bhide" />
+          <Foundercard imageUrl={"./assets/rohit.jpg"} title="Rohit Bokade" />
+          <Foundercard imageUrl={"./assets/supriya.jpg"} title="Supriya Bhide" />
           {/* <Foundercard imageUrl={umeshsir} title="Dr. Umesh Shinde" /> */}
         </div>
         <Headers title="Mentors" size="10vh" />
         <div className="text-center md:flex justify-center">
-          <Foundercard imageUrl={"/assets/Umeshsir.jpg"} title="Dr. Umesh Shinde" />
-          <Foundercard imageUrl={"/assets/exprincipalsir.jpg"} title="Dr. Suresh Ukarande" />
-          <Foundercard imageUrl={"/assets/principalsir.png"} title="Dr. Vivek Sunnapwar" />
+          <Foundercard imageUrl={"./assets/Umeshsir.jpg"} title="Dr. Umesh Shinde" />
+          <Foundercard imageUrl={"./assets/exprincipalsir.jpg"} title="Dr. Suresh Ukarande" />
+          <Foundercard imageUrl={"./assets/principalsir.png"} title="Dr. Vivek Sunnapwar" />
         </div>
       </div>
       <Footer bg={"white"} text={"black"} />

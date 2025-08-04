@@ -47,7 +47,7 @@ export const teams = [
     linkedin:
       "https://www.linkedin.com/in/rohit-yadav-3253b9239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     email: "rohit15@somaiya.edu",
-    profile: "/assets/RohitY.jpg",
+    profile: "./assets/RohitY.jpg",
   },
   {
     fname: "Megh",
@@ -64,7 +64,7 @@ export const teams = [
     linkedin:
       "https://www.linkedin.com/in/megh-shah-a8aa112a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     email: "megh.ks@somaiya.edu",
-    profile: "/assets/Megh Shah.jpg",
+    profile: "./assets/Megh Shah.jpg",
   },
   {
     fname: "Parth",
@@ -80,7 +80,7 @@ export const teams = [
       "NLL provides us the right mixture of hardworking yet fun team-mates, which collaborate on challenging projects.",
     linkedin: "https://www.linkedin.com/in/parth-pulkundwar-79914a289/",
     email: "p.pulkundwar@somaiya.edu",
-    profile: "/assets/Parth.jpg",
+    profile: "./assets/Parth.jpg",
   },
   {
     fname: "Trushali",
@@ -96,7 +96,7 @@ export const teams = [
       "My experience at New Leap Labs has been fueled by a deep enthusiasm for communication systems and experiential learning. I have played a role in the design and functioning of our satellite ground station, where I engaged with antennas, RF chains, and signal tracking instruments. As a licensed amateur radio operator, I have also delved into real-time communication and data reception, acquiring essential practical knowledge in wireless and satellite technologies.",
     linkedin: "https://www.linkedin.com/in/trushali-phatak-9980b8373/",
     email: "trushali.phatak@somaiya.edu",
-    profile: "/assets/Trushali Phatak.jpeg",
+    profile: "./assets/Trushali Phatak.jpeg",
   },
 
    {
@@ -113,7 +113,7 @@ export const teams = [
       "Joining NLL lab has been an enriching journey. Learned HTML, CSS, JavaScript, Python, and React.js. Helped in developing a website from scratch, gaining practical project experience. Immersed in real-world coding challenges and collaborative learning. Enhanced proficiency in diverse programming languages. NLL lab provided a dynamic space for hands-on exploration.",
     linkedin: "https://in.linkedin.com/in/ankur-chheda-66b5992a6",
     email: "ankur.chheda@somaiya.edu",
-    profile: "/assets/Ankur.jpg",
+    profile: "./assets/Ankur.jpg",
   },
   {
     fname: "Vivek",
@@ -130,7 +130,7 @@ export const teams = [
     linkedin:
       "https://www.linkedin.com/in/vivek-dhanawade-47483b2a6?trk=contact-info",
     email: "vivek.dhanawade@somaiya.edu",
-    profile: "/assets/vivek.jpg",
+    profile: "./assets/vivek.jpg",
   },
   {
     fname: "Neeraj",
@@ -146,7 +146,7 @@ export const teams = [
     linkedin:
       "https://www.linkedin.com/in/neeraj-patil-78220725a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     email: "neeraj.rp@somaiya.edu",
-    profile: "/assets/Neeraj.jpg",
+    profile: "./assets/Neeraj.jpg",
   },
 
  
@@ -164,7 +164,7 @@ export const teams = [
     linkedin:
       "https://www.linkedin.com/in/aditya-kesarkar-7aa3b6291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     email: "kesarkar.a@somaiya.edu",
-    profile: "/assets/Aditya.jpg",
+    profile: "./assets/Aditya.jpg",
   },
 
    {
@@ -182,7 +182,7 @@ export const teams = [
     linkedin:
       "https://www.linkedin.com/in/manassable/",
     email: "manas1999sable@gmail.com",
-    profile: "/assets/Manas Sable.jpg",
+    profile: "./assets/Manas Sable.jpg",
   },
   {
     fname: "Shreya",
@@ -198,7 +198,7 @@ export const teams = [
       "Since my first year, I’ve been part of New Leap Labs, where I focus on embedded systems and hardware prototyping. I've worked extensively with microcontrollers, sensors, and communication protocols like APRS. NLL gave me hands-on experience in debugging, interfacing, and writing low-level firmware. It’s where I built my core skills in embedded systems through real-world, team-driven projects.",
     linkedin: "https://www.linkedin.com/in/shreya-patil-2a1321296",
     email: "shreya25@somaiya.edu",
-    profile: "/assets/ShreyaP.jpg",
+    profile: "./assets/ShreyaP.jpg",
   },
   
   
@@ -216,7 +216,7 @@ export const teams = [
       "At NLL, I’ve worked on the firmware, testing digipeater and TM/TC systems on BeliefSat-0.1. I’ve learned how to design and validate communication protocols for space-grade systems. Along the way, I’ve built strong friendships and developed a great bond with my seniors, who’ve guided me throughout the journey.",
     linkedin: "https://www.linkedin.com/in/aarya-gojare-56850928a/",
     email: "aarya.gojare@somaiya.edu",
-    profile: "/assets/Aarya Gojare.jpg",
+    profile: "./assets/Aarya Gojare.jpg",
   },
 
   {
@@ -233,7 +233,7 @@ export const teams = [
       "My experience is pretty good while working with other team members in NLL. Have learned many things after joining NLL.",
     linkedin: "https://www.linkedin.com/in/aryan-ilake-04bb042a6/",
     email: "aryan.ilake@somaiya.edu",
-    profile: "/assets/Aryan.jpg",
+    profile: "./assets/Aryan.jpg",
   },
   {
     fname: "Pratik",
@@ -249,7 +249,7 @@ export const teams = [
       "I joined New Leap Labs in my first year, in the course of 2 years of NLL I had provided me confidence in my hardware and software technical skills as well as have helped me learn team management skills. I can certify that whatever I am today a substantial credit for it goes to NLL in shaping me.",
     linkedin: "https://www.linkedin.com/in/pratik-gangapurwala-6aa3321a8",
     email: "pgangapurwala@gmail.com",
-    profile: "/assets/Pratik.jpg",
+    profile: "./assets/Pratik.jpg",
   },
   // {
   //   fname: "Pranav",
@@ -281,7 +281,7 @@ export const teams = [
       "I joined the core team in the 2nd year of NLL formation. I initially worked on UASS project, became R&D head of the team. I have worked on beliefsat0. After starting work at Dhruva Space, I am mentoring the team for various projects, mainly on how to qualify the subsystems for space.",
     linkedin: "https://www.linkedin.com/in/cakasambe/",
     email: "c.kasambe@somaiya.edu",
-    profile: "/assets/Chaitanya.jpg",
+    profile: "./assets/Chaitanya.jpg",
   },
   {
     fname: "Hitanshu",
@@ -297,7 +297,7 @@ export const teams = [
       "So, I am Hitanshu from 2nd year in IT department. I joined NLI (New Leap Initiative) since @ years ago, as a Structure Design. I done all tools regarding my domain in few weeks. After that, I got some tasks from my seniors, and I did them very well. I like my work, and all people are very great in NLL.",
     linkedin: "https://www.linkedin.com/in/hitanshu-kanabar-b69a63298/",
     email: "hitanshu.k@somaiya.edu",
-    profile: "/assets/Hitanshu.jpg",
+    profile: "./assets/Hitanshu.jpg",
   },
   {
     fname: "Rohit",
@@ -313,7 +313,7 @@ export const teams = [
       "My name is Rohit Khandekar, and I was part of UASS (Upper Air Sounding System) project under NLL. We built a weather detecting device in collaboration with Databyte services and systems for IMD (Indian Meteorological Department). We successfully built a working prototype which measured pressure, temperature, and humidity. We had several launches at IMD along with their weather detecting device, named Radiosonde, to compare how accurate our prototype was. After 6-7 launches, we got almost accurate values. I am really blessed to be part of NLL.",
     linkedin: "https://www.linkedin.com/in/rohit-khandekar-111755168/",
     email: "rohit.khandekar@somaiya.edu",
-    profile: "/assets/RohitKhandekar.jpg",
+    profile: "./assets/RohitKhandekar.jpg",
   },
   {
     fname: "Jyoti",
@@ -329,7 +329,7 @@ export const teams = [
       "From 2018 to 2022, I had the privilege of contributing to New Leap Labs, specifically working on the BeliefSat project. Throughout my tenure, I not only acquired new skills but also gained valuable managerial experience. Being a part of this dynamic team was an honor, providing me with opportunities to broaden my knowledge and make meaningful contributions.",
     linkedin: "http://www.linkedin.com/in/jyoti-gadgil",
     email: "jyoti.gadgil@somaiya.edu",
-    profile: "/assets/Jyoti.jpg",
+    profile: "./assets/Jyoti.jpg",
   },
   {
     fname: "Akshay",
@@ -345,7 +345,7 @@ export const teams = [
       "Played a crucial role in the development of the CROWN ham club and am a co-founding member. Had a substantial contribution to the team by making various GS antennae. We were determined to launch the satellite even when no one believed us, and we succeeded because #Webelieve.",
     linkedin: "https://www.linkedin.com/in/akshay-jain-966073162/",
     email: "akshay.hj30@gmail.com",
-    profile: "/assets/Akshay.jpg",
+    profile: "./assets/Akshay.jpg",
   },
   // {
   //   fname: "Rhythm",
@@ -378,7 +378,7 @@ export const teams = [
     linkedin:
       "https://www.linkedin.com/in/pavan-jangam-9732791a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     email: "pavan.jangam@somaiya.edu",
-    profile: "/assets/Pavan.jpg",
+    profile: "./assets/Pavan.jpg",
   },
   {
     fname: "Yash",
@@ -395,7 +395,7 @@ export const teams = [
     linkedin:
       "https://www.linkedin.com/in/yash-mestry-a9b213260/",
     email: "mestry.y@somaiya.edu",
-    profile: "/assets/YashM.jpg",
+    profile: "./assets/YashM.jpg",
   },
 
   {
@@ -413,7 +413,7 @@ export const teams = [
     linkedin:
       "https://www.linkedin.com/in/shrutika-bhosle-774a191b0/",
     email: "shrutikabhosle11@gmail.com",
-    profile: "/assets/SHRUTIKA BHOSLE.png",
+    profile: "./assets/SHRUTIKA BHOSLE.png",
   },
 
   {
@@ -430,7 +430,7 @@ export const teams = [
       "In a short span of time of having joined NLL, I have learned so many different things and tried my hands on many new things. NLL gives me an opportunity to explore new fields of my interest.",
     linkedin: "http://linkedin.com/in/dhriti-kothari-9b922525b",
     email: "dhriti.m@somaiya.edu",
-    profile: "/assets/Dhriti.jpg",
+    profile: "./assets/Dhriti.jpg",
   },
    {
     fname: "Maharshi",
@@ -446,7 +446,7 @@ export const teams = [
       "I am working on Structure Design focusing on CubeSat structural development and contributed to team efforts in designing 3D models for supporting satellite electronics and 3D models idea for making rigid cover for antenna's.Also I had made 2d drawing in AutoCAD for making PSLV C-58 rocket structure.Looking forward, I aim to deepen my engagement within the organization by taking on greater responsibilities and exploring opportunities that align with my technical interests.",
     linkedin: "",
     email: "maharshi.j@somaiya.edu",
-    profile: "/assets/Maharshi.jpg",
+    profile: "./assets/Maharshi.jpg",
   },
 
   
@@ -465,7 +465,7 @@ export const teams = [
       "It all started with the mission design competition at ISRO which we won. A small team of aspiring minds made it to the top. This team would then go on to found NLL under the leadership of Rohit. I was offered the position of a mentor and I graduated soon enough, but I watched with pride as Beliefsat was launched into space.",
     linkedin: "https://www.linkedin.com/in/amey-noolkar-17a988192/",
     email: "amey.noolkar@somaiya.edu",
-    profile: "/assets/AMEY NOOLKAR.jpg",
+    profile: "./assets/AMEY NOOLKAR.jpg",
   },
   {
     fname: "Parshwa",
@@ -481,7 +481,7 @@ export const teams = [
       "My experience in NLL was one of the best learning phases during my academic years. Initially, I was part of the communication subsystem, then I worked on rocketry. I even visited WPC with Saikumar regarding the Amateur radio license, and I learned a lot. I had a great time working here and created a lot of memories.",
     linkedin: "https://www.linkedin.com/in/parshwadama",
     email: "parshwadama12@gmail.com",
-    profile: "/assets/Parshwa.jpg",
+    profile: "./assets/Parshwa.jpg",
   },
 
   {
@@ -499,7 +499,7 @@ export const teams = [
       "Joined as part of the Satellite team. Later took on HAM team. Formed CROWN Club. Took over the UASS project when it got stuck in lockdown. Brought it back on track. Reformed the entire team when it fell apart during lockdown. Brought in a whole new batch of students, trained them, prepared code of conducts, SOPs, and created the team structure with much sophisticated positions including the Chairperson and Managing Committee. Took on the GS project (also my final year project). Never held any prominent position in the team. Resigned later due to disagreement with the management. ",
     linkedin: "https://www.linkedin.com/in/jatin-bhosale-911845184",
     email: "jatin.bhosale@somaiya.edu",
-    profile: "/assets/Jatin Bhosale.jpg",
+    profile: "./assets/Jatin Bhosale.jpg",
   },
 
   {
@@ -516,7 +516,7 @@ export const teams = [
       "I am Sahil Mange, studying second year engineering at KJSIT. I joined NLL on the first day and have learned much about IOT and embedded systems. NLL gives me the opportunity to explore my interest in space technologies.",
     linkedin: "https://www.linkedin.com/in/sahil-mange-7b74722a8/",
     email: "sahil.mange@somaiya.edu",
-    profile: "/assets/Sahil.jpg",
+    profile: "./assets/Sahil.jpg",
   },
 
   {
@@ -533,7 +533,7 @@ export const teams = [
     linkedin:
       "https://www.linkedin.com/in/sheetal-popat-705619222/?originalSubdomain=in",
     email: "sheetal.popat@somaiya.edu",
-    profile: "/assets/Sheetal.jpg",
+    profile: "./assets/Sheetal.jpg",
   },
   {
     fname: "Pranjal",
@@ -549,7 +549,7 @@ export const teams = [
     linkedin:
       "https://www.linkedin.com/in/pranjalsancheti/?originalSubdomain=in",
     email: "pranjal.sancheti@somaiya.edu",
-    profile: "/assets/Pranjal.jpg",
+    profile: "./assets/Pranjal.jpg",
   },
 
 ];

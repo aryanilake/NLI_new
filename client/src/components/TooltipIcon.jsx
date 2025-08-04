@@ -11,7 +11,7 @@ const TooltipIcon = ({ alt, content }) => {
                 style={{ cursor: 'pointer' }}
                 onMouseEnter={() => setShowTooltip(true)}
                 onMouseLeave={() => setShowTooltip(false)}
-                src={'/assets/info.svg'}
+                src={'./assets/info.svg'}
                 alt={alt}
                 className="h-5"
             />

@@ -28,7 +28,7 @@ function GroundStation() {
           <div className="mainimg h-[30vh] md:h-[50vh] flex items-center w-full overflow-hidden justify-center rounded-3xl">
             <div className="rounded-3xl overflow-hidden h-[50vh]">
               <img
-                src={"/assets/gs.jpg"}
+                src={"./assets/gs.jpg"}
                 className="w-[160vh] h-[60vh] transform hover:scale-110 transition-transform duration-300 ease-in-out"
                 alt="Ground Station"
               />

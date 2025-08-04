@@ -21,54 +21,54 @@ function App() {
   const [activitiesData, setActivitiesData] = useState([]);
   const [eventsData, setEventsData] = useState([]);
   const [projectsData, setProjectsData] = useState([]);  // Added state for projects
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   // Fetch achievements, activities, events, and projects when the app loads
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // const achievementsResponse = await getAllachievements();
-        // const activitiesResponse = await getAllactivities();
-        // const eventsResponse = await getAllevents();
-        // const projectsResponse = await getAllprojects();  
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       // const achievementsResponse = await getAllachievements();
+  //       // const activitiesResponse = await getAllactivities();
+  //       // const eventsResponse = await getAllevents();
+  //       // const projectsResponse = await getAllprojects();  
 
-        // Log the responses for debugging
-        console.log("Fetched achievements:", achievementsResponse);
-        console.log("Fetched activities:", activitiesResponse);
-        console.log("Fetched events:", eventsResponse);
-        console.log("Fetched projects:", projectsResponse);
+  //       // Log the responses for debugging
+  //       console.log("Fetched achievements:", achievementsResponse);
+  //       console.log("Fetched activities:", activitiesResponse);
+  //       console.log("Fetched events:", eventsResponse);
+  //       console.log("Fetched projects:", projectsResponse);
 
-        if (Array.isArray(achievementsResponse.data)) {
-          setAchievementsData(achievementsResponse.data);
-        }
-        if (Array.isArray(activitiesResponse.data)) {
-          setActivitiesData(activitiesResponse.data.map(item => ({
-            aname: item.name,
-            image: item.image,
-            details: item.details,
-            date: item.date
-          })));
-        }
-        if (Array.isArray(eventsResponse.data)) {
-          setEventsData(eventsResponse.data.map(item => ({
-            name: item.name,
-            image: item.image,
-            details: item.details,
-            date: item.date
-          })));
-        }
-        if (Array.isArray(projectsResponse.data)) {  // Setting the projects data
-          setProjectsData(projectsResponse.data);
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  //       if (Array.isArray(achievementsResponse.data)) {
+  //         setAchievementsData(achievementsResponse.data);
+  //       }
+  //       if (Array.isArray(activitiesResponse.data)) {
+  //         setActivitiesData(activitiesResponse.data.map(item => ({
+  //           aname: item.name,
+  //           image: item.image,
+  //           details: item.details,
+  //           date: item.date
+  //         })));
+  //       }
+  //       if (Array.isArray(eventsResponse.data)) {
+  //         setEventsData(eventsResponse.data.map(item => ({
+  //           name: item.name,
+  //           image: item.image,
+  //           details: item.details,
+  //           date: item.date
+  //         })));
+  //       }
+  //       if (Array.isArray(projectsResponse.data)) {  // Setting the projects data
+  //         setProjectsData(projectsResponse.data);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   // Setup Lenis for smooth scrolling
   function raf(time) {

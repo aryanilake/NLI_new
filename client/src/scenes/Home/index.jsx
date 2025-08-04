@@ -79,7 +79,7 @@ function Home() {
   className="intro absolute mx-auto w-[70%] sm:w-[60%] md:w-[85%] h-[70%] sm:h-[75%] flex justify-center items-center overflow-hidden"
 >
   <motion.img
-    src={"/assets/space.jpg"}
+    src={"./assets/space.jpg"}
     alt=""
     className="w-full md:h-[120vh] rounded-md opacity-120"
     style={{
@@ -122,7 +122,7 @@ function Home() {
           <Link to="/projects" className="block">
             <img
               className="w-full h-auto md:w-[150vh] md:h-[90vh] border border-black"
-              src={"/assets/belifsat.jpg"}
+              src={"./assets/belifsat.jpg"}
               alt="BeliefSat-1"
             />
           </Link>
@@ -145,7 +145,7 @@ function Home() {
       <Link to="/projects" className="block">
         <img
           className="w-full h-auto md:w-[150vh] md:h-[90vh] border border-black"
-          src={"/assets/beliefsat1.jpg"}
+          src={"./assets/beliefsat1.jpg"}
           alt="Ground Station"
         />
       </Link>
@@ -167,7 +167,7 @@ function Home() {
         <Link to="/projects" className="block">
           <img
             className="w-full h-auto md:w-[150vh] md:h-[90vh] border border-black"
-            src={"/assets/avruti.jpg"}
+            src={"./assets/avruti.jpg"}
             alt="Avruti"
           />
         <p id="copyRightText" >© Energy Tracker Asia</p>
@@ -198,22 +198,22 @@ function Home() {
                   {/* First Row */}
                   <div className="items-center justify-center md:flex justify-center">
                     <CardsDomain
-                      imageUrl={"/assets/software.png"}
+                      imageUrl={"./assets/software.png"}
                       title="Software"
                       description="Software domain involves designing, developing, and maintaining applications and systems for diverse purposes."
                     />
                     <CardsDomain
-                      imageUrl={"/assets/embedded.jpg"}
+                      imageUrl={"./assets/embedded.jpg"}
                       title="System Design"
                       description="System Design at NLL focuses on embedded systems and custom PCB design. We build, integrate, and test circuits and firmware for satellite subsystems and specialized electronic modules. The goal is reliable hardware that performs well in space and demanding real-world conditions."
                     />
                     <CardsDomain
-                      imageUrl={"/assets/radio.webp"}
+                      imageUrl={"./assets/radio.webp"}
                       title="Radio Frequency"
                       description="Radio frequency domain involves electromagnetic waves for wireless communication, spanning from 3 kHz to 300 GHz."
                     />
                     <CardsDomain
-                      imageUrl={"/assets/structure.jpg"}
+                      imageUrl={"./assets/structure.jpg"}
                       title="Structure Design"
                       description="This domain involves creatively designing structures. It contains simulation and testing of structures that can sustain extreme temperatures and mechanical pressure."
                     />
@@ -222,7 +222,7 @@ function Home() {
                   {/* Second Row */}
                   <div className="md:flex justify-center">
                     <CardsDomain
-                      imageUrl={"/assets/data.jpg"}
+                      imageUrl={"./assets/data.jpg"}
                       title="Data Science"
                       description="Data Science involves extracting insights from data using statistical, machine learning, deep learning, and NLP techniques to build intelligent systems and support data-driven decision-making."
                     />
@@ -232,7 +232,7 @@ function Home() {
                       description="PCB design involves creating circuit layouts on boards for electronic devices, optimizing connectivity and functionality."
                     /> */}
                     <CardsDomain
-                      imageUrl={"/assets/document.webp"}
+                      imageUrl={"./assets/document.webp"}
                       title="Non-technical"
                       description="This domain involves communication, process management, and user-focused content creation for clarity and efficiency.
                   "
@@ -246,14 +246,14 @@ function Home() {
                   {/* First Row */}
                   <div className="test flex py-10 items-center justify-center">
                     <Cd
-                      imageUrl={"/assets/software.png"}
+                      imageUrl={"./assets/software.png"}
                       title="Software"
                       description="Software domain involves designing, developing, and maintaining applications and systems for diverse purposes."
                     />
                   </div>
                   <div className="test flex py-10 items-center justify-center">
                     <Cd
-                      imageUrl={"/assets/embedded.jpg"}
+                      imageUrl={"./assets/embedded.jpg"}
                       title="System Design"
                       description="System Design at NLL focuses on embedded systems and custom PCB design. We build, integrate, and test circuits and firmware for satellite subsystems and specialized electronic modules. The goal is reliable hardware that performs well in space and demanding real-world conditions."
                     />
@@ -267,7 +267,7 @@ function Home() {
                   </div>
                   <div className="test flex py-10 items-center justify-center">
                     <Cd
-                      imageUrl={"/assets/structure.jpg"}
+                      imageUrl={"./assets/structure.jpg"}
                       title="Structure Design"
                       description="Hardware domain involves designing, building, and maintaining physical computer components, including processors, memory, and peripherals."
                     />
@@ -278,7 +278,7 @@ function Home() {
                 <div className="md:flex justify-center">
                   <div className="test flex py-10 items-center justify-center">
                     <Cd
-                      imageUrl={"/assets/data.jpg"}
+                      imageUrl={"./assets/data.jpg"}
                       title="Data Science"
                       description="Data Science involves extracting insights from data using statistical, machine learning, deep learning, and NLP techniques to build intelligent systems and support data-driven decision-making."
                     />
@@ -292,7 +292,7 @@ function Home() {
                   </div> */}
                   <div className="test flex py-10 items-center justify-center">
                     <Cd
-                      imageUrl={"/assets/document.webp"}
+                      imageUrl={"./assets/document.webp"}
                       title="Non-technical"
                       description="This domain involves communication, process management, and user-focused content creation for clarity and efficiency.
                   "

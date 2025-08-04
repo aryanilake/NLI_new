@@ -13,7 +13,7 @@ function Footer({ bg, text }) {
     <div style={{ backgroundColor: bg, color: text }} className="mt-[-2vh] font-poppins">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between py-1">
         <div className="text-center p-5 lg:text-left mb-4 lg:mb-0 w-full">
-          <img className="rounded mb-1 w-[15vh] h-[15vh]" src={"/assets/kjsit.png"} alt="KJSIT Logo" />
+          <img className="rounded mb-1 w-[15vh] h-[15vh]" src={"./assets/kjsit.png"} alt="KJSIT Logo" />
           <span className="text-lg font-semibold">
             KJ SOMAIYA INSTITIUTE OF TECHNOLOGY
           </span>
@@ -36,11 +36,11 @@ function Footer({ bg, text }) {
               </a>
           </div>
           <div className="flex justify-start space-x-4 p-1">
-            <a href="https://www.instagram.com/nll.kjsit/"><img src={"/assets/instagram.svg"} alt="instagram" className="w-6 h-6"></img></a>
+            <a href="https://www.instagram.com/nll.kjsit/"><img src={"./assets/instagram.svg"} alt="instagram" className="w-6 h-6"></img></a>
             {/* <a href="https://www.facebook.com/nlikjsieit/"><img src={facebook} alt="Facebook" className="w-6 h-6"></img></a> */}
-            <a href="https://in.linkedin.com/company/new-leap-initiative-kjsit"><img src={"/assets/linkedin.svg"} alt="LinkedIn" className="w-6 h-6" /></a>
-            <a href="https://github.com/NewLeapKjsieit"><img src={"/assets/github.svg"} alt="GitHub" className="w-6 h-6" /></a>
-            <a href="https://twitter.com/NLIspaceclub"><img src={"/assets/twitter.svg"} alt="Twitter" className="w-6 h-6" /></a>
+            <a href="https://in.linkedin.com/company/new-leap-initiative-kjsit"><img src={"./assets/linkedin.svg"} alt="LinkedIn" className="w-6 h-6" /></a>
+            <a href="https://github.com/NewLeapKjsieit"><img src={"./assets/github.svg"} alt="GitHub" className="w-6 h-6" /></a>
+            <a href="https://twitter.com/NLIspaceclub"><img src={"./assets/twitter.svg"} alt="Twitter" className="w-6 h-6" /></a>
           </div>
         </div>
       </div>
