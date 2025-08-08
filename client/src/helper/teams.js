@@ -34,6 +34,42 @@
 export const teams = [
   {
     fname: "Rohit",
+    lname: "Bokade",
+    yearleft: 0,
+    active: false,
+    project1: "Beliefsat-0",
+    project2: "Beliefsat-1",
+    project3: "UASS",
+    project4: "Somaiya-Pod",
+    domain: "Embedded",
+    departmentclg: "Information technology",
+    about:
+      "",
+    linkedin:
+      "https://www.linkedin.com/in/rnbokade/",
+    email: "rohit.bokade@somaiya.edu",
+    profile: "./assets/rohit.jpg",
+  },
+  {
+    fname: "Supriya",
+    lname: "Bhide",
+    yearleft: 0,
+    active: false,
+    project1: "Beliefsat-0",
+    project2: "Beliefsat-1",
+    project3: "UASS",
+    project4: "Somaiya-Pod",
+    domain: "Embedded",
+    departmentclg: "Computer Engineering",
+    about:
+      "",
+    linkedin:
+      "https://www.linkedin.com/in/supriyabhide/",
+    email: "supriya.bhide@somaiya.edu",
+    profile: "./assets/supriya.jpg",
+  },
+  {
+    fname: "Rohit",
     lname: "Yadav",
     yearleft: 0,
     active: false,
@@ -88,7 +124,7 @@ export const teams = [
     yearleft: 0,
     active: true,
     project1: "Crown-GS",
-    project2: "na",
+    project2: "Beliefsat-0",
     project3: "na",
     domain: "Radio Frequency",
     departmentclg: "Information Technology",

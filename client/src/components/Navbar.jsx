@@ -99,7 +99,7 @@ const Navbar = ({ bgcolor, textColor, active }) => {
               <div className="text-center">
 
                 <Link to="/founders" className="block">
-                  Founders & Mentors
+                  Mentors
                   {(active == "founders") ? <div className="absolute left-0 right-0  h-1 bg-[#7f8c8d] rounded rounded-t"></div> : <div ></div>}
                   {/* <div className="absolute left-0 right-0 bottom-0 h-1 bg-[#262626] transform scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100 rounded rounded-t"></div> */}
                 </Link>
